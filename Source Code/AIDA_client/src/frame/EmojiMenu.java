@@ -188,4 +188,5 @@ public class EmojiMenu extends JFrame{
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
 
+
 }

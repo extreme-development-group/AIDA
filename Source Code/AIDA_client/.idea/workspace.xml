@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79073fca-de88-4332-94cc-2ca43276fba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/frame/ChatFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frame/ChatWithGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frame/MemberText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/HeadPortrait.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/HeadPortrait.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frame/ChatWithFriends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/ChatWithFriends.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/frame/EmojiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/EmojiMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frame/HeadPortrait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/HeadPortrait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/MemberText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/MemberText.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
+            <state relative-caret-position="295">
               <caret line="265" column="33" lean-forward="true" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3105">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="295">
+              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3359#3360#0" expanded="true" />
@@ -59,6 +49,8 @@
                 <element signature="e#4256#4257#0" expanded="true" />
                 <element signature="e#4821#4822#0" expanded="true" />
                 <element signature="e#4868#4869#0" expanded="true" />
+                <element signature="e#9464#9465#0" expanded="true" />
+                <element signature="e#9519#9520#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            <state relative-caret-position="341">
+              <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1104">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="341">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5171#5172#0" expanded="true" />
@@ -168,17 +160,17 @@
         <option value="$PROJECT_DIR$/src/HeadPortrait.java" />
         <option value="$PROJECT_DIR$/src/frame/SingleText.java" />
         <option value="$PROJECT_DIR$/src/frame/HeadPortrait.java" />
-        <option value="$PROJECT_DIR$/src/frame/MemberText.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatFrame.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatWithGroup.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatWithFriends.java" />
+        <option value="$PROJECT_DIR$/src/frame/ChatWithGroup.java" />
         <option value="$PROJECT_DIR$/src/frame/EmojiMenu.java" />
+        <option value="$PROJECT_DIR$/src/frame/MemberText.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="921" />
-    <option name="y" value="6" />
+    <option name="x" value="661" />
+    <option name="y" value="28" />
     <option name="width" value="1571" />
     <option name="height" value="1047" />
   </component>
@@ -319,15 +311,15 @@
       <option name="presentableId" value="Default" />
       <updated>1561852876106</updated>
       <workItem from="1561852879261" duration="114000" />
-      <workItem from="1561853101332" duration="45329000" />
+      <workItem from="1561853101332" duration="46811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45443000" />
+    <option name="totallyTimeSpent" value="46925000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="921" y="6" width="1571" height="1047" extended-state="0" />
+    <frame x="1104" y="7" width="1571" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16611515" />
@@ -466,16 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/HeadPortrait.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -493,21 +475,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1104">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="295">
+          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5171#5172#0" expanded="true" />
-            <element signature="e#5206#5207#0" expanded="true" />
+            <element signature="e#3359#3360#0" expanded="true" />
+            <element signature="e#3425#3426#0" expanded="true" />
+            <element signature="e#4194#4195#0" expanded="true" />
+            <element signature="e#4256#4257#0" expanded="true" />
+            <element signature="e#4821#4822#0" expanded="true" />
+            <element signature="e#4868#4869#0" expanded="true" />
+            <element signature="e#9464#9465#0" expanded="true" />
+            <element signature="e#9519#9520#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
+        <state relative-caret-position="295">
           <caret line="265" column="33" lean-forward="true" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -522,18 +510,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
+    <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3105">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="341">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3359#3360#0" expanded="true" />
-            <element signature="e#3425#3426#0" expanded="true" />
-            <element signature="e#4194#4195#0" expanded="true" />
-            <element signature="e#4256#4257#0" expanded="true" />
-            <element signature="e#4821#4822#0" expanded="true" />
-            <element signature="e#4868#4869#0" expanded="true" />
+            <element signature="e#5171#5172#0" expanded="true" />
+            <element signature="e#5206#5207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

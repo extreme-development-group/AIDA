@@ -2,6 +2,8 @@ package frame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
@@ -14,14 +16,48 @@ public class MemberText extends JPanel {
     private HeadPortrait avatar;
     private JLabel idLabel;
     private JLabel statusLabel;
+    private int status;
+    private int userStatus;
+    private ChatWithGroup group;
 
-    public MemberText(String avatarPath,String username,int status) throws IOException {
+    public MemberText(String avatarPath,String username,int status,ChatWithGroup group,int userStatus) throws IOException {
+        this.group=group;
+        this.status=status;
+        this.userStatus=userStatus;
         avatar=new HeadPortrait(30,30,avatarPath);
-
         idLabel=new JLabel();
         idLabel.setText(username);
         idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));
         idLabel.setPreferredSize(new Dimension(200,20));
+        idLabel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if(e.isMetaDown()){
+                    showPopupMenu(e.getComponent(),e.getX(),e.getY());
+                }
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
 
         statusLabel =new JLabel();
         statusLabel.setPreferredSize(new Dimension(40,40));
@@ -42,5 +78,31 @@ public class MemberText extends JPanel {
         Image image = imageIcon.getImage();                         // 但这个图片太大不适合做Icon//    为把它缩小点，先要取出这个Icon的image ,然后缩放到合适的大小
         Image smallImage = image.getScaledInstance(x,y,Image.SCALE_FAST);//    再由修改后的Image来生成合适的Icon
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
+    }
+    private void showPopupMenu(Component invoker,int x,int y){
+        JPopupMenu popupMenu=new JPopupMenu();
+        JMenuItem setAdmin = new JMenuItem("设置为管理员");
+        JMenuItem getOut=new JMenuItem("踢出群");
+        if (userStatus==0){
+            popupMenu.add(setAdmin);
+            popupMenu.add(getOut);
+        }else if (userStatus==1){
+            popupMenu.add(getOut);
+        }
+        setAdmin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("admin");
+
+            }
+        });
+        getOut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("delete");
+
+            }
+        });
+        popupMenu.show(invoker,x,y);
     }
 }

@@ -239,7 +239,7 @@ public class ChatWithGroup extends ChatFrame {
         chatPanel.add(new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",0));
     }
     public void updateMember(String avatarPath,String userName,int statue) throws IOException {
-        groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",0));
+        groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",0,this,0));
     }
     private void showEmojiMenu(){
         EmojiMenu emojiMenu=new EmojiMenu(this);
