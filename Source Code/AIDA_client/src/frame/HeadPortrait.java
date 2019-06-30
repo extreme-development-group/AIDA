@@ -11,11 +11,12 @@ import java.io.IOException;
 class HeadPortrait extends JButton {
     public static void main(String[] args) throws IOException {
         //JPanel panel=new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",1);
-        EmojiMenu emojiMenu=new EmojiMenu(new ChatWithFriends());
+        JPanel Member=new MemberText("res/Icon/11111.png","11",0);
+        //EmojiMenu emojiMenu=new EmojiMenu(new ChatWithFriends());
         JFrame frame = new JFrame("圆形按钮");
         frame.getContentPane().setBackground(Color.white);
         frame.getContentPane().setLayout(new FlowLayout());
-        frame.getContentPane().add(emojiMenu);
+        frame.getContentPane().add(Member);
         frame.setSize(200, 200);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

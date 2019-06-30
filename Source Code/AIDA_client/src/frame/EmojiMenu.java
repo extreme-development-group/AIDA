@@ -7,8 +7,8 @@ import java.awt.event.*;
 public class EmojiMenu extends JFrame{
     public JPanel panel;
     private JButton b1,b2,b3,b4,b5,b6,b7,b8,b9;
-    public ChatWithFriends chat;
-    public EmojiMenu(ChatWithFriends chat){
+    public ChatFrame chat;
+    public EmojiMenu(ChatFrame chat){
 
         this.chat=chat;
         b1=new JButton();
