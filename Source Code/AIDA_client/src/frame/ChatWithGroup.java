@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ChatWithGroup extends ChatFrame {
     public static void main(String[] args) throws IOException {
@@ -11,20 +13,31 @@ public class ChatWithGroup extends ChatFrame {
     }
     protected JButton GroupNameButton,minimize,closeButton,emojiButton,
             pictureButton,sendButton;
-    protected JPanel mainControlPanel,chatPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel,groupMemberPanel;
-    protected JScrollPane scrollPanel;
+    protected JPanel mainControlPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel,groupMemberPanel;
     protected JScrollPane memberPanel;
+
+    private int memberHeight;
+
+    public void updateMember(String avatarPath,String userName,int statue) throws IOException {
+        memberHeight=memberHeight+40;
+        groupMemberPanel.setPreferredSize(new Dimension(200,height));
+        groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",1,0,this,0));
+    }
+
+    private void showEmojiMenu(){
+        EmojiMenu emojiMenu=new EmojiMenu(this);
+    }
 
     public ChatWithGroup() throws IOException {
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
         this.add(memberPanel,BorderLayout.EAST);
-        this.add(scrollPanel,BorderLayout.CENTER);
+        this.add(scrollPane,BorderLayout.CENTER);
         this.add(controlPanel,BorderLayout.SOUTH);
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
-        updateChat("111","1111","1111",true);
+        updateChat("res/Icon/11111.png","mike","1111","1111",0);
         updateMember("111","111",1);
         this.setSize(700,520);
         setLocationRelativeTo(null);
@@ -155,6 +168,20 @@ public class ChatWithGroup extends ChatFrame {
         sendButton.setBorderPainted(false); // set don't draw border
         sendButton.setFocusPainted(false);
         sendButton.setBounds(600,0,80,30);
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String date=df.format(new Date());
+                try {
+                    updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
+                    scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+                    input.setText("");
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
 
         input=new JTextArea("");
@@ -189,11 +216,16 @@ public class ChatWithGroup extends ChatFrame {
         mainControlPanel.add(sysPanel,BorderLayout.EAST);
 
         chatPanel.setBackground(new Color(243,249,253));
-        chatPanel.setLayout(new FlowLayout());
-        scrollPanel =new JScrollPane(chatPanel);
-        scrollPanel.setBorder(null);
-        scrollPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        chatPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        scrollPane =new JScrollPane(chatPanel);
+        scrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
+        height=0;
+        scrollPane.setPreferredSize(new Dimension(500, 300));
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
+        scrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
+        scrollPane.getVerticalScrollBar().setUnitIncrement(15);
+        chatPanel.setPreferredSize(new Dimension(500,height));
 
 
 
@@ -218,13 +250,17 @@ public class ChatWithGroup extends ChatFrame {
 
         groupMemberPanel=new JPanel();
         memberPanel= new JScrollPane(groupMemberPanel);
-        groupMemberPanel.setLayout(new FlowLayout());
+        groupMemberPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 1, 1));
         memberPanel.setPreferredSize(new Dimension(200,300));
         memberPanel.setBackground(new Color(201,251,254));
         groupMemberPanel.setBackground(new Color(201,251,254));
-        memberPanel.setBorder(null);
+        memberPanel.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
+        memberHeight=40;
         memberPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        memberPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        memberPanel.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
+        memberPanel.getVerticalScrollBar().setUI(new ScrollBarUI());
+        memberPanel.getVerticalScrollBar().setUnitIncrement(15);
+        groupMemberPanel.setPreferredSize(new Dimension(200,memberHeight));
 
 
     }
@@ -235,13 +271,5 @@ public class ChatWithGroup extends ChatFrame {
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
 
-    public void updateChat(String userName,String sendTime,String message,boolean isOld) throws IOException {
-        chatPanel.add(new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",0));
-    }
-    public void updateMember(String avatarPath,String userName,int statue) throws IOException {
-        groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",0,this,0));
-    }
-    private void showEmojiMenu(){
-        EmojiMenu emojiMenu=new EmojiMenu(this);
-    }
+
 }

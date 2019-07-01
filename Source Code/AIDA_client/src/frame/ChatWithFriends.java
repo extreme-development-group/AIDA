@@ -5,6 +5,8 @@ import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
@@ -14,6 +16,27 @@ public class ChatWithFriends extends ChatFrame {
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
     protected JPanel mainControlPanel,chatPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
     protected JScrollPane scrollPane;
+    private int height;
+
+    private ImageIcon setIcon(String filepath,int x,int y){
+        ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
+        Image image = imageIcon.getImage();                         // 但这个图片太大不适合做Icon//    为把它缩小点，先要取出这个Icon的image ,然后缩放到合适的大小
+        Image smallImage = image.getScaledInstance(x,y,Image.SCALE_FAST);//    再由修改后的Image来生成合适的Icon
+        return new ImageIcon(smallImage);//   最后设置它为按钮的图片
+    }
+
+    public void updateChat(String avatarPath,String userName,String sendTime,String message,int side) throws IOException {
+
+        height=height+60;
+        chatPanel.setPreferredSize(new Dimension(500,height));
+        chatPanel.add(new SingleText(avatarPath,userName,sendTime,message,side));
+        JScrollBar bar=scrollPane.getVerticalScrollBar();
+        bar.setValue(bar.getMaximum()+50);
+    }
+
+    private void showEmojiMenu(){
+        EmojiMenu emojiMenu=new EmojiMenu(this);
+    }
 
     public ChatWithFriends() throws IOException {
         init();
@@ -23,7 +46,8 @@ public class ChatWithFriends extends ChatFrame {
         this.add(controlPanel,BorderLayout.SOUTH);
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
-        updateChat("111","1111","1111",true);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        updateChat("res/Avatar/head-test.JPG","Mike",df.format(new Date()),"1111",0);
         this.setSize(500,520);
         setLocationRelativeTo(null);
         this.setVisible(true);
@@ -187,6 +211,20 @@ public class ChatWithFriends extends ChatFrame {
         sendButton.setBorderPainted(false); // set don't draw border
         sendButton.setFocusPainted(false);
         sendButton.setBounds(400,0,80,30);
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String date=df.format(new Date());
+                try {
+                    updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
+                    scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+                    input.setText("");
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
 
         input=new JTextArea("");
@@ -205,6 +243,7 @@ public class ChatWithFriends extends ChatFrame {
 
 
         mainControlPanel.setPreferredSize(new Dimension(500,40));
+
         chatPanel.setPreferredSize(new Dimension(500,300));
         functionPanel.setPreferredSize(new Dimension(500,40));
         inputPanel.setPreferredSize(new Dimension(500,100));
@@ -221,11 +260,17 @@ public class ChatWithFriends extends ChatFrame {
         mainControlPanel.add(sysPanel,BorderLayout.EAST);
 
         chatPanel.setBackground(new Color(243,249,253));
-        chatPanel.setLayout(new FlowLayout());
+        chatPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
         scrollPane=new JScrollPane(chatPanel);
-        scrollPane.setBorder(null);
+        scrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
+        height=0;
+        scrollPane.setPreferredSize(new Dimension(500, 300));
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        scrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
+        scrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
+        scrollPane.getVerticalScrollBar().setUnitIncrement(15);
+        chatPanel.setPreferredSize(new Dimension(500,height));
+
 
 
 
@@ -253,18 +298,6 @@ public class ChatWithFriends extends ChatFrame {
         controlPanel.add(sendPanel,BorderLayout.SOUTH);
 
     }
-    private ImageIcon setIcon(String filepath,int x,int y){
-        ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
-        Image image = imageIcon.getImage();                         // 但这个图片太大不适合做Icon//    为把它缩小点，先要取出这个Icon的image ,然后缩放到合适的大小
-        Image smallImage = image.getScaledInstance(x,y,Image.SCALE_FAST);//    再由修改后的Image来生成合适的Icon
-        return new ImageIcon(smallImage);//   最后设置它为按钮的图片
-    }
 
-    public void updateChat(String userName,String sendTime,String message,boolean isOld) throws IOException {
-        chatPanel.add(new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",0));
-    }
-    private void showEmojiMenu(){
-        EmojiMenu emojiMenu=new EmojiMenu(this);
-    }
 }
 

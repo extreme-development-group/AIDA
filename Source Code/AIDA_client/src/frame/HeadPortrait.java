@@ -43,7 +43,6 @@ class HeadPortrait extends JButton {
         {
             graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             //留一个像素的空白区域，这个很重要，画圆的时候把这个覆盖
-            int border = 1;
             //图片是一个圆型
             Ellipse2D.Double shape = new Ellipse2D.Double(border , border, width-2*border, width-2*border);
             //需要保留的区域

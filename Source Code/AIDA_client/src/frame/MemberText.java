@@ -18,18 +18,12 @@ public class MemberText extends JPanel {
     private JLabel statusLabel;
     private int status;
     private int userStatus;
+    private int userID;
     private ChatWithGroup group;
 
-    public MemberText(String avatarPath,String username,int status,ChatWithGroup group,int userStatus) throws IOException {
-        this.group=group;
-        this.status=status;
-        this.userStatus=userStatus;
-        avatar=new HeadPortrait(30,30,avatarPath);
-        idLabel=new JLabel();
-        idLabel.setText(username);
-        idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));
-        idLabel.setPreferredSize(new Dimension(200,20));
-        idLabel.addMouseListener(new MouseListener() {
+    public MemberText(String avatarPath,String username,int userID,int status,ChatWithGroup group,int userStatus) throws IOException {
+        this.userID=userID;
+        this.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
@@ -45,7 +39,6 @@ public class MemberText extends JPanel {
                 if(e.isMetaDown()){
                     showPopupMenu(e.getComponent(),e.getX(),e.getY());
                 }
-
             }
 
             @Override
@@ -58,6 +51,14 @@ public class MemberText extends JPanel {
 
             }
         });
+        this.group=group;
+        this.status=status;
+        this.userStatus=userStatus;
+        avatar=new HeadPortrait(30,30,avatarPath);
+        idLabel=new JLabel();
+        idLabel.setText(username);
+        idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));
+        idLabel.setPreferredSize(new Dimension(200,20));
 
         statusLabel =new JLabel();
         statusLabel.setPreferredSize(new Dimension(40,40));
@@ -92,15 +93,13 @@ public class MemberText extends JPanel {
         setAdmin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("admin");
-
+                group.input.setText(userID+"setAdmin");
             }
         });
         getOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("delete");
-
+                group.input.setText(userID+"exit");
             }
         });
         popupMenu.show(invoker,x,y);

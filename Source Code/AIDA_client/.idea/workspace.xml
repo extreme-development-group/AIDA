@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java" line="266" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="79073fca-de88-4332-94cc-2ca43276fba7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/frame/EmojiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/EmojiMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frame/ScrollBarUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithFriends.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatWithGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_client/frame/MemberText.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/ChatFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/ChatFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/ChatWithFriends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/ChatWithFriends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/ChatWithGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/ChatWithGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/HeadPortrait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/HeadPortrait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/frame/MemberText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/MemberText.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,41 +40,52 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="265" column="33" lean-forward="true" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
+            <state relative-caret-position="294">
+              <caret line="220" column="97" lean-forward="true" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3353#3354#0" expanded="true" />
-                <element signature="e#3419#3420#0" expanded="true" />
-                <element signature="e#3189#3190#0" expanded="true" />
-                <element signature="e#3235#3236#0" expanded="true" />
-                <element signature="e#3601#3602#0" expanded="true" />
-                <element signature="e#3648#3649#0" expanded="true" />
-                <element signature="e#9371#9372#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
+                <element signature="e#3873#3874#0" expanded="true" />
+                <element signature="e#3939#3940#0" expanded="true" />
+                <element signature="e#4708#4709#0" expanded="true" />
+                <element signature="e#4770#4771#0" expanded="true" />
+                <element signature="e#5335#5336#0" expanded="true" />
+                <element signature="e#5382#5383#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
+        <entry file="file://$PROJECT_DIR$/src/frame/ScrollBarUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+            <state relative-caret-position="309">
+              <caret line="79" column="6" lean-forward="true" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3359#3360#0" expanded="true" />
-                <element signature="e#3425#3426#0" expanded="true" />
-                <element signature="e#4194#4195#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-897">
+              <caret line="179" column="42" lean-forward="true" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#4256#4257#0" expanded="true" />
-                <element signature="e#4821#4822#0" expanded="true" />
-                <element signature="e#4868#4869#0" expanded="true" />
-                <element signature="e#9464#9465#0" expanded="true" />
-                <element signature="e#9519#9520#0" expanded="true" />
+                <element signature="e#4322#4323#0" expanded="true" />
+                <element signature="e#5091#5092#0" expanded="true" />
+                <element signature="e#5151#5152#0" expanded="true" />
+                <element signature="e#5716#5717#0" expanded="true" />
+                <element signature="e#5763#5764#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,17 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+            <state relative-caret-position="276">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,19 +104,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/Status/anchor-fill.png">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3760#3761#0" expanded="true" />
+                <element signature="e#3833#3834#0" expanded="true" />
+                <element signature="e#3980#3981#0" expanded="true" />
+                <element signature="e#4061#4062#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="516">
               <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5171#5172#0" expanded="true" />
-                <element signature="e#5206#5207#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="4991">
               <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
             </state>
           </provider>
@@ -108,8 +143,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/HeadPortrait.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="736">
+              <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,7 +155,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/imageio/ImageIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="27692">
               <caret line="1300" column="18" selection-start-line="1300" selection-start-column="18" selection-end-line="1300" selection-end-column="18" />
             </state>
           </provider>
@@ -129,7 +164,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/SingleText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
+            <state relative-caret-position="194">
               <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -159,20 +194,21 @@
         <option value="$PROJECT_DIR$/src/BufferedImageBuilder.java" />
         <option value="$PROJECT_DIR$/src/HeadPortrait.java" />
         <option value="$PROJECT_DIR$/src/frame/SingleText.java" />
+        <option value="$PROJECT_DIR$/src/frame/EmojiMenu.java" />
+        <option value="$PROJECT_DIR$/src/frame/MemberText.java" />
+        <option value="$PROJECT_DIR$/src/frame/ScrollBarUI.java" />
         <option value="$PROJECT_DIR$/src/frame/HeadPortrait.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatFrame.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatWithFriends.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatWithGroup.java" />
-        <option value="$PROJECT_DIR$/src/frame/EmojiMenu.java" />
-        <option value="$PROJECT_DIR$/src/frame/MemberText.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="661" />
-    <option name="y" value="28" />
-    <option name="width" value="1571" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1330" />
+    <option name="y" value="365" />
+    <option name="width" value="1295" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -180,6 +216,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -191,6 +229,12 @@
               <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Avatar" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -213,8 +257,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,6 +265,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -293,8 +336,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ChatWithGroup" />
-        <item itemvalue="Application.HeadPortrait" />
         <item itemvalue="Application.ChatWithFriends" />
+        <item itemvalue="Application.HeadPortrait" />
         <item itemvalue="Application.GenerateAvatarImage" />
         <item itemvalue="Application.CircleButton" />
       </list>
@@ -311,28 +354,29 @@
       <option name="presentableId" value="Default" />
       <updated>1561852876106</updated>
       <workItem from="1561852879261" duration="114000" />
-      <workItem from="1561853101332" duration="46811000" />
+      <workItem from="1561853101332" duration="47008000" />
+      <workItem from="1561941428156" duration="14000" />
+      <workItem from="1561941451285" duration="9405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46925000" />
+    <option name="totallyTimeSpent" value="56541000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1104" y="7" width="1571" height="1047" extended-state="0" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16611515" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17213663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32968238" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23338048" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,6 +386,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,24 +414,16 @@
     <entry file="file://$PROJECT_DIR$/res/Icon/mini_selected.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/Icon/camera (2).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Icon/smile (3).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Icon/camera (2).png" />
+    <entry file="file://$PROJECT_DIR$/res/Icon/smile (3).png" />
     <entry file="file://$PROJECT_DIR$/res/Icon/phone.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/res/Icon/smile.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp-blank.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp-avatar.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp-blank.png" />
+    <entry file="file://$PROJECT_DIR$/temp-avatar.png" />
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -431,26 +468,46 @@
     <entry file="file://$PROJECT_DIR$/res/Emoji/EMOJI-03.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/Status/anchor-fill.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="4991">
           <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/Status/anchor-fill.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/imageio/ImageIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="27692">
           <caret line="1300" column="18" selection-start-line="1300" selection-start-column="18" selection-end-line="1300" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/ScrollBarUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="79" column="6" lean-forward="true" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/SingleText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
+        <state relative-caret-position="194">
           <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -460,74 +517,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/HeadPortrait.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="736">
+          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3359#3360#0" expanded="true" />
-            <element signature="e#3425#3426#0" expanded="true" />
-            <element signature="e#4194#4195#0" expanded="true" />
-            <element signature="e#4256#4257#0" expanded="true" />
-            <element signature="e#4821#4822#0" expanded="true" />
-            <element signature="e#4868#4869#0" expanded="true" />
-            <element signature="e#9464#9465#0" expanded="true" />
-            <element signature="e#9519#9520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="265" column="33" lean-forward="true" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3353#3354#0" expanded="true" />
-            <element signature="e#3419#3420#0" expanded="true" />
-            <element signature="e#3189#3190#0" expanded="true" />
-            <element signature="e#3235#3236#0" expanded="true" />
-            <element signature="e#3601#3602#0" expanded="true" />
-            <element signature="e#3648#3649#0" expanded="true" />
-            <element signature="e#9371#9372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/EmojiMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5171#5172#0" expanded="true" />
-            <element signature="e#5206#5207#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/MemberText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3833#3834#0" expanded="true" />
+            <element signature="e#3980#3981#0" expanded="true" />
+            <element signature="e#4061#4062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithFriends.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="220" column="97" lean-forward="true" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#3873#3874#0" expanded="true" />
+            <element signature="e#3939#3940#0" expanded="true" />
+            <element signature="e#4708#4709#0" expanded="true" />
+            <element signature="e#4770#4771#0" expanded="true" />
+            <element signature="e#5335#5336#0" expanded="true" />
+            <element signature="e#5382#5383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/ChatWithGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-897">
+          <caret line="179" column="42" lean-forward="true" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4256#4257#0" expanded="true" />
+            <element signature="e#4322#4323#0" expanded="true" />
+            <element signature="e#5091#5092#0" expanded="true" />
+            <element signature="e#5151#5152#0" expanded="true" />
+            <element signature="e#5716#5717#0" expanded="true" />
+            <element signature="e#5763#5764#0" expanded="true" />
           </folding>
         </state>
       </provider>
