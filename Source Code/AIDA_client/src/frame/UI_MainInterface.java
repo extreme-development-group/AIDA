@@ -1,5 +1,6 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Ellipse2D;
@@ -19,9 +20,11 @@ public class UI_MainInterface extends JFrame {
     private JLabel divLine1, divLine2, divLine3;
     // friendListPanel
     private JPanel friendListPanel;
+    private listScrollPanel friendListJSP;
     // friendPanel
     // groupListPanel
     private JPanel groupListPanel;
+    private listScrollPanel groupListJSP;
     // groupPanel
 
     UI_MainInterface() {
@@ -39,7 +42,7 @@ public class UI_MainInterface extends JFrame {
         addMouseListener(adapter);
         addMouseMotionListener(adapter);
 
-        setSize(upPanel.getWidth(), 500);
+        setSize(upPanel.getWidth(), upPanel.getHeight()+400);
         setLocationRelativeTo(null);
         setVisible(true);
     }
@@ -49,8 +52,8 @@ public class UI_MainInterface extends JFrame {
         initListPanel();
 
         add(upPanel);
-        add(friendListPanel);
-        add(groupListPanel);
+        add(friendListJSP);
+        add(groupListJSP);
     }
 
     private void initupPanel() {
@@ -125,7 +128,6 @@ public class UI_MainInterface extends JFrame {
                 signature.setSelectionEnd(0);
                 signature.setBackground(null);
                 signature.setEnabled(false);
-//                signature.setEditable(false);
                 if(signature.getText().equals("")) {
                     signature.setText("个性签名");
                 }
@@ -153,11 +155,11 @@ public class UI_MainInterface extends JFrame {
         friendsButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 // 保持按下
-                friendListPanel.setVisible(true);
+                friendListJSP.setVisible(true);
                 friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
                 friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
                 // 另一弹起
-                groupListPanel.setVisible(false);
+                groupListJSP.setVisible(false);
                 groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_normal.png"));
                 groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_hover.png"));
                 super.mouseClicked(e);
@@ -177,11 +179,11 @@ public class UI_MainInterface extends JFrame {
         groupsButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 // 保持按下
-                groupListPanel.setVisible(true);
+                groupListJSP.setVisible(true);
                 groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
                 groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
                 // 另一弹起
-                friendListPanel.setVisible(false);
+                friendListJSP.setVisible(false);
                 friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_normal.png"));
                 friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_hover.png"));
                 super.mouseClicked(e);
@@ -210,11 +212,24 @@ public class UI_MainInterface extends JFrame {
 
     private void initListPanel() {
         friendListPanel = new listPanel();
-        friendListPanel.add(new friendPanel());
+        friendListJSP = new listScrollPanel(friendListPanel);
+        add(friendListJSP);
+
+        for(int i=0; i<5; i++) {
+            friendListPanel.setPreferredSize(new Dimension(250, 50*i));
+            friendListPanel.add(new friendPanel());
+        }
 
         groupListPanel = new listPanel();
-        groupListPanel.add(new groupPanel());
-        groupListPanel.setVisible(false);
+        groupListJSP = new listScrollPanel(groupListPanel);
+        add(groupListJSP);
+
+        for(int i=0; i<15; i++) {
+            groupListPanel.setPreferredSize(new Dimension(250, 50*i));
+            groupListPanel.add(new groupPanel());
+        }
+
+        groupListJSP.setVisible(false);
     }
 
     public static void main(String[] args) {
@@ -226,9 +241,23 @@ public class UI_MainInterface extends JFrame {
 // listPanel
 class listPanel extends JPanel {
     listPanel() {
-        setBounds(0, 165, 250, 400);
+        setLocation(0, 165);
+        setPreferredSize(new Dimension(250, 397)); // jscrollpanel有3像素未知区域。。。
         setBackground(new Color(238, 255, 250));
         setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
+    }
+}
+
+// listScrollPanel
+class listScrollPanel extends JScrollPane {
+    listScrollPanel(JPanel jp) {
+        super(jp);
+        setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        getVerticalScrollBar().setUI(new ScrollBarUI());
+        getVerticalScrollBar().setUnitIncrement(15);
+        setBounds(0, 165, 250, 400);
+        setBorder(null);
     }
 }
 
@@ -236,11 +265,26 @@ class listPanel extends JPanel {
 class friendPanel extends JPanel {
     private RoundHeadPortrait headPortrait;
     private JLabel nickname, status, signature;
+    private Color originColor, hoverColor;
     friendPanel() {
+        originColor = new Color(245, 245, 245);
+        hoverColor = new Color(255, 255, 255);
+
         setPreferredSize(new Dimension(250, 50));
-        setBackground(new Color(230, 230, 230, 200));
+        setBackground(originColor);
         setLayout(null);
         init();
+
+        addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent e) {
+                setBackground(hoverColor);
+                super.mouseEntered(e);
+            }
+            public void mouseExited(MouseEvent e) {
+                setBackground(originColor);
+                super.mouseExited(e);
+            }
+        });
     }
 
     private void init() {
@@ -271,15 +315,31 @@ class friendPanel extends JPanel {
         add(status);
     }
 }
+
 // groupPanel
 class groupPanel extends JPanel {
     private RoundHeadPortrait headPortrait;
     private JLabel groupName;
+    private Color originColor, hoverColor;
     groupPanel() {
+        originColor = new Color(245, 245, 245);
+        hoverColor = new Color(255, 255, 255);
+
         setPreferredSize(new Dimension(250, 50));
-        setBackground(new Color(230, 230, 230, 200));
+        setBackground(originColor);
         setLayout(null);
         init();
+
+        addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent e) {
+                setBackground(hoverColor);
+                super.mouseEntered(e);
+            }
+            public void mouseExited(MouseEvent e) {
+                setBackground(originColor);
+                super.mouseExited(e);
+            }
+        });
     }
 
     private void init() {
@@ -411,5 +471,57 @@ class DragWindowListener extends MouseAdapter {
     public void mouseClicked(MouseEvent e) {
         SwingUtilities.getRoot((Component) e.getSource()).requestFocus();
         super.mouseClicked(e);
+    }
+}
+
+// 滚动条样式
+class ScrollBarUI extends BasicScrollBarUI {
+    // 更改滑道颜色与滚动条宽度
+    protected void configureScrollBarColors() {
+        // 滑道
+        trackColor = new Color(0, 0, 0, 0);
+
+        // 滚动条宽度
+        scrollBarWidth = 10;
+    }
+
+    protected void paintTrack(Graphics g, JComponent c, Rectangle trackBounds) {
+        super.paintTrack(g, c, trackBounds);
+    }
+
+    // 更改滚动条内部样式(滑块颜色,滑块宽度,把手颜色等)
+    protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
+        // 重写父类方法，如果不加这一句无法拖动滑动条
+        g.translate(thumbBounds.x, thumbBounds.y);
+
+        // 设置把手颜色
+        g.setColor(Color.black);
+
+        // 消除锯齿
+        Graphics2D g2 = (Graphics2D) g;
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.addRenderingHints(rh);
+
+        // 设置半透明效果
+        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.1f));
+
+        // 填充圆角矩形
+        g2.fillRoundRect(0, 0, 10, thumbBounds.height - 1, 15, 15);
+    }
+
+    // 隐藏向下点击的按钮
+    protected JButton createIncreaseButton(int orientation) {
+        JButton button = new JButton();
+
+        // 使按钮不显示
+        button.setVisible(false);
+        return button;
+    }
+
+    // 隐藏向上点击的按钮
+    protected JButton createDecreaseButton(int orientation) {
+        JButton button = new JButton();
+        button.setVisible(false);
+        return button;
     }
 }
