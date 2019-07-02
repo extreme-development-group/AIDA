@@ -1,4 +1,4 @@
-package frame;
+package frame.ChatFrame;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;

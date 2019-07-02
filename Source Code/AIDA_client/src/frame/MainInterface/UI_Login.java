@@ -1,11 +1,8 @@
-import javax.imageio.ImageIO;
+package frame.MainInterface;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class UI_Login extends JFrame {
     // upPanel

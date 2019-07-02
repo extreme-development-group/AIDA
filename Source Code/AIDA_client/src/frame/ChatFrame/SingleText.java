@@ -1,8 +1,7 @@
-package frame;
+package frame.ChatFrame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 public class SingleText extends JPanel {
     public static int LEFT=0;

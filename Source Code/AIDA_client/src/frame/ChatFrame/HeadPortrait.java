@@ -1,4 +1,4 @@
-package frame;
+package frame.ChatFrame;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package frame;
+package frame.MainInterface;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

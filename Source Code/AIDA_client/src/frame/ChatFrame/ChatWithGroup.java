@@ -1,4 +1,4 @@
-package frame;
+package frame.ChatFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,11 +17,16 @@ public class ChatWithGroup extends ChatFrame {
     protected JScrollPane memberPanel;
 
     private int memberHeight;
+    public void updateChat(String avatarPath,String userName,String sendTime,String message,int side) throws IOException {
+        height=height+60;
+        chatPanel.setPreferredSize(new Dimension(500,height));
+        //chatPanel.add(new SingleText(avatarPath,userName,sendTime,message,side));
+    }
 
     public void updateMember(String avatarPath,String userName,int statue) throws IOException {
         memberHeight=memberHeight+40;
         groupMemberPanel.setPreferredSize(new Dimension(200,height));
-        groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",1,0,this,0));
+        //groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",1,0,this,0));
     }
 
     private void showEmojiMenu(){

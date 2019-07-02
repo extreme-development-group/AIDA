@@ -69,7 +69,7 @@ public final class DataStream implements Runnable {
                 scMessage = in.readUTF();
 
                 // 解析处理消息
-                ChatExecute.execute(scMessage);
+                //ChatExecute.execute(scMessage);
             }
         } catch (IOException e) {
             /* 如果程序执行到这里，可能是因为与服务器断开连接，所以需要关闭这些流 */

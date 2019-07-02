@@ -1,9 +1,8 @@
-package frame;
+package frame.ChatFrame;
 
 import client.InteractWithServer;
 
 import javax.swing.*;
-import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
@@ -229,13 +228,9 @@ public class ChatWithFriends extends ChatFrame {
             public void actionPerformed(ActionEvent e) {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String date=df.format(new Date());
-                try {
-                    updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
-                    scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
-                    input.setText("");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+                //updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
+                scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+                input.setText("");
             }
         });
 

@@ -1,17 +1,9 @@
-import frame.DragWindowListener;
-import frame.RoundHeadPortrait;
-import frame.UI_Minimize;
+package frame.MainInterface;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class UI_MainInterface extends JFrame {
     // upPanel

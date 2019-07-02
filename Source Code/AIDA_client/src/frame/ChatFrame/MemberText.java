@@ -1,4 +1,4 @@
-package frame;
+package frame.ChatFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +21,7 @@ public class MemberText extends JPanel {
     private int userID;
     private ChatWithGroup group;
 
-    public MemberText(String avatarPath,String username,int userID,int status,ChatWithGroup group,int userStatus) throws IOException {
+    public MemberText(Image memAvatar,String username,int userID,int status,ChatWithGroup group,int userStatus) throws IOException {
         this.userID=userID;
         this.addMouseListener(new MouseListener() {
             @Override
@@ -54,7 +54,7 @@ public class MemberText extends JPanel {
         this.group=group;
         this.status=status;
         this.userStatus=userStatus;
-        avatar=new HeadPortrait(30,30,avatarPath);
+        avatar=new HeadPortrait(30,30,memAvatar);
         idLabel=new JLabel();
         idLabel.setText(username);
         idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));

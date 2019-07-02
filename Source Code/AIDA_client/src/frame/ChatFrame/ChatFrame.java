@@ -1,4 +1,4 @@
-package frame;
+package frame.ChatFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,9 +9,5 @@ public class ChatFrame extends JFrame {
     protected int height;
     protected JPanel chatPanel;
     protected JScrollPane scrollPane;
-    public void updateChat(String avatarPath,String userName,String sendTime,String message,int side) throws IOException {
-        height=height+60;
-        chatPanel.setPreferredSize(new Dimension(500,height));
-        chatPanel.add(new SingleText(avatarPath,userName,sendTime,message,side));
-    }
+
 }
