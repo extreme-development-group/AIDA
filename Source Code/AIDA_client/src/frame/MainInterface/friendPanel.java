@@ -1,6 +1,7 @@
 package frame.MainInterface;
 
 import frame.ChatFrame.ChatWithFriends;
+import frame.Listener.deleteListener;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,6 +26,7 @@ public class friendPanel extends JPanel {
     }
     private String fSignature;
     private Image fHead;
+    private UI_MainInterface now;
 
     friendPanel(String id,Image fHead,String fName,String fSignature,String fOnline,UI_MainInterface now) throws IOException {
         fid = id;
@@ -35,6 +37,7 @@ public class friendPanel extends JPanel {
         this.fName=fName;
         this.fSignature=fSignature;
         this.fOnline=fOnline;
+        this.now=now;
 
         setPreferredSize(new Dimension(250, 50));
         setBackground(originColor);
