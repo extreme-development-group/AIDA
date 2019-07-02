@@ -1,5 +1,7 @@
 package frame.MainInterface;
 
+import frame.Listener.LoginListener;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -212,11 +214,8 @@ public class UI_Login extends JFrame {
         loginButton.setBounds(userID.getX(), rememberPasswd.getY()+rememberPasswd.getHeight()+7, 190, 30);
         loginButton.setFocusPainted(false); // 去除选中时文字焦点
         loginButton.setBackground(new Color(9, 163, 220));
-        loginButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                loading();
-            }
-        });
+        LoginListener loginListener=new LoginListener(this,userID,passwd,rememberPasswd,autoLogin);
+        loginButton.addActionListener(loginListener);
         downPanel.add(loginButton);
     }
 
@@ -362,7 +361,7 @@ public class UI_Login extends JFrame {
     }
 
     // 切换到初始登录界面
-    private void toLoginPanel() {
+    public void toLoginPanel() {
         Thread t = new Thread(new Runnable() {
             public void run() {
                 registerPanel.setVisible(false);
@@ -382,8 +381,17 @@ public class UI_Login extends JFrame {
         t.start();
     }
 
+    // 加载返回登录
+    public void backtoLoginPanel() {
+        loadingPanel.setVisible(false);
+        headPortrait.setLocation(40, 20);
+        downPanel.add(headPortrait);
+        downPanel.setVisible(true);
+    }
+
+
     // 登陆中
-    private void loading() {
+    public void loading() {
         // 先将头像框加到loadingPanel
         loadingPanel.add(headPortrait);
         // 判断是从注册跳转而来还是直接登录
@@ -412,13 +420,15 @@ public class UI_Login extends JFrame {
             Thread t = new Thread(new Runnable() {
                 public void run() {
                     downPanel.setVisible(false);
-                    try{
-                        Thread.sleep(100);
-                    } catch (Exception e) {
-                        System.out.println();
-                    }
                     loadingPanel.setVisible(true);
                     headPortrait.setLocation(175, 20);
+//
+//                    //
+//                    try{
+//                        Thread.sleep(1000);
+//                    } catch (Exception e) {
+//                        System.out.println();
+//                    }
                 }
             });
             t.start();

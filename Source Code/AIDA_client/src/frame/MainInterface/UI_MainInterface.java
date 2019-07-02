@@ -1,19 +1,28 @@
 package frame.MainInterface;
 
-import config.UserInfo;
+import client.InteractWithServer;
+import frame.ChatFrame.ChatWithFriends;
+import frame.ChatFrame.ChatWithGroup;
+import frame.ChatFrame.GetAvatar;
+import frame.ChatFrame.HeadPortrait;
+import user.User;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicBorders;
 import javax.swing.plaf.basic.BasicMenuItemUI;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UI_MainInterface extends JFrame {
     // upPanel
     private JPanel upPanel, choosePanel;
     private JButton minimizeButton, closeButton;
-    private RoundHeadPortrait headPortrait;
+    private JButton headPortrait;
     private JLabel nickname;
     private JTextField signature;
     private JButton friendsButton, groupsButton;
@@ -26,9 +35,37 @@ public class UI_MainInterface extends JFrame {
     private JPanel groupListPanel;
     private listScrollPanel groupListJSP;
     // groupPanel
+    //user information
+    public User userInfo;
+    public static HashMap<String, friendPanel> friend;
+    public static HashMap<String, groupPanel> group;
+    public static HashMap<String, ChatWithFriends> withFriend;
+    public static HashMap<String, ChatWithGroup> withGroup;
 
-    UI_MainInterface() {
-        setTitle("NickName"+" -- 在线");
+    public UI_MainInterface(String userIdString) throws IOException {
+        //信息载入
+        userInfo= InteractWithServer.getUserInfo(userIdString);
+        // 调试
+        System.out.println("----------- 个人信息 --------------");
+        System.out.println("ID：" + userInfo.getUserId());
+        System.out.println("昵称：" + userInfo.getUserName());
+        System.out.println("Email：" + userInfo.getUserEmail());
+        System.out.println("性别：" + userInfo.getUserSex());
+        System.out.println("生日：" + userInfo.getUserBirthday());
+        System.out.println("头像：" + userInfo.getUserAvatar());
+        System.out.println("个性签名：" + userInfo.getUserSignatrue());
+        System.out.println("注册时间：" + userInfo.getUserRegistertime());
+        System.out.print("好友列表 :");
+        for (int i = 0; i < userInfo.getFriends().size(); i++)
+            System.out.print(userInfo.getFriends().get(i).getName() + " ");
+        System.out.print("\n群列表 ： ");
+        for (int i = 0; i < userInfo.getGroups().size(); i++)
+            System.out.print(userInfo.getGroups().get(i).getName() + " ");
+        System.out.println("\n----------- END --------------");
+
+
+
+
         setIconImage(Toolkit.getDefaultToolkit().createImage("res/MainInterface/qq_logo.png"));
         setUndecorated(true);
         setResizable(false);
@@ -47,7 +84,30 @@ public class UI_MainInterface extends JFrame {
         setVisible(true);
     }
 
-    private void init() {
+    public static HashMap<String, friendPanel> getFriend() {
+        return friend;
+    }
+
+    public static void setFriend(HashMap<String, friendPanel> friend) {
+        UI_MainInterface.friend = friend;
+    }
+
+    public static HashMap<String, groupPanel> getGroup() {
+        return group;
+    }
+
+    public static void setGroup(HashMap<String, groupPanel> group) {
+        UI_MainInterface.group = group;
+    }
+    public static HashMap<String, ChatWithFriends> getFriendChat() {
+        return withFriend;
+    }
+
+    public static HashMap<String, ChatWithGroup> getGroupChat() {
+        return withGroup;
+    }
+
+    private void init() throws IOException {
         initupPanel();
         initListPanel();
 
@@ -81,23 +141,26 @@ public class UI_MainInterface extends JFrame {
         });
         upPanel.add(minimizeButton);
         // 头像框
+        //
+        //设置头像
+        //
         try {
-            headPortrait = new RoundHeadPortrait(70, 70, new Color(128, 255, 255),"res/MainInterface/headPortrait.jpg");
+            headPortrait = new RoundHeadPortrait(70, 70, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
         } catch (Exception e) {
             System.out.println("Get headPortrait ERROR!");
         }
         headPortrait.setLocation(20, 40);
         upPanel.add(headPortrait);
         // 昵称
-        nickname = new JLabel("昵称");
+        nickname = new JLabel(userInfo.getUserName());
         nickname.setBounds(105, 50, 100, 16);
-        nickname.setFont(new Font("微软雅黑", Font.BOLD, 15));
+        nickname.setFont(new Font("微软雅黑", Font.BOLD, 14));
         nickname.setForeground(Color.WHITE);
         upPanel.add(nickname);
         // 个性签名
-        signature = new JTextField("个性签名");
+        signature = new JTextField(userInfo.getUserSignatrue());
         signature.setBounds(105, 80, 130, 16);
-        signature.setFont(new Font("微软雅黑", Font.PLAIN, 14));
+        signature.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         signature.setBorder(null);
         signature.setForeground(Color.black);
         signature.setBackground(null);
@@ -210,30 +273,38 @@ public class UI_MainInterface extends JFrame {
         upPanel.add(choosePanel);
     }
 
-    private void initListPanel() {
+    private void initListPanel() throws IOException {
         friendListPanel = new listPanel();
         friendListJSP = new listScrollPanel(friendListPanel);
         add(friendListJSP);
+        Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
 
-        for(int i=0; i<5; i++) {
+        for(int i=0; i<this.userInfo.getFriends().size(); i++) {
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
-            friendListPanel.add(new friendPanel(i));
+            friendPanel friendPanel= new friendPanel(this.userInfo.getFriends().get(i).getId(),
+                    image,this.userInfo.getFriends().get(i).getName(),
+                    this.userInfo.getFriends().get(i).getSignature(),
+                    "在线",this);
+            friendListPanel.add(friendPanel);
         }
 
         groupListPanel = new listPanel();
         groupListJSP = new listScrollPanel(groupListPanel);
         add(groupListJSP);
 
-        for(int i=0; i<15; i++) {
+        for(int i=0; i<this.userInfo.getGroups().size(); i++) {
             groupListPanel.setPreferredSize(new Dimension(250, 50*i));
-            groupListPanel.add(new groupPanel(i));
+            groupPanel group=new groupPanel(this.userInfo.getGroups().get(i).getId(),
+                    image,
+                    this.userInfo.getGroups().get(i).getName(),
+                    this.userInfo.getGroups().get(i).getSignature(),this);
+            groupListPanel.add(group);
         }
-
         groupListJSP.setVisible(false);
     }
 
-    public static void main(String[] args) {
-        UI_MainInterface demo = new UI_MainInterface();
+    public static void main(String[] args) throws IOException {
+        UI_MainInterface demo = new UI_MainInterface("111");
     }
 
 }
@@ -262,108 +333,39 @@ class listScrollPanel extends JScrollPane {
 }
 
 // friendPanel
-class friendPanel extends JPanel {
-    private RoundHeadPortrait headPortrait;
-    private JLabel nickname, status, signature;
-    private Color originColor, hoverColor;
 
-    public int getUserID() {
-        return UserID;
-    }
 
-    //    private UserInfo userinfo;
-    private int UserID = 1;
-    // just for test
-
-    friendPanel(int id) {
-        UserID = id;
-        originColor = new Color(245, 245, 245);
-        hoverColor = new Color(255, 255, 255);
-
-        setPreferredSize(new Dimension(250, 50));
-        setBackground(originColor);
-        setLayout(null);
-        init();
-
-        addMouseListener(new MouseAdapter() {
-            // 右键弹出菜单
-            // 鼠标释放弹出
-            public void mouseReleased(MouseEvent e) {
-                if(e.getButton() == MouseEvent.BUTTON3) {
-                    MyPopupMenu friendPopupMenu = new MyPopupMenu();
-                    MyMenuItem chatItem = new MyMenuItem("发送消息");
-                    chatItem.addActionListener(new ActionListener() {
-                        public void actionPerformed(ActionEvent e) {
-                            System.out.println( UserID );
-                        }
-                    });
-                    MyMenuItem deleteItem = new MyMenuItem("删除好友");
-                    deleteItem.addActionListener(new deleteListener((JPanel)e.getComponent()));
-                    MyMenuItem infoItem = new MyMenuItem("个人资料");
-                    friendPopupMenu.add(chatItem);
-                    friendPopupMenu.add(infoItem);
-                    friendPopupMenu.add(deleteItem);
-                    friendPopupMenu.show(e.getComponent(), e.getX(), e.getY());
-                }
-                super.mouseClicked(e);
-            }
-
-            public void mouseEntered(MouseEvent e) {
-                setBackground(hoverColor);
-                super.mouseEntered(e);
-            }
-            public void mouseExited(MouseEvent e) {
-                setBackground(originColor);
-                super.mouseExited(e);
-            }
-        });
-    }
-
-    private void init() {
-        // 头像
-        try {
-            headPortrait = new RoundHeadPortrait(40, 40, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
-        } catch (Exception e) {
-            System.out.println();
-        }
-        headPortrait.setLocation(5,5);
-        add(headPortrait);
-        // 昵称
-        nickname = new JLabel("昵称"+UserID);
-        nickname.setBounds(55, 8, 100, 16);
-        nickname.setFont(new Font("微软雅黑", Font.BOLD, 14));
-        add(nickname);
-        // 个性签名
-        signature = new JLabel("个性签名");
-        signature.setBounds(55, 28, 130, 14);
-        signature.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-        signature.setForeground(Color.gray);
-        add(signature);
-        // 状态
-        status = new JLabel("在线");
-        status.setBounds(200, nickname.getY(), 30, 16);
-        status.setFont(new Font("微软雅黑", Font.BOLD, 14));
-        status.setForeground(Color.BLACK);
-        add(status);
-    }
-}
 
 // groupPanel
 class groupPanel extends JPanel {
+
     private RoundHeadPortrait headPortrait;
     private JLabel groupName;
     private Color originColor, hoverColor;
+    //    private UserInfo userinfo;
+    private String fid;
+    // just for test
+    private String fName,fSignature;
+    private Image fHead;
+    private boolean isOnline;
+    private UI_MainInterface now;
 
-    public int getGroupID() {
+
+    public String getGroupID() {
         return groupID;
     }
 
     //    private groupInfo groupID;
-    private int groupID = 1;
+    private String groupID;
     // just for test
 
-    groupPanel(int id) {
+    groupPanel(String id,Image fHead,String fName,String fSignature,UI_MainInterface now) {
         groupID = id;
+        this.fHead=fHead;
+        this.fName=fName;
+        this.fSignature=fSignature;
+        this.now=now;
+
         originColor = new Color(245, 245, 245);
         hoverColor = new Color(255, 255, 255);
 
@@ -371,21 +373,55 @@ class groupPanel extends JPanel {
         setBackground(originColor);
         setLayout(null);
         init();
+        addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2) {
+                    try {
+                        now.withGroup.put(fid,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),fid,fName,fHead,fHead,0));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
 
         addMouseListener(new MouseAdapter() {
             public void mouseReleased(MouseEvent e) {
-                MyPopupMenu groupPopupMenu = new MyPopupMenu();
-                MyMenuItem enterItem = new MyMenuItem("进入群聊");
-                enterItem.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        System.out.println( groupID );
-                    }
-                });
-                MyMenuItem exitItem = new MyMenuItem("退出群聊");
-                groupPopupMenu.add(enterItem);
-                groupPopupMenu.add(exitItem);
-                groupPopupMenu.show(e.getComponent(), e.getX(), e.getY());
-                super.mouseReleased(e);
+                if (e.getButton()==e.BUTTON3){
+                    MyPopupMenu groupPopupMenu = new MyPopupMenu();
+                    MyMenuItem enterItem = new MyMenuItem("进入群聊");
+                    enterItem.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            System.out.println( groupID );
+                        }
+                    });
+                    MyMenuItem exitItem = new MyMenuItem("退出群聊");
+                    groupPopupMenu.add(enterItem);
+                    groupPopupMenu.add(exitItem);
+                    groupPopupMenu.show(e.getComponent(), e.getX(), e.getY());
+                    super.mouseReleased(e);
+                }
             }
 
             public void mouseEntered(MouseEvent e) {
@@ -503,7 +539,7 @@ class deleteListener implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         friendPanel temp = (friendPanel)parentPanel;
-        System.out.println("删除" + temp.getUserID() );
+        System.out.println("删除" + temp.getFid() );
         // 流式布局自动位移
         temp.setVisible(false);
 

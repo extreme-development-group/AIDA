@@ -53,13 +53,7 @@ public final class DataStream implements Runnable {
     }
 
     /*
-     * （非 Javadoc）
-     *
      * @Description: 因为数据输入流读取时候会阻塞，所以将其单独分配在一个线程里面
-     *
-     * @see java.lang.Runnable#run()
-     *
-     * @exception: IOException 如果与服务器连接中断导致数据输入流读取异常，产生IOException.
      */
     @Override
     public void run() {
@@ -69,7 +63,7 @@ public final class DataStream implements Runnable {
                 scMessage = in.readUTF();
 
                 // 解析处理消息
-                //ChatExecute.execute(scMessage);
+                ChatExecute.execute(scMessage);
             }
         } catch (IOException e) {
             /* 如果程序执行到这里，可能是因为与服务器断开连接，所以需要关闭这些流 */

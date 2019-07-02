@@ -1,6 +1,6 @@
 package frame.ChatFrame;
 
-import client.InteractWithServer;
+import frame.Listener.SendFriend;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -8,12 +8,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.Vector;
 
 public class ChatWithGroup extends ChatFrame {
     public static void main(String[] args) throws IOException {
         Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
-        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,"11",0);
+        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,image,0);
     }
     protected JButton GroupNameButton,minimize,closeButton,emojiButton,
             pictureButton,sendButton;
@@ -21,33 +20,36 @@ public class ChatWithGroup extends ChatFrame {
     protected JScrollPane memberPanel;
 
     private int memberHeight;
-    private String fName,fid,fAvatarString,mid,mName;
+    private String fName,fid,mid,mName;
     private int messageNum;
     private int height;
     private Image fHeadPic,mHeadPic;
     private int userStatue;
-    public void addMember(String uid, String uName, int statue) throws IOException {
-        Image image=GetAvatar.getAvatarImage(uid,"./Data/Avatar/User/",fAvatarString).getImage();
-        memberHeight=memberHeight+40;
-        groupMemberPanel.setPreferredSize(new Dimension(200,height));
-        groupMemberPanel.add(new MemberText(image,uName,uid,statue,this, userStatue));
-        memberPanel.getViewport().setViewPosition(new Point(0,groupMemberPanel.getHeight()));
+    public void addMember(String uid, String uName, int statue){
+        try {
+            Image image = ImageIO.read(new File("res/Avatar/head-test.JPG"));
+            memberHeight=memberHeight+40;
+            groupMemberPanel.setPreferredSize(new Dimension(200,height));
+            groupMemberPanel.add(new MemberText(image,uName,uid,statue,this, userStatue));
+            memberPanel.getViewport().setViewPosition(new Point(0,groupMemberPanel.getHeight()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void showEmojiMenu(){
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,String fAvatarString,int userStatue) throws IOException {
+    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,Image fHeadPic,int userStatue) throws IOException {
         this.mid=mid;
         this.mName=mName;
         this.fid=fid;
         this.fName=fName;
-        this.fAvatarString=fAvatarString;
         this.mHeadPic=mHeadPic;
         this.userStatue =userStatue;
-        this.fHeadPic=GetAvatar.getAvatarImage(fid,"./Data/Avatar/User/",fAvatarString).getImage();
-        this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
+        this.fHeadPic=fHeadPic;
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);

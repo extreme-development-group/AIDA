@@ -1,6 +1,8 @@
-package frame.ChatFrame;
+package frame.Listener;
 
 import client.ChatThread;
+import frame.ChatFrame.ChatFrame;
+import frame.ChatFrame.ChatWithFriends;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
 
-class SendFriend implements ActionListener {
+public class SendFriend implements ActionListener {
     private JTextArea message;
     private String mName;
     private String fid;
@@ -33,8 +35,7 @@ class SendFriend implements ActionListener {
             ChatThread.getDataStream().send(this.message.getText(), fid, isGroup);
             this.message.setText("");
         }
-        else
-        {JOptionPane.showMessageDialog(now, "发送消息不能为空，请重新输入");}
+        else {JOptionPane.showMessageDialog(now, "发送消息不能为空，请重新输入");}
     }
 
     public void setMessage(JTextArea message) {

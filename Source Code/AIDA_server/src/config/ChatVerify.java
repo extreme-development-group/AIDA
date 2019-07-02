@@ -1,9 +1,30 @@
+/**
+ * All rights Reserved, Designed By www.dreamwings.cn
+ * @Title:		ChatVerify.java
+ * @Package:	com.oicq.config
+ * @Description:用作登录验证所要发送的对象，实现了 java.io.Serializable 接口
+ * @author:		千千
+ * @date:		2016/11/20 19:06
+ * @version:	V1.0
+ * @Copyright:	2016 www.dreamwings.cn Inc. All rights reserved.
+ */
 package config;
 
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+/**
+ * @ClassName: ChatVerify
+ * @Description:Used as the object to be authenticated by login, the
+ *                   java.io.Serializable interface is implemented.
+ * @author: 千千
+ * @date: 2016/11/20 19:06
+ *
+ * @since: JDK 1.8
+ * @Copyright: 2016 www.dreamwings.cn Inc. All rights reserved.
+ */
 
 public final class ChatVerify implements Serializable {
 
@@ -32,7 +53,7 @@ public final class ChatVerify implements Serializable {
      */
     public ChatVerify(String userId, String userPassword) {
         this.userId = userId;
-        this.userPassword = getMd5(userPassword);
+        this.userPassword = userPassword;
     }
 
     /**
@@ -47,7 +68,7 @@ public final class ChatVerify implements Serializable {
     /**
      * @Title: getUserPassword
      * @Description: 返回MD5加密后的密码
-     * @return: String 加密后的密码
+     * @return: userPassword 加密后的密码
      */
     public String getUserPassword() {
         return userPassword;
@@ -56,8 +77,9 @@ public final class ChatVerify implements Serializable {
     /**
      * @Title: getMd5
      * @Description: 对一个字符串进行MD5加密并返回加密后的串
-     * @return: String 加密后的密码
+     * @return: mdPassword 加密后的密码
      * @exception: NoSuchAlgorithmException
+     *                 MessageDigest.getInstance("MD5")会抛出该异常.
      */
     private String getMd5(String str) {
         String mdPassword = "";

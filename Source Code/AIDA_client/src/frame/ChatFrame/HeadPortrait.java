@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-class HeadPortrait extends JButton {
+public class HeadPortrait extends JButton {
     public static void main(String[] args) throws IOException {
         //JPanel panel=new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",1);
         //JPanel Member=new MemberText("res/Icon/11111.png","11",0);
@@ -27,7 +27,7 @@ class HeadPortrait extends JButton {
     private int border;
 
 
-    HeadPortrait(int width, int height, Image image){
+    public HeadPortrait(int width, int height, Image image){
         this.width = width;
         this.height = height;
         border=1;

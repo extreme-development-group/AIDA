@@ -25,15 +25,16 @@ public final class DataBaseConnection {
      */
     public DataBaseConnection() {
         // 数据库驱动名
-        String dbDriver = "com.mysql.jdbc.Driver";
+        String dbDriver = "com.mysql.cj.jdbc.Driver";
 
         // 数据库所在域
         String dbUrl = "jdbc:mysql://" + ServerInfo.MYSQL_IP + ":" + ServerInfo.MYSQL_PORT + "/" + ServerInfo.DB_NAME
-                + "?useUnicode=true&characterEncoding=UTF-8";
+                + "?useSSL=false&serverTimezone=UTC";
 
         try {
             // 加载驱动
             Class.forName(dbDriver);
+            System.out.println("连接数据库...");
 
             // 获取连接对象
             conn = DriverManager.getConnection(dbUrl, ServerInfo.DB_USER_NAME, ServerInfo.DB_USER_PASSWORD);

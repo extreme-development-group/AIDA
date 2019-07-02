@@ -1,6 +1,6 @@
 package frame.ChatFrame;
 
-import client.InteractWithServer;
+import frame.Listener.SendFriend;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -9,13 +9,11 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Vector;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
         Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
-        ChatWithFriends chatWithFriends=new ChatWithFriends("1","Mike","2","Jack",image,"11");
+        ChatWithFriends chatWithFriends=new ChatWithFriends("1","Mike","2","Jack",image,image);
 
     }
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
@@ -39,15 +37,14 @@ public class ChatWithFriends extends ChatFrame {
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithFriends(String mid,String mName,String fid,String fName,Image mHeadPic,String fAvatarString){
+    public ChatWithFriends(String mid,String mName,String fid,String fName,Image mHeadPic,Image fHeadPic){
         this.mid=mid;
         this.mName=mName;
         this.fid=fid;
         this.fName=fName;
         this.fAvatarString=fAvatarString;
         this.mHeadPic=mHeadPic;
-        this.fHeadPic=(GetAvatar.getAvatarImage(fid, "res/Avatar/User/",
-                fAvatarString)).getImage();
+        this.fHeadPic=fHeadPic;
         this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
 
         init();

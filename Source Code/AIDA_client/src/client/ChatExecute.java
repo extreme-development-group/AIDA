@@ -1,8 +1,14 @@
 package client;
 
+import frame.ChatFrame.ChatFrame;
 import frame.ChatFrame.ChatWithFriends;
+import frame.ChatFrame.ChatWithGroup;
 import frame.MainInterface.UI_MainInterface;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
 public final class ChatExecute {
@@ -10,6 +16,9 @@ public final class ChatExecute {
      * @Fields message : 接收到的消息内容
      */
     private static String message;
+
+    private static Image image;
+
 
     /**
      * @Fields fromId : 发送该消息的用户ID，用作显示对方信息
@@ -34,6 +43,55 @@ public final class ChatExecute {
      * @return: void
      */
     public static void execute(String scMessage) {
+        // 对接收到的消息内容进行解码
+        String res[] = scMessage.split("```", 5);
+        try {
+            image = ImageIO.read(new File("res/Avatar/head-test.JPG"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 从服务端发送的内容解码之后长度为5，代表该消息为聊天内容
+        if (res.length == 5) {
+            type = res[1];
+            fromId = res[2];
+            toId = res[3];
+            message = res[4];
+
+            // 以ID为键，对应聊天面板为值的哈希映射
+            HashMap<String, ChatWithFriends> fModel;
+            HashMap<String, ChatWithGroup> gModel;
+
+            // 接收到的消息是从好友发送来的
+            if (type.equals("toFriend")) {
+
+                fModel = UI_MainInterface.getFriendChat();
+
+                // 展示在对应好友聊天面板中
+                if (fModel.containsKey(fromId)) {
+                    fModel.get(fromId).addMessage(image,UI_MainInterface.getFriend().get(fromId).getfName(), res[0], message,
+                            0);
+                }
+            }
+            // 接收到的消息是从某个群发送来的
+            else if (type.equals("toGroup")) {
+                gModel = UI_MainInterface.getGroupChat();
+                if (gModel.containsKey(toId)) {
+                    // 聊天面板显示用户昵称
+                    String fromString = UI_MainInterface.getFriend().containsKey(fromId)
+                            ? UI_MainInterface.getFriend().get(fromId).getfName() : ("陌生人:" + fromId);
+                    gModel.get(toId).addMessage(image,fromString, res[0], message, 0);
+                }
+            }
+        } // 接收的内容是为了改变用户状态（在线/离线）
+        else if (res.length == 3) {
+            /** res[0]:验证标识、res[1]:状态信息、res[2]:好友ID */
+            if (res[0].equals("OnlineSituation")) {
+                if (UI_MainInterface.getFriend().containsKey(res[2])) {
+                    UI_MainInterface.getFriend().get(res[2]).setfOnline(res[1]);
+                }
+            }
+        }
 
     }
 }

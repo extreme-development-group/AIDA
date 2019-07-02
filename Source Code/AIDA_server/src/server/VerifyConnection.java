@@ -116,13 +116,19 @@ public final class VerifyConnection implements Runnable {
             ObjectOutputStream out = new ObjectOutputStream(userSocket.getOutputStream());
             while (true) {
                 // 接收一个对象流
+                System.out.println("0");
                 Object obj = in.readObject();
+                System.out.println(obj);
 
                 // 获取处理结果
                 Object result = switchCon(obj);
+                System.out.println("2");
+
 
                 // 返回给客户端这个处理结果
+
                 out.writeObject(result);
+                System.out.println("3");
 
                 // 关闭所有流
                 in.close();

@@ -9,9 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public final class GetAvatar {
-
     private static void download(String urlString, String filename, String savePath) throws Exception {
-
         // 构造URL
         URL url = new URL(urlString);
 

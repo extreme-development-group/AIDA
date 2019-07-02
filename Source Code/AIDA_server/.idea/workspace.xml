@@ -2,43 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ad7d98-0c8d-46e5-bd9a-272580981483" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AIDA_client/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ListenerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/ChatVerify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/ServerInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/DataBaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/DataCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ChatThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/DataStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/VerifyConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/VerifyThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/Listener/LoginListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/Listener/SendFriend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/MainInterface/friendPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MySQLDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/ChatExecute.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/ChatExecute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/ChatThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/ChatThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/InteractWithServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/client/InteractWithServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/ChatVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/ChatVerify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/ServerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/ServerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/UserInfo$FriendsOrGroups.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/UserInfo$FriendsOrGroups.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/config/UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$6.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$6.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/GetAvatar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/GetAvatar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/HeadPortrait.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/HeadPortrait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/ChatFrame/SendFriend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItemUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItemUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyPopupMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/MyPopupMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/ScrollBarUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/ScrollBarUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$3.class" afterDir="false" />
@@ -46,28 +57,41 @@
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/deleteListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/deleteListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$1$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/listPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/listPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/listScrollPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/MainInterface/listScrollPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/AddFriends$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/AddFriends$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/AddFriends.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/Avatar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/InquiryFriendFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/InquiryFriendFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/InquiryFriendFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/frame/test/InquiryFriendFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/out/production/AIDA_client/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/src/client/ChatExecute.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/client/ChatExecute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/client/DataStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/client/DataStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/config/ChatVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/config/ChatVerify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/config/ServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/config/ServerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/config/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/config/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatWithFriends.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatWithFriends.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatWithGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ChatWithGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/GetAvatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/GetAvatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/MemberText.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/MemberText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/HeadPortrait.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/HeadPortrait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/ChatFrame/ListenerClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/MainInterface/UI_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/MainInterface/UI_Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIDA_client/src/frame/MainInterface/UI_MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/frame/MainInterface/UI_MainInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIDA_client/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA_client/src/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDA_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_server/config/ChatVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_server/config/ChatVerify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_server/config/ServerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_server/config/ServerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_server/database/DataBaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_server/database/DataBaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_server/server/VerifyConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AIDA_server/server/VerifyConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/ChatVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ChatVerify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/ServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ServerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DataBaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/VerifyConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/VerifyConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,54 +100,67 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="oicq@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="oicq@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="oicq@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="oicq: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="oicq@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="oicq: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/DataBaseConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/server/VerifyConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+            <state relative-caret-position="594">
+              <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
+        <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="211" column="25" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3312#3338#0" expanded="true" />
-                <element signature="e#4589#4615#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2323">
-              <caret line="117" column="31" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+            <state relative-caret-position="-2534">
+              <caret line="53" column="42" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/ChatThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-149">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            <state relative-caret-position="378">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,11 +181,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
+        <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="2277">
+              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
               <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/ChatVerify.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -158,32 +208,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/VerifyConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/config/ChatVerify.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -191,10 +217,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/VerifyThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-197">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="345">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/DataBaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-910">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MySQLDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4485">
+              <caret line="210" column="31" selection-start-line="210" selection-start-column="27" selection-end-line="210" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3312#3338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,23 +275,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/config/ChatVerify.java" />
-        <option value="$PROJECT_DIR$/src/config/ServerInfo.java" />
         <option value="$PROJECT_DIR$/src/config/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/database/DataBaseConnection.java" />
         <option value="$PROJECT_DIR$/src/server/ChatServer.java" />
         <option value="$PROJECT_DIR$/src/server/Start.java" />
         <option value="$PROJECT_DIR$/src/server/VerifyThread.java" />
-        <option value="$PROJECT_DIR$/src/server/VerifyConnection.java" />
         <option value="$PROJECT_DIR$/src/server/DataStream.java" />
         <option value="$PROJECT_DIR$/src/server/ChatThread.java" />
         <option value="$PROJECT_DIR$/src/database/DataCheck.java" />
         <option value="$PROJECT_DIR$/src/user/User.java" />
+        <option value="$PROJECT_DIR$/src/config/ChatVerify.java" />
+        <option value="$PROJECT_DIR$/src/config/ServerInfo.java" />
+        <option value="$PROJECT_DIR$/src/database/DataBaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/MySQLDemo.java" />
+        <option value="$PROJECT_DIR$/src/server/VerifyConnection.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1270" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="955" />
+    <option name="y" value="15" />
     <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
@@ -288,15 +350,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J 8/8.0.15/mysql-connector-java-8.0.15.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -310,7 +376,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Start">
+    <configuration name="MySQLDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MySQLDemo" />
+      <module name="AIDA_server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.Start" />
       <module name="AIDA_server" />
@@ -327,6 +400,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Start" />
+        <item itemvalue="Application.MySQLDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -341,15 +415,15 @@
       <option name="presentableId" value="Default" />
       <updated>1561852991211</updated>
       <workItem from="1561852994500" duration="82000" />
-      <workItem from="1562045129434" duration="1634000" />
+      <workItem from="1562045129434" duration="11266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1716000" />
+    <option name="totallyTimeSpent" value="11348000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1270" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="955" y="15" width="1294" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20583469" />
@@ -359,7 +433,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32968238" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
@@ -380,72 +454,13 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3298217" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/config/ServerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="36" column="53" lean-forward="true" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="142" column="1" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DataBaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ChatThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="211" column="25" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3312#3338#0" expanded="true" />
-            <element signature="e#4589#4615#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2323">
@@ -456,10 +471,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
+    <entry file="file://$PROJECT_DIR$/src/config/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="410">
+          <caret line="142" column="1" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2cfef208-a148-4642-b676-8926688c3546/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/71c573db-ff16-4354-b19e-89cb67306fef/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="765" column="45" selection-start-line="765" selection-start-column="45" selection-end-line="765" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/ServerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="381" column="18" selection-start-line="381" selection-start-column="18" selection-end-line="381" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MySQLDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/ChatVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ChatThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2277">
+          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -468,15 +548,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="92">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/DataBaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-910">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2534">
+          <caret line="53" column="42" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/VerifyThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="345">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -485,23 +585,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/VerifyConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        <state relative-caret-position="594">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/ChatVerify.java">
+    <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="4485">
+          <caret line="210" column="31" selection-start-line="210" selection-start-column="27" selection-end-line="210" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3312#3338#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>AIDA_server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
