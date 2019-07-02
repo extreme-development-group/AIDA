@@ -2,9 +2,11 @@ package frame.ChatFrame;
 
 import client.InteractWithServer;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,12 +14,13 @@ import java.util.Vector;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
+        Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
+        ChatWithFriends chatWithFriends=new ChatWithFriends("1","Mike","2","Jack",image,"11");
 
     }
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
-    protected JPanel mainControlPanel,chatPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
-    protected JScrollPane scrollPane;
+    protected JPanel mainControlPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
     private String fAvatarString,fName,fid,mid,mName;
     private int messageNum;
     private int height;
@@ -30,12 +33,7 @@ public class ChatWithFriends extends ChatFrame {
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
 
-    public void updateChat(Image userHeadPic,String userName,String sendTime,String message,int side){
-        height=height+60;
-        chatPanel.setPreferredSize(new Dimension(500,height));
-        chatPanel.add(new SingleText(userHeadPic,userName,sendTime,message,side));
-        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
-    }
+
 
     private void showEmojiMenu(){
         EmojiMenu emojiMenu=new EmojiMenu(this);
@@ -48,7 +46,8 @@ public class ChatWithFriends extends ChatFrame {
         this.fName=fName;
         this.fAvatarString=fAvatarString;
         this.mHeadPic=mHeadPic;
-        this.fHeadPic=GetAvatar.getAvatarImage(fid,"./Data/Avatar/User/",fAvatarString).getImage();
+        this.fHeadPic=(GetAvatar.getAvatarImage(fid, "res/Avatar/User/",
+                fAvatarString)).getImage();
         this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
 
         init();
@@ -59,7 +58,7 @@ public class ChatWithFriends extends ChatFrame {
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //updateChat("res/Avatar/head-Search.JPG","Mike",df.format(new Date()),"1111",0);
+        //addMessage("res/Avatar/head-Search.JPG","Mike",df.format(new Date()),"1111",0);
         this.setSize(500,520);
         setLocationRelativeTo(null);
         this.setVisible(true);
@@ -223,16 +222,8 @@ public class ChatWithFriends extends ChatFrame {
         sendButton.setBorderPainted(false); // set don't draw border
         sendButton.setFocusPainted(false);
         sendButton.setBounds(400,0,80,30);
-        sendButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String date=df.format(new Date());
-                //updateChat("res/Avatar/head-Search.JPG","Ponny",date,input.getText(),1);
-                scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
-                input.setText("");
-            }
-        });
+        SendFriend sendFriend=new SendFriend(mHeadPic,mName,fid,false,input,this);
+        sendButton.addActionListener(sendFriend);
 
 
         input=new JTextArea("");
@@ -279,22 +270,22 @@ public class ChatWithFriends extends ChatFrame {
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         chatPanel.setPreferredSize(new Dimension(500,height));
 
-        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, false);
-        for (int i = 0; i < record.size(); i++) {
-            /*
-             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
-             */
-            String res[] = record.get(i).split("```", 4);
-            // 聊天面板显示用户昵称
-            if (res.length == 4) {
-                if (res[1].equals(fid)){
-                    updateChat(fHeadPic,fName,res[0],res[3],0);
-                }else if (res[1].equals(mid)){
-                    updateChat(mHeadPic,mName,res[0],res[3],1);
-                }
-            }
-        }
-        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+//        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, false);
+//        for (int i = 0; i < record.size(); i++) {
+//            /*
+//             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+//             */
+//            String res[] = record.get(i).split("```", 4);
+//            // 聊天面板显示用户昵称
+//            if (res.length == 4) {
+//                if (res[1].equals(fid)){
+//                    addMessage(fHeadPic,fName,res[0],res[3],0);
+//                }else if (res[1].equals(mid)){
+//                    addMessage(mHeadPic,mName,res[0],res[3],1);
+//                }
+//            }
+//        }
+//        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
 
 
 

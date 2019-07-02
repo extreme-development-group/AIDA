@@ -1,15 +1,19 @@
 package frame.ChatFrame;
 
+import client.InteractWithServer;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Vector;
 
 public class ChatWithGroup extends ChatFrame {
     public static void main(String[] args) throws IOException {
-        ChatWithGroup test=new ChatWithGroup();
+        Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
+        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,"11",0);
     }
     protected JButton GroupNameButton,minimize,closeButton,emojiButton,
             pictureButton,sendButton;
@@ -17,23 +21,33 @@ public class ChatWithGroup extends ChatFrame {
     protected JScrollPane memberPanel;
 
     private int memberHeight;
-    public void updateChat(String avatarPath,String userName,String sendTime,String message,int side) throws IOException {
-        height=height+60;
-        chatPanel.setPreferredSize(new Dimension(500,height));
-        //chatPanel.add(new SingleText(avatarPath,userName,sendTime,message,side));
-    }
-
-    public void updateMember(String avatarPath,String userName,int statue) throws IOException {
+    private String fName,fid,fAvatarString,mid,mName;
+    private int messageNum;
+    private int height;
+    private Image fHeadPic,mHeadPic;
+    private int userStatue;
+    public void addMember(String uid, String uName, int statue) throws IOException {
+        Image image=GetAvatar.getAvatarImage(uid,"./Data/Avatar/User/",fAvatarString).getImage();
         memberHeight=memberHeight+40;
         groupMemberPanel.setPreferredSize(new Dimension(200,height));
-        //groupMemberPanel.add(new MemberText("res/Icon/11111.png","11",1,0,this,0));
+        groupMemberPanel.add(new MemberText(image,uName,uid,statue,this, userStatue));
+        memberPanel.getViewport().setViewPosition(new Point(0,groupMemberPanel.getHeight()));
     }
 
     private void showEmojiMenu(){
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithGroup() throws IOException {
+    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,String fAvatarString,int userStatue) throws IOException {
+        this.mid=mid;
+        this.mName=mName;
+        this.fid=fid;
+        this.fName=fName;
+        this.fAvatarString=fAvatarString;
+        this.mHeadPic=mHeadPic;
+        this.userStatue =userStatue;
+        this.fHeadPic=GetAvatar.getAvatarImage(fid,"./Data/Avatar/User/",fAvatarString).getImage();
+        this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
@@ -42,8 +56,8 @@ public class ChatWithGroup extends ChatFrame {
         this.add(controlPanel,BorderLayout.SOUTH);
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
-        updateChat("res/Icon/11111.png","mike","1111","1111",0);
-        updateMember("111","111",1);
+        //addMessage("res/Icon/11111.png","mike","1111","1111",0);
+        //addMember("111","111",1);
         this.setSize(700,520);
         setLocationRelativeTo(null);
 
@@ -173,20 +187,8 @@ public class ChatWithGroup extends ChatFrame {
         sendButton.setBorderPainted(false); // set don't draw border
         sendButton.setFocusPainted(false);
         sendButton.setBounds(600,0,80,30);
-        sendButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String date=df.format(new Date());
-                try {
-                    updateChat("res/Avatar/head-Search.JPG","Ponny",date,input.getText(),1);
-                    scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
-                    input.setText("");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
+        SendFriend sendFriend=new SendFriend(mHeadPic,mName,fid,true,input,this);
+        sendButton.addActionListener(sendFriend);
 
 
         input=new JTextArea("");
@@ -232,6 +234,23 @@ public class ChatWithGroup extends ChatFrame {
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         chatPanel.setPreferredSize(new Dimension(500,height));
 
+//        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, true);
+//        for (int i = 0; i < record.size(); i++) {
+//            /*
+//             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+//             */
+//            String res[] = record.get(i).split("```", 4);
+//            // 聊天面板显示用户昵称
+//            if (res.length == 4) {
+//                if (res[1].equals(mid)){
+//                    addMessage(mHeadPic,mName,res[0],res[3],1);
+//                }else {
+//                    addMessage((GetAvatar.getAvatarImage(res[1],"res/Avatar/User/",fAvatarString).getImage()),mName,res[0],res[3],0);
+//                }
+//            }
+//        }
+//        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+
 
 
         functionPanel.setLayout(new FlowLayout(FlowLayout.LEADING,10,0));
@@ -260,12 +279,33 @@ public class ChatWithGroup extends ChatFrame {
         memberPanel.setBackground(new Color(201,251,254));
         groupMemberPanel.setBackground(new Color(201,251,254));
         memberPanel.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
-        memberHeight=40;
+        memberHeight=0;
         memberPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         memberPanel.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
         memberPanel.getVerticalScrollBar().setUI(new ScrollBarUI());
         memberPanel.getVerticalScrollBar().setUnitIncrement(15);
         groupMemberPanel.setPreferredSize(new Dimension(200,memberHeight));
+
+//        Vector<String> members = InteractWithServer.getGroupMembers(fid);
+//        for (String i : members) {
+//            if (i.equals(mid))
+//                continue;
+//            ImageIcon icon = new ImageIcon("./res/tempheadportrait.jpg");
+//            String content = "陌生人(" + i + ")";
+//            if (MainInterface.getFriend().containsKey(i)) {
+//                icon = GetAvatar.getAvatarImage(i, "./Data/Avatar/User/",
+//                        MainInterface.getFriend().get(i).getfAvatar());
+//                content = MainInterface.getFriend().get(i).getfName() + "("
+//                        + MainInterface.getFriend().get(i).getFid() + ")";
+//            }
+//            icon = new ImageIcon(icon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
+//            peopleBox.add(new JLabel(icon));
+//            peopleBox.add(new JLabel(content));
+//            groupPeopleBox.add(peopleBox);
+//
+//            addMember(i,"00","");
+//
+//        }
 
 
     }

@@ -18,10 +18,10 @@ public class MemberText extends JPanel {
     private JLabel statusLabel;
     private int status;
     private int userStatus;
-    private int userID;
+    private String userID;
     private ChatWithGroup group;
 
-    public MemberText(Image memAvatar,String username,int userID,int status,ChatWithGroup group,int userStatus) throws IOException {
+    public MemberText(Image memAvatar,String username,String userID,int status,ChatWithGroup group,int userStatus) throws IOException {
         this.userID=userID;
         this.addMouseListener(new MouseListener() {
             @Override

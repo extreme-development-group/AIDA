@@ -56,7 +56,7 @@ public final class GetAvatar {
             }
             avatar = new ImageIcon(path);
         } catch (Exception e) {
-            avatar = new ImageIcon("./res/tempheadportrait.jpg");
+            avatar = new ImageIcon("res/Avatar/head-test.JPG");
             System.out.println("获取头像失败，改为默认头像：" + avatarUrl);
         }
         return avatar;

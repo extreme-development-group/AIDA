@@ -1,6 +1,10 @@
 package frame.MainInterface;
 
+import config.UserInfo;
+
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicBorders;
+import javax.swing.plaf.basic.BasicMenuItemUI;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
@@ -213,7 +217,7 @@ public class UI_MainInterface extends JFrame {
 
         for(int i=0; i<5; i++) {
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
-            friendListPanel.add(new friendPanel());
+            friendListPanel.add(new friendPanel(i));
         }
 
         groupListPanel = new listPanel();
@@ -222,7 +226,7 @@ public class UI_MainInterface extends JFrame {
 
         for(int i=0; i<15; i++) {
             groupListPanel.setPreferredSize(new Dimension(250, 50*i));
-            groupListPanel.add(new groupPanel());
+            groupListPanel.add(new groupPanel(i));
         }
 
         groupListJSP.setVisible(false);
@@ -262,7 +266,17 @@ class friendPanel extends JPanel {
     private RoundHeadPortrait headPortrait;
     private JLabel nickname, status, signature;
     private Color originColor, hoverColor;
-    friendPanel() {
+
+    public int getUserID() {
+        return UserID;
+    }
+
+    //    private UserInfo userinfo;
+    private int UserID = 1;
+    // just for test
+
+    friendPanel(int id) {
+        UserID = id;
         originColor = new Color(245, 245, 245);
         hoverColor = new Color(255, 255, 255);
 
@@ -272,6 +286,28 @@ class friendPanel extends JPanel {
         init();
 
         addMouseListener(new MouseAdapter() {
+            // 右键弹出菜单
+            // 鼠标释放弹出
+            public void mouseReleased(MouseEvent e) {
+                if(e.getButton() == MouseEvent.BUTTON3) {
+                    MyPopupMenu friendPopupMenu = new MyPopupMenu();
+                    MyMenuItem chatItem = new MyMenuItem("发送消息");
+                    chatItem.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            System.out.println( UserID );
+                        }
+                    });
+                    MyMenuItem deleteItem = new MyMenuItem("删除好友");
+                    deleteItem.addActionListener(new deleteListener((JPanel)e.getComponent()));
+                    MyMenuItem infoItem = new MyMenuItem("个人资料");
+                    friendPopupMenu.add(chatItem);
+                    friendPopupMenu.add(infoItem);
+                    friendPopupMenu.add(deleteItem);
+                    friendPopupMenu.show(e.getComponent(), e.getX(), e.getY());
+                }
+                super.mouseClicked(e);
+            }
+
             public void mouseEntered(MouseEvent e) {
                 setBackground(hoverColor);
                 super.mouseEntered(e);
@@ -293,7 +329,7 @@ class friendPanel extends JPanel {
         headPortrait.setLocation(5,5);
         add(headPortrait);
         // 昵称
-        nickname = new JLabel("昵称");
+        nickname = new JLabel("昵称"+UserID);
         nickname.setBounds(55, 8, 100, 16);
         nickname.setFont(new Font("微软雅黑", Font.BOLD, 14));
         add(nickname);
@@ -317,7 +353,17 @@ class groupPanel extends JPanel {
     private RoundHeadPortrait headPortrait;
     private JLabel groupName;
     private Color originColor, hoverColor;
-    groupPanel() {
+
+    public int getGroupID() {
+        return groupID;
+    }
+
+    //    private groupInfo groupID;
+    private int groupID = 1;
+    // just for test
+
+    groupPanel(int id) {
+        groupID = id;
         originColor = new Color(245, 245, 245);
         hoverColor = new Color(255, 255, 255);
 
@@ -327,6 +373,21 @@ class groupPanel extends JPanel {
         init();
 
         addMouseListener(new MouseAdapter() {
+            public void mouseReleased(MouseEvent e) {
+                MyPopupMenu groupPopupMenu = new MyPopupMenu();
+                MyMenuItem enterItem = new MyMenuItem("进入群聊");
+                enterItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println( groupID );
+                    }
+                });
+                MyMenuItem exitItem = new MyMenuItem("退出群聊");
+                groupPopupMenu.add(enterItem);
+                groupPopupMenu.add(exitItem);
+                groupPopupMenu.show(e.getComponent(), e.getX(), e.getY());
+                super.mouseReleased(e);
+            }
+
             public void mouseEntered(MouseEvent e) {
                 setBackground(hoverColor);
                 super.mouseEntered(e);
@@ -348,7 +409,7 @@ class groupPanel extends JPanel {
         headPortrait.setLocation(5,5);
         add(headPortrait);
         // 群名
-        groupName = new JLabel("群名");
+        groupName = new JLabel("群名"+groupID);
         groupName.setBounds(55, 8, 100, 16);
         groupName.setFont(new Font("微软雅黑", Font.BOLD, 14));
         add(groupName);
@@ -404,5 +465,47 @@ class ScrollBarUI extends BasicScrollBarUI {
         JButton button = new JButton();
         button.setVisible(false);
         return button;
+    }
+}
+
+// 菜单选项样式
+class MyMenuItem extends JMenuItem {
+    MyMenuItem(String text) {
+        super(text);
+        setBorderPainted(false);
+        setOpaque(false);
+        setFont(new Font("微软雅黑", Font.PLAIN, 14));
+        setUI(new MyMenuItemUI());
+    }
+}
+// MenuItem鼠标滑过样式
+class MyMenuItemUI extends  BasicMenuItemUI {
+    MyMenuItemUI() {
+        super.selectionBackground = new Color(2, 167, 240);
+        super.selectionForeground = Color.white;
+    }
+}
+// 弹出菜单样式
+class MyPopupMenu extends JPopupMenu {
+    MyPopupMenu() {
+        setBorder(BorderFactory.createLineBorder(Color.white, 2));
+        setBackground(new Color(245, 255, 252));
+    }
+}
+
+// 删除事件
+class deleteListener implements ActionListener {
+    private JPanel parentPanel;
+
+    deleteListener(JPanel parent) {
+        parentPanel = parent;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        friendPanel temp = (friendPanel)parentPanel;
+        System.out.println("删除" + temp.getUserID() );
+        // 流式布局自动位移
+        temp.setVisible(false);
+
     }
 }
