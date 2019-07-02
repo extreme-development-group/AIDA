@@ -62,10 +62,13 @@ public final class ChatExecute {
             HashMap<String, ChatWithFriends> fModel;
             HashMap<String, ChatWithGroup> gModel;
 
+            // all ok.
+
             // 接收到的消息是从好友发送来的
             if (type.equals("toFriend")) {
 
                 fModel = UI_MainInterface.getFriendChat();
+                System.out.println(scMessage);
 
                 // 展示在对应好友聊天面板中
                 if (fModel.containsKey(fromId)) {

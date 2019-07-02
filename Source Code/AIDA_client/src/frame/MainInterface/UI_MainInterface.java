@@ -3,20 +3,15 @@ package frame.MainInterface;
 import client.InteractWithServer;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ChatWithGroup;
-import frame.ChatFrame.GetAvatar;
-import frame.ChatFrame.HeadPortrait;
 import user.User;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicMenuItemUI;
-import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 public class UI_MainInterface extends JFrame {
     // upPanel
@@ -41,6 +36,13 @@ public class UI_MainInterface extends JFrame {
     public static HashMap<String, groupPanel> group;
     public static HashMap<String, ChatWithFriends> withFriend;
     public static HashMap<String, ChatWithGroup> withGroup;
+    // 静态初始化块
+    static {
+        friend = new HashMap<String, friendPanel>();
+        group = new HashMap<String, groupPanel>();
+        withFriend = new HashMap<String, ChatWithFriends>();
+        withGroup = new HashMap<String, ChatWithGroup>();
+    }
 
     public UI_MainInterface(String userIdString) throws IOException {
         //信息载入
@@ -65,7 +67,7 @@ public class UI_MainInterface extends JFrame {
 
 
 
-
+        setTitle(userInfo.getUserName());
         setIconImage(Toolkit.getDefaultToolkit().createImage("res/MainInterface/qq_logo.png"));
         setUndecorated(true);
         setResizable(false);
@@ -280,12 +282,13 @@ public class UI_MainInterface extends JFrame {
         Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
 
         for(int i=0; i<this.userInfo.getFriends().size(); i++) {
+            String fid = this.userInfo.getFriends().get(i).getId();
+            String fname = this.userInfo.getFriends().get(i).getName();
+            String fsignature = this.userInfo.getFriends().get(i).getSignature();
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
-            friendPanel friendPanel= new friendPanel(this.userInfo.getFriends().get(i).getId(),
-                    image,this.userInfo.getFriends().get(i).getName(),
-                    this.userInfo.getFriends().get(i).getSignature(),
-                    "在线",this);
-            friendListPanel.add(friendPanel);
+            friendPanel friend= new friendPanel(fid, image, fname, fsignature, "在线",this);
+            friendListPanel.add(friend);
+            UI_MainInterface.friend.put(fid, friend);
         }
 
         groupListPanel = new listPanel();
@@ -293,12 +296,12 @@ public class UI_MainInterface extends JFrame {
         add(groupListJSP);
 
         for(int i=0; i<this.userInfo.getGroups().size(); i++) {
+            String gid = this.userInfo.getGroups().get(i).getId();
+            String gname = this.userInfo.getGroups().get(i).getName();
             groupListPanel.setPreferredSize(new Dimension(250, 50*i));
-            groupPanel group=new groupPanel(this.userInfo.getGroups().get(i).getId(),
-                    image,
-                    this.userInfo.getGroups().get(i).getName(),
-                    this.userInfo.getGroups().get(i).getSignature(),this);
+            groupPanel group=new groupPanel(gid, image, gname, this);
             groupListPanel.add(group);
+            UI_MainInterface.group.put(gid, group);
         }
         groupListJSP.setVisible(false);
     }

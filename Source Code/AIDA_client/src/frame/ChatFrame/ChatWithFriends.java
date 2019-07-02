@@ -48,6 +48,7 @@ public class ChatWithFriends extends ChatFrame {
         this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
 
         init();
+        this.setTitle(fName);
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
         this.add(scrollPane,BorderLayout.CENTER);
@@ -210,6 +211,11 @@ public class ChatWithFriends extends ChatFrame {
         cameraButton.setFocusPainted(false);
         cameraButton.setIcon(setIcon("res/Icon/camera.png",30,30));
 
+        input=new JTextArea("");
+        input.setPreferredSize(new Dimension(500,300));
+        input.setBackground(new Color(128,255,255));
+        input.setBorder(null);
+
         sendButton=new JButton();
         sendButton.setText("发送");
         //sendButton.setPreferredSize(new Dimension(80,30));
@@ -221,13 +227,6 @@ public class ChatWithFriends extends ChatFrame {
         sendButton.setBounds(400,0,80,30);
         SendFriend sendFriend=new SendFriend(mHeadPic,mName,fid,false,input,this);
         sendButton.addActionListener(sendFriend);
-
-
-        input=new JTextArea("");
-        input.setPreferredSize(new Dimension(500,300));
-        input.setBackground(new Color(128,255,255));
-        input.setBorder(null);
-
 
         mainControlPanel =new JPanel();
         chatPanel=new JPanel();

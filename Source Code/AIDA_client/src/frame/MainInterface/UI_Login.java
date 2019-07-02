@@ -28,7 +28,7 @@ public class UI_Login extends JFrame {
     private JPanel loadingPanel;
     private JLabel loadingText;
 
-    UI_Login() {
+    public UI_Login() {
 
         setTitle("登录窗口");
         setIconImage(Toolkit.getDefaultToolkit().createImage("./res/Login/qq_logo.png")); // 设置小图标
