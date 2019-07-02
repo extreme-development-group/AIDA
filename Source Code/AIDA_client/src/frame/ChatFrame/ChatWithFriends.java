@@ -13,7 +13,7 @@ import java.util.Vector;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
-        ChatWithFriends test=new ChatWithFriends();
+
     }
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
