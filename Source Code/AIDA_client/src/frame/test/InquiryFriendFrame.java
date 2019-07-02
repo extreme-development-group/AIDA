@@ -1,10 +1,10 @@
-//7.1 11:45 µÚÈý°æ
+//7.1 11:45 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-package test;
+package frame.test;
 
 import java.awt.Color;
 
-//6.30.18:00 µÚ¶þ°æ
+//6.30.18:00 ï¿½Ú¶ï¿½ï¿½ï¿½
 
 //package com.lsh.view;
 
@@ -32,7 +32,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.oracle.swing.pojo.User;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -92,7 +91,7 @@ public class InquiryFriendFrame extends JFrame {
 
 
 	public InquiryFriendFrame() {
-		this.setTitle("²éÕÒ");
+		this.setTitle("ï¿½ï¿½ï¿½ï¿½");
 		//this.setUndecorated(true);
 		
 		this.setResizable(false);
@@ -103,10 +102,10 @@ public class InquiryFriendFrame extends JFrame {
 		this.contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		this.setContentPane(contentPane);
 		this.contentPane.setLayout(null);
-		this.userIdField = new JTextField("ÇëÊäÈëÕËºÅ/ÈººÅ");
+		this.userIdField = new JTextField("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½/Èºï¿½ï¿½");
 		this.userIdField.setBounds(70, 35, 360, 30);
 		this.userIdField.setBackground(Color.WHITE);
-		this.userIdField.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 15));
+		this.userIdField.setFont(new Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", Font.PLAIN, 15));
 		this.userIdField.setBorder(null);
 		this.userIdField.setForeground(new Color(211, 211, 211));
 		this.contentPane.add(userIdField);
@@ -119,12 +118,12 @@ public class InquiryFriendFrame extends JFrame {
 
 		});
 
-		JButton btnNewButton = new JButton("²é Ñ¯");
+		JButton btnNewButton = new JButton("ï¿½ï¿½ Ñ¯");
 		btnNewButton.setBounds(505, 35, 110, 30);
 		contentPane.add(btnNewButton);
 		//overViewLabel
-		JLabel overViewLabel = new JLabel("²éÕÒµ½0ÈË / 0¸öÈº");
-		overViewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 13));
+		JLabel overViewLabel = new JLabel("ï¿½ï¿½ï¿½Òµï¿½0ï¿½ï¿½ / 0ï¿½ï¿½Èº");
+		overViewLabel.setFont(new Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", Font.PLAIN, 13));
 
 		overViewLabel.setBounds(12, 105, 130, 18);
 		contentPane.add(overViewLabel);
@@ -146,13 +145,13 @@ public class InquiryFriendFrame extends JFrame {
 		pageNumLabel = new JLabel("0/0Ò³| ", SwingConstants.RIGHT);
 		pageNumLabel.setForeground(new Color(90, 90, 90));
 		pageNumLabel.setBounds(580, 105, 60, 20);
-		pageNumLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		pageNumLabel.setFont(new Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", Font.PLAIN, 14));
 		this.add(pageNumLabel);
 
-		nextPageLabel = new JLabel("ÏÂÒ»Ò³");
+		nextPageLabel = new JLabel("ï¿½ï¿½Ò»Ò³");
 		nextPageLabel.setForeground(new Color(90, 90, 90));
 		nextPageLabel.setBounds(640, 105, 45, 20);
-		nextPageLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 13));
+		nextPageLabel.setFont(new Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", Font.PLAIN, 13));
 		nextPageLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
 		nextPageLabel.addMouseListener(new MouseAdapter() {
@@ -171,14 +170,14 @@ public class InquiryFriendFrame extends JFrame {
 
 		/*
 		 * Container c = getContentPane(); c.setLayout(new GridLayout(3,3,5,5)); for
-		 * (int i = 0;i<9;i++) { c.add(new JButton("°´Å¥"+i)); }
+		 * (int i = 0;i<9;i++) { c.add(new JButton("ï¿½ï¿½Å¥"+i)); }
 		 * 
 		 */
-		// ²éÑ¯µÄÏìÓ¦¼àÌý
+		// ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 		/*
-		 * ½¨Ãæ°å1 ½¨Íø¸ñ·Åµ½Ãæ°å1Àï Íø¸ñÀïÃæ·Å¸öÃæ°å2 °Ñ¸öÈËÐÅÏ¢·Åµ½Ãæ°å2//Ãæ°¸¶þÎª¶ÔÏó£¬ÐèÐÂ½¨Ò»¸öÀà¡££¨ÊµÏÖÕ¹Ê¾ÐÅÏ¢£¨Í·ÏñêÇ³ÆºÅÂë£©£¬¼ÓºÃÓÑÏìÓ¦£©
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½2 ï¿½Ñ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½Åµï¿½ï¿½ï¿½ï¿½2//ï¿½æ°¸ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ò»ï¿½ï¿½ï¿½à¡£ï¿½ï¿½Êµï¿½ï¿½Õ¹Ê¾ï¿½ï¿½Ï¢ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ç³Æºï¿½ï¿½ë£©ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½
 		 * 
-		 * ¼ÓºÃÓÑÏìÓ¦£º µ¯³öÒ»ÐÂ¿ò£¬ Í·ÏñÃû³Æ ÐÔ±ð ËùÔÚµØ ÑéÖ¤ÐÅÏ¢£¨ÎÄ±¾ÊäÈë¿ò£¬£©Ìí¼Ó°´Å¥£¨È·¶¨£©£¬µã»÷ºóµ¯³ödialog£¬ÇëÇóÒÑ·¢³ö
+		 * ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â¿ï¿½ Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô±ï¿½ ï¿½ï¿½ï¿½Úµï¿½ ï¿½ï¿½Ö¤ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬£ï¿½ï¿½ï¿½Ó°ï¿½Å¥ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½óµ¯³ï¿½dialogï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½
 		 */
 
 

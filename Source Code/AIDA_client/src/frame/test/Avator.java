@@ -1,4 +1,4 @@
-package test;
+package frame.test;
 
 
 import javax.imageio.ImageIO;

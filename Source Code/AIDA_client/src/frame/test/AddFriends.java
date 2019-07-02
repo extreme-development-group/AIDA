@@ -1,27 +1,11 @@
-package test;
+package frame.test;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
-import java.awt.Color;
-import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.Image;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-
-
-import Avator;
 
 
 
@@ -30,7 +14,7 @@ public class AddFriends extends JFrame{
 	private JPanel verifyPane;
 	private JButton confirmB;
 	private JTextArea verifyArea;
-	private test.Avator avator;
+	private Avator avator;
 	private JLabel nameL,genderL,addressL;
 	//private JTextField Verification;
 	private int count = 0;//文本域第一次计数
