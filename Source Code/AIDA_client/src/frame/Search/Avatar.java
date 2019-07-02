@@ -1,4 +1,4 @@
-package frame.test;
+package frame.Search;
 
 
 import javax.imageio.ImageIO;
@@ -9,26 +9,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-class Avator extends JButton {
-    public static void main(String[] args) throws IOException {
-        //JPanel panel=new SingleText("res/Icon/11111.png","mike","2019.6.30","hello!",1);
-        //JPanel Member=new MemberText("res/Icon/11111.png","11",0);
-        //EmojiMenu emojiMenu=new EmojiMenu(new ChatWithFriends());
-        JFrame frame = new JFrame("圆形按钮");
-        frame.getContentPane().setBackground(Color.white);
-        frame.getContentPane().setLayout(new FlowLayout());
-        //frame.getContentPane().add(Member);
-        frame.setSize(200, 200);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
+public class Avatar extends JButton {
     private int width;
     private int height;
     private int border;
 
-
-    Avator(int width, int height, String filepath) throws IOException {
+    public Avatar(int width, int height, String filepath) throws IOException {
         this.width = width;
         this.height = height;
         border=1;

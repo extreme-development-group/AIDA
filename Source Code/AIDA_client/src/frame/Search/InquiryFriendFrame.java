@@ -1,6 +1,6 @@
 //7.1 11:45 ������
 
-package frame.test;
+package frame.Search;
 
 import java.awt.Color;
 
@@ -8,17 +8,11 @@ import java.awt.Color;
 
 //package com.lsh.view;
 
-import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -26,7 +20,6 @@ import java.util.List;
 //import java.awt.FlowLayout;
 //import java.awt.event.FocusAdapter;
 //import java.awt.event.FocusEvent;
-import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -37,10 +30,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 //import javax.swing.JScrollPane;
-import javax.swing.JTable;
+
 
 public class InquiryFriendFrame extends JFrame {
 	
@@ -163,7 +155,7 @@ public class InquiryFriendFrame extends JFrame {
 				} else if (sumPage == nowPage) {
 					nowPage = 1;
 				}
-				showResult();
+				//showResult();
 			}
 		});
 		this.add(nextPageLabel);

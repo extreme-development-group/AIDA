@@ -179,7 +179,7 @@ public class ChatWithGroup extends ChatFrame {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String date=df.format(new Date());
                 try {
-                    updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
+                    updateChat("res/Avatar/head-Search.JPG","Ponny",date,input.getText(),1);
                     scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
                     input.setText("");
                 } catch (IOException ex) {

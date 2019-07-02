@@ -59,7 +59,7 @@ public class ChatWithFriends extends ChatFrame {
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //updateChat("res/Avatar/head-test.JPG","Mike",df.format(new Date()),"1111",0);
+        //updateChat("res/Avatar/head-Search.JPG","Mike",df.format(new Date()),"1111",0);
         this.setSize(500,520);
         setLocationRelativeTo(null);
         this.setVisible(true);
@@ -228,7 +228,7 @@ public class ChatWithFriends extends ChatFrame {
             public void actionPerformed(ActionEvent e) {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String date=df.format(new Date());
-                //updateChat("res/Avatar/head-test.JPG","Ponny",date,input.getText(),1);
+                //updateChat("res/Avatar/head-Search.JPG","Ponny",date,input.getText(),1);
                 scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
                 input.setText("");
             }

@@ -1,4 +1,4 @@
-package frame.test;
+package frame.Search;
 
 
 import javax.swing.*;
@@ -14,7 +14,7 @@ public class AddFriends extends JFrame{
 	private JPanel verifyPane;
 	private JButton confirmB;
 	private JTextArea verifyArea;
-	private Avator avator;
+	private Avatar avatar;
 	private JLabel nameL,genderL,addressL;
 	//private JTextField Verification;
 	private int count = 0;//文本域第一次计数
@@ -49,12 +49,12 @@ public class AddFriends extends JFrame{
 		this.verifyPane.setOpaque(true);
 		this.verifyPane.setLayout(null);
 		this.add(verifyPane);
-		
-		this.avator = new Avator(80, 80, "source/avator.jpg");
-		this.avator.setLocation(22, 40);
-		//this.avator.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().createImage("source/avator.jpg").getScaledInstance(70, 70, Image.SCALE_DEFAULT)));
-		//this.avator.setBackground(Color.WHITE);
-		this.contentPane.add(avator);
+
+		avatar = new Avatar(80, 80, "res/Avatar/avatar.jpg");
+		avatar.setLocation(22, 40);
+		//this.avatar.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().createImage("source/avatar.jpg").getScaledInstance(70, 70, Image.SCALE_DEFAULT)));
+		//this.avatar.setBackground(Color.WHITE);
+		this.contentPane.add(avatar);
 		
 		this.nameL = new JLabel();
 		this.nameL.setBounds(20,130,100,20);
