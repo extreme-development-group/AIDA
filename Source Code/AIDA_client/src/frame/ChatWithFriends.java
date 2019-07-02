@@ -1,5 +1,7 @@
 package frame;
 
+import client.InteractWithServer;
+
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
@@ -7,6 +9,7 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Vector;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
@@ -16,7 +19,10 @@ public class ChatWithFriends extends ChatFrame {
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
     protected JPanel mainControlPanel,chatPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
     protected JScrollPane scrollPane;
+    private String fAvatarString,fName,fid,mid,mName;
+    private int messageNum;
     private int height;
+    private Image fHeadPic,mHeadPic;
 
     private ImageIcon setIcon(String filepath,int x,int y){
         ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
@@ -25,20 +31,27 @@ public class ChatWithFriends extends ChatFrame {
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
 
-    public void updateChat(String avatarPath,String userName,String sendTime,String message,int side) throws IOException {
-
+    public void updateChat(Image userHeadPic,String userName,String sendTime,String message,int side){
         height=height+60;
         chatPanel.setPreferredSize(new Dimension(500,height));
-        chatPanel.add(new SingleText(avatarPath,userName,sendTime,message,side));
-        JScrollBar bar=scrollPane.getVerticalScrollBar();
-        bar.setValue(bar.getMaximum()+50);
+        chatPanel.add(new SingleText(userHeadPic,userName,sendTime,message,side));
+        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
     }
 
     private void showEmojiMenu(){
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithFriends() throws IOException {
+    public ChatWithFriends(String mid,String mName,String fid,String fName,Image mHeadPic,String fAvatarString){
+        this.mid=mid;
+        this.mName=mName;
+        this.fid=fid;
+        this.fName=fName;
+        this.fAvatarString=fAvatarString;
+        this.mHeadPic=mHeadPic;
+        this.fHeadPic=GetAvatar.getAvatarImage(fid,"./Data/Avatar/User/",fAvatarString).getImage();
+        this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
+
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
@@ -47,7 +60,7 @@ public class ChatWithFriends extends ChatFrame {
         setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        updateChat("res/Avatar/head-test.JPG","Mike",df.format(new Date()),"1111",0);
+        //updateChat("res/Avatar/head-test.JPG","Mike",df.format(new Date()),"1111",0);
         this.setSize(500,520);
         setLocationRelativeTo(null);
         this.setVisible(true);
@@ -58,7 +71,7 @@ public class ChatWithFriends extends ChatFrame {
 
         //friends name button
         friendsNameButton=new JButton();
-        friendsNameButton.setText("white");
+        friendsNameButton.setText(fName);
         friendsNameButton.setFont(new Font("微软雅黑",Font.BOLD,16));
         friendsNameButton.setForeground(Color.WHITE);
         friendsNameButton.setFocusPainted(false);
@@ -70,8 +83,8 @@ public class ChatWithFriends extends ChatFrame {
             public void mouseDragged(MouseEvent e) {
                 Point p = ChatWithFriends.this.getLocation();
                 ChatWithFriends.this.setLocation(
-                        p.x + (e.getX() - origin.x),
-                        p.y + (e.getY() - origin.y));
+                        e.getXOnScreen() - origin.x,
+                        e.getYOnScreen() - origin.y);
             }
 
             @Override
@@ -82,13 +95,13 @@ public class ChatWithFriends extends ChatFrame {
         friendsNameButton.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                origin.x = e.getX();
-                origin.y = e.getY();
+
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
-
+                origin.x = e.getX();
+                origin.y = e.getY();
             }
 
             @Override
@@ -271,6 +284,23 @@ public class ChatWithFriends extends ChatFrame {
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         chatPanel.setPreferredSize(new Dimension(500,height));
 
+        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, false);
+        for (int i = 0; i < record.size(); i++) {
+            /*
+             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+             */
+            String res[] = record.get(i).split("```", 4);
+            // 聊天面板显示用户昵称
+            if (res.length == 4) {
+                if (res[1].equals(fid)){
+                    updateChat(fHeadPic,fName,res[0],res[3],0);
+                }else if (res[1].equals(mid)){
+                    updateChat(mHeadPic,mName,res[0],res[3],1);
+                }
+            }
+        }
+        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+
 
 
 
@@ -299,5 +329,12 @@ public class ChatWithFriends extends ChatFrame {
 
     }
 
+    public int getMessageNum() {
+        return messageNum;
+    }
+
+    public void setMessageNum(int messageNum) {
+        this.messageNum = messageNum;
+    }
 }
 

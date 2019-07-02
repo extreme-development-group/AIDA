@@ -11,8 +11,8 @@ public class SingleText extends JPanel {
     private JPanel textPanel;
     private JLabel idLabel;
     private JLabel textLabel;
-    public SingleText(String avatarPath,String username,String time,String text,int side) throws IOException {
-        avatar=new HeadPortrait(40,40,avatarPath);
+    public SingleText(Image userHeadPic,String username,String time,String text,int side) {
+        avatar=new HeadPortrait(40,40,userHeadPic);
 
         idLabel=new JLabel();
         idLabel.setText(username+"  "+time);

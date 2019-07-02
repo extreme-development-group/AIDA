@@ -74,13 +74,13 @@ public class ChatWithGroup extends ChatFrame {
         GroupNameButton.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                origin.x = e.getX();
-                origin.y = e.getY();
+
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
-
+                origin.x = e.getX();
+                origin.y = e.getY();
             }
 
             @Override

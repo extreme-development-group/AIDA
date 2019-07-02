@@ -27,7 +27,7 @@ class HeadPortrait extends JButton {
     private int border;
 
 
-    HeadPortrait(int width, int height, String filepath) throws IOException {
+    HeadPortrait(int width, int height, Image image){
         this.width = width;
         this.height = height;
         border=1;
@@ -35,7 +35,7 @@ class HeadPortrait extends JButton {
         setBorderPainted(false);
         setFocusPainted(false);
         setSize(width, height);
-        BufferedImage avatarImage = ImageIO.read(new File(filepath));
+        BufferedImage avatarImage = (BufferedImage)image;
         // 透明底的图片
         BufferedImage formatAvatarImage = new BufferedImage(width, width, BufferedImage.TYPE_4BYTE_ABGR);
         Graphics2D graphics = formatAvatarImage.createGraphics();
