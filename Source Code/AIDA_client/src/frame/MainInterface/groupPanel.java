@@ -30,10 +30,11 @@ public class groupPanel extends JPanel {
     private String groupID;
     // just for test
 
-    groupPanel(String id,Image fHead,String fName,UI_MainInterface now) {
+    groupPanel(String id,Image fHead,String fName,String fSignature,UI_MainInterface now) {
         groupID = id;
         this.fHead=fHead;
         this.fName=fName;
+        this.fSignature=fSignature;
         this.now=now;
 
         originColor = new Color(245, 245, 245);

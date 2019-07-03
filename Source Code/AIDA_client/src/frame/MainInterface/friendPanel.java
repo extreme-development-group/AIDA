@@ -43,15 +43,36 @@ public class friendPanel extends JPanel {
         setBackground(originColor);
         setLayout(null);
         init();
-
-        addMouseListener(new MouseAdapter() {
+        addMouseListener(new MouseListener() {
+            @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     now.withFriend.put(fid,new ChatWithFriends(now.userInfo.getUserId(),now.userInfo.getUserName(),fid,fName,fHead,fHead));
                 }
-                super.mouseClicked(e);
             }
 
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
+        addMouseListener(new MouseAdapter() {
             // 右键弹出菜单
             // 鼠标释放弹出
             public void mouseReleased(MouseEvent e) {
@@ -73,8 +94,6 @@ public class friendPanel extends JPanel {
                 }
                 super.mouseClicked(e);
             }
-
-
 
             public void mouseEntered(MouseEvent e) {
                 setBackground(hoverColor);

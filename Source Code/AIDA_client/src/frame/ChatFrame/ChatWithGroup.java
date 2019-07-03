@@ -179,10 +179,6 @@ public class ChatWithGroup extends ChatFrame {
         pictureButton.setFocusPainted(false);
         pictureButton.setIcon(setIcon("res/Icon/image.png",30,30));
 
-        input=new JTextArea("");
-        input.setPreferredSize(new Dimension(700,300));
-        input.setBackground(new Color(128,255,255));
-        input.setBorder(null);
 
         sendButton=new JButton();
         sendButton.setText("发送");
@@ -196,6 +192,11 @@ public class ChatWithGroup extends ChatFrame {
         SendFriend sendFriend=new SendFriend(mHeadPic,mName,fid,true,input,this);
         sendButton.addActionListener(sendFriend);
 
+
+        input=new JTextArea("");
+        input.setPreferredSize(new Dimension(700,300));
+        input.setBackground(new Color(128,255,255));
+        input.setBorder(null);
 
 
         mainControlPanel =new JPanel();
