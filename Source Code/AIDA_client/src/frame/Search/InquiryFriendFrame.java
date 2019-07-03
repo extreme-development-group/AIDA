@@ -1,18 +1,21 @@
-//7.1 11:45 ������
-
+//7.1 15:45 第四版
+//7.1 11:45 第三版
 package frame.Search;
 
+import frame.MainInterface.UI_MainInterface;
+
 import java.awt.Color;
-
-//6.30.18:00 �ڶ���
-
-//package com.lsh.view;
-
+import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ import java.util.List;
 //import java.awt.FlowLayout;
 //import java.awt.event.FocusAdapter;
 //import java.awt.event.FocusEvent;
+import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -30,12 +34,14 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 //import javax.swing.JScrollPane;
-
+import javax.swing.JTable;
 
 public class InquiryFriendFrame extends JFrame {
-	
+
+
 	//public List<User> result=new ArrayList<>();
 	public int nowPage = 0;
 	private int sumPage;
@@ -51,28 +57,28 @@ public class InquiryFriendFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					InquiryFriendFrame frame = new InquiryFriendFrame();
+					InquiryFriendFrame frame = new InquiryFriendFrame(null);
 				/*
 				 * 	JButton demo = new JButton("close");
 					demo.setBounds(0,0,30,30);
 					demo.addActionListener(new ActionListener() {
-						
+
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							System.exit(0);
-							
+
 						}
 					});
 					frame.add(demo);
 				 */
-					
-					
+
+
 					frame.setVisible(true);
-					
-					
+
+
 					//JFrame demo = new JFrame();
 					//demo.setBounds(500, 500, 500, 500);
-					
+
 					//demo.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -82,10 +88,10 @@ public class InquiryFriendFrame extends JFrame {
 	}
 
 
-	public InquiryFriendFrame() {
-		this.setTitle("����");
+	public InquiryFriendFrame(UI_MainInterface now) {
+		this.setTitle("查找");
 		//this.setUndecorated(true);
-		
+
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds((Toolkit.getDefaultToolkit().getScreenSize().width - 700) / 2,
@@ -94,10 +100,10 @@ public class InquiryFriendFrame extends JFrame {
 		this.contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		this.setContentPane(contentPane);
 		this.contentPane.setLayout(null);
-		this.userIdField = new JTextField("�������˺�/Ⱥ��");
+		this.userIdField = new JTextField("请输入账号/群号");
 		this.userIdField.setBounds(70, 35, 360, 30);
 		this.userIdField.setBackground(Color.WHITE);
-		this.userIdField.setFont(new Font("΢���ź�", Font.PLAIN, 15));
+		this.userIdField.setFont(new Font("微软雅黑", Font.PLAIN, 15));
 		this.userIdField.setBorder(null);
 		this.userIdField.setForeground(new Color(211, 211, 211));
 		this.contentPane.add(userIdField);
@@ -110,12 +116,12 @@ public class InquiryFriendFrame extends JFrame {
 
 		});
 
-		JButton btnNewButton = new JButton("�� ѯ");
+		JButton btnNewButton = new JButton("查 询");
 		btnNewButton.setBounds(505, 35, 110, 30);
 		contentPane.add(btnNewButton);
 		//overViewLabel
-		JLabel overViewLabel = new JLabel("���ҵ�0�� / 0��Ⱥ");
-		overViewLabel.setFont(new Font("΢���ź�", Font.PLAIN, 13));
+		JLabel overViewLabel = new JLabel("查找到0人 / 0个群");
+		overViewLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
 
 		overViewLabel.setBounds(12, 105, 130, 18);
 		contentPane.add(overViewLabel);
@@ -134,16 +140,16 @@ public class InquiryFriendFrame extends JFrame {
 		}
 		this.add(resultPanel);
 
-		pageNumLabel = new JLabel("0/0ҳ| ", SwingConstants.RIGHT);
+		pageNumLabel = new JLabel("0/0页| ", SwingConstants.RIGHT);
 		pageNumLabel.setForeground(new Color(90, 90, 90));
 		pageNumLabel.setBounds(580, 105, 60, 20);
-		pageNumLabel.setFont(new Font("΢���ź�", Font.PLAIN, 14));
+		pageNumLabel.setFont(new Font("微软雅黑", Font.PLAIN, 14));
 		this.add(pageNumLabel);
 
-		nextPageLabel = new JLabel("��һҳ");
+		nextPageLabel = new JLabel("下一页");
 		nextPageLabel.setForeground(new Color(90, 90, 90));
 		nextPageLabel.setBounds(640, 105, 45, 20);
-		nextPageLabel.setFont(new Font("΢���ź�", Font.PLAIN, 13));
+		nextPageLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
 		nextPageLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
 		nextPageLabel.addMouseListener(new MouseAdapter() {
@@ -155,21 +161,21 @@ public class InquiryFriendFrame extends JFrame {
 				} else if (sumPage == nowPage) {
 					nowPage = 1;
 				}
-				//showResult();
+//				showResult();
 			}
 		});
 		this.add(nextPageLabel);
 
 		/*
 		 * Container c = getContentPane(); c.setLayout(new GridLayout(3,3,5,5)); for
-		 * (int i = 0;i<9;i++) { c.add(new JButton("��ť"+i)); }
-		 * 
+		 * (int i = 0;i<9;i++) { c.add(new JButton("按钮"+i)); }
+		 *
 		 */
-		// ��ѯ����Ӧ����
+		// 查询的响应监听
 		/*
-		 * �����1 ������ŵ����1�� ��������Ÿ����2 �Ѹ�����Ϣ�ŵ����2//�永��Ϊ�������½�һ���ࡣ��ʵ��չʾ��Ϣ��ͷ���ǳƺ��룩���Ӻ�����Ӧ��
-		 * 
-		 * �Ӻ�����Ӧ�� ����һ�¿� ͷ������ �Ա� ���ڵ� ��֤��Ϣ���ı�����򣬣���Ӱ�ť��ȷ����������󵯳�dialog�������ѷ���
+		 * 建面板1 建网格放到面板1里 网格里面放个面板2 把个人信息放到面板2//面案二为对象，需新建一个类。（实现展示信息（头像昵称号码），加好友响应）
+		 *
+		 * 加好友响应： 弹出一新框， 头像名称 性别 所在地 验证信息（文本输入框，）添加按钮（确定），点击后弹出dialog，请求已发出
 		 */
 
 

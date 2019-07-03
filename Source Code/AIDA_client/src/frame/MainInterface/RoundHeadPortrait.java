@@ -14,7 +14,7 @@ public class RoundHeadPortrait extends JButton {
     private int height;
     private Color borderColor;
 
-    public RoundHeadPortrait(int width, int height, Color borderColor, String filepath) throws IOException {
+    public RoundHeadPortrait(int width, int height, Color borderColor, String filepath){
         this.borderColor = borderColor;
         this.width = width;
         this.height = height;
@@ -23,7 +23,12 @@ public class RoundHeadPortrait extends JButton {
         setBorderPainted(false);
         setFocusPainted(false);
         setSize(width, height);
-        BufferedImage avatarImage = ImageIO.read(new File(filepath));
+        BufferedImage avatarImage = null;
+        try {
+            avatarImage = ImageIO.read(new File(filepath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         // 透明底的图片
         BufferedImage formatAvatarImage = new BufferedImage(width, width, BufferedImage.TYPE_4BYTE_ABGR);
         Graphics2D graphics = formatAvatarImage.createGraphics();

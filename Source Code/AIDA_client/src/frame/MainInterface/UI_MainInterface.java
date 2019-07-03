@@ -3,6 +3,7 @@ package frame.MainInterface;
 import client.InteractWithServer;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ChatWithGroup;
+import frame.Search.InquiryFriendFrame;
 import user.User;
 
 import javax.imageio.ImageIO;
@@ -20,7 +21,7 @@ public class UI_MainInterface extends JFrame {
     private JButton headPortrait;
     private JLabel nickname;
     private JTextField signature;
-    private JButton friendsButton, groupsButton;
+    private JButton friendsButton, groupsButton, searchButton;
     private JLabel divLine1, divLine2, divLine3;
     // friendListPanel
     private JPanel friendListPanel;
@@ -101,6 +102,7 @@ public class UI_MainInterface extends JFrame {
     public static void setGroup(HashMap<String, groupPanel> group) {
         UI_MainInterface.group = group;
     }
+
     public static HashMap<String, ChatWithFriends> getFriendChat() {
         return withFriend;
     }
@@ -199,6 +201,21 @@ public class UI_MainInterface extends JFrame {
             }
         });
         upPanel.add(signature);
+        // 搜索按钮
+        searchButton = new JButton();
+        searchButton.setBounds(upPanel.getWidth()-40, upPanel.getHeight()-35-30, 30, 30);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setBorderPainted(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setIcon(setIcon("res/MainInterface/search.png", 30, 30));
+        searchButton.setRolloverIcon(setIcon("res/MainInterface/search_hover.png", 30, 30));
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new InquiryFriendFrame(UI_MainInterface.this);
+            }
+        });
+        upPanel.add(searchButton);
         // 选择面板
         choosePanel = new JPanel();
         choosePanel.setBounds(0, 130, 250, 35);
@@ -309,6 +326,21 @@ public class UI_MainInterface extends JFrame {
 
     public static void main(String[] args) throws IOException {
         UI_MainInterface demo = new UI_MainInterface("111");
+    }
+
+    private ImageIcon setIcon(String filepath,int x,int y){
+        ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
+        Image image = imageIcon.getImage();                         // 但这个图片太大不适合做Icon//    为把它缩小点，先要取出这个Icon的image ,然后缩放到合适的大小
+        Image smallImage = image.getScaledInstance(x,y,Image.SCALE_FAST);//    再由修改后的Image来生成合适的Icon
+        return new ImageIcon(smallImage);//   最后设置它为按钮的图片
+    }
+
+    public void addfriend(String fid,Image fHead,String fName,String fSignature,String fOnline) {
+        friendListPanel.setPreferredSize(new Dimension(250, friendListPanel.getHeight()+50));
+        friendPanel friend= new friendPanel(fid, fHead, fName, fSignature, fOnline,this);
+        friendListPanel.add(friend);
+        UI_MainInterface.friend.put(fid, friend);
+
     }
 
 }

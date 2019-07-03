@@ -6,7 +6,7 @@ import java.awt.*;
 // 最小化按钮
 public class UI_Minimize extends JButton {
 
-    UI_Minimize() {
+    public UI_Minimize() {
         setMargin(new Insets(0, 0, 0, 0)); // 消除按钮外边距
         setContentAreaFilled(false); // 不绘制内容区域（透明背景）
         setBorderPainted(false); // 去除边框

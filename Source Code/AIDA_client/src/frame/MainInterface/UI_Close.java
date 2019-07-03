@@ -6,7 +6,7 @@ import java.awt.*;
 // 关闭按钮
 public class UI_Close extends JButton {
 
-    UI_Close() {
+    public UI_Close() {
         setMargin(new Insets(0, 0, 0, 0)); // 消除按钮外边距
         setContentAreaFilled(false); // 不绘制内容区域（透明背景）
         setBorderPainted(false); // 去除边框
