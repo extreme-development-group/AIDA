@@ -1,6 +1,8 @@
 package frame.ChatFrame;
 
+import client.InteractWithServer;
 import frame.Listener.SendFriend;
+import frame.MainInterface.UI_MainInterface;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -8,11 +10,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Vector;
 
 public class ChatWithGroup extends ChatFrame {
     public static void main(String[] args) throws IOException {
         Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
-        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,image,0);
+        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,0);
     }
     protected JButton GroupNameButton,minimize,closeButton,emojiButton,
             pictureButton,sendButton;
@@ -23,7 +26,7 @@ public class ChatWithGroup extends ChatFrame {
     private String fName,fid,mid,mName;
     private int messageNum;
     private int height;
-    private Image fHeadPic,mHeadPic;
+    private Image mHeadPic;
     private int userStatue;
     public void addMember(String uid, String uName, int statue){
         try {
@@ -42,14 +45,13 @@ public class ChatWithGroup extends ChatFrame {
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,Image fHeadPic,int userStatue) throws IOException {
+    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,int userStatue) throws IOException {
         this.mid=mid;
         this.mName=mName;
         this.fid=fid;
         this.fName=fName;
         this.mHeadPic=mHeadPic;
         this.userStatue =userStatue;
-        this.fHeadPic=fHeadPic;
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
@@ -71,7 +73,7 @@ public class ChatWithGroup extends ChatFrame {
 
         //friends name button
         GroupNameButton =new JButton();
-        GroupNameButton.setText("white");
+        GroupNameButton.setText(fName);
         GroupNameButton.setFont(new Font("微软雅黑",Font.BOLD,16));
         GroupNameButton.setForeground(Color.WHITE);
         GroupNameButton.setFocusPainted(false);
@@ -287,26 +289,25 @@ public class ChatWithGroup extends ChatFrame {
         memberPanel.getVerticalScrollBar().setUnitIncrement(15);
         groupMemberPanel.setPreferredSize(new Dimension(200,memberHeight));
 
-//        Vector<String> members = InteractWithServer.getGroupMembers(fid);
-//        for (String i : members) {
-//            if (i.equals(mid))
-//                continue;
-//            ImageIcon icon = new ImageIcon("./res/tempheadportrait.jpg");
-//            String content = "陌生人(" + i + ")";
-//            if (MainInterface.getFriend().containsKey(i)) {
-//                icon = GetAvatar.getAvatarImage(i, "./Data/Avatar/User/",
-//                        MainInterface.getFriend().get(i).getfAvatar());
-//                content = MainInterface.getFriend().get(i).getfName() + "("
-//                        + MainInterface.getFriend().get(i).getFid() + ")";
-//            }
-//            icon = new ImageIcon(icon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
-//            peopleBox.add(new JLabel(icon));
-//            peopleBox.add(new JLabel(content));
-//            groupPeopleBox.add(peopleBox);
-//
-//            addMember(i,"00","");
-//
-//        }
+        Vector<String> members = InteractWithServer.getGroupMembers(fid);
+        for (String i : members) {
+            System.out.println(i);
+            String id[] = i.split("```");
+            String memberid = id[1];
+            String memberName = id[2];
+            int state = Integer.parseInt(id[0]);
+            if (memberid.equals(mid)) {
+                addMember(mid, mName, state);
+                continue;
+            }
+            ImageIcon icon = new ImageIcon("./res/tempheadportrait.jpg");
+            if (UI_MainInterface.getFriend().containsKey(memberid)) {
+                icon = GetAvatar.getAvatarImage(memberid, "./Data/Avatar/User/",
+                        UI_MainInterface.getFriend().get(memberid).getFAvatar());
+            }
+            icon = new ImageIcon(icon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
+            addMember(memberid,memberName,state);
+        }
 
 
     }

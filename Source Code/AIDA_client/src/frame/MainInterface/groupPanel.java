@@ -14,24 +14,15 @@ public class groupPanel extends JPanel {
     private JLabel groupName;
     private Color originColor, hoverColor;
     //    private UserInfo userinfo;
-    private String fid;
+    private String groupID; // groupid
     // just for test
     private String fName,fSignature;
     private Image fHead;
     private boolean isOnline;
     private UI_MainInterface now;
 
-
-    public String getGroupID() {
-        return groupID;
-    }
-
-    //    private groupInfo groupID;
-    private String groupID;
-    // just for test
-
     groupPanel(String id,Image fHead,String fName,UI_MainInterface now) {
-        groupID = id;
+        this.groupID = id;
         this.fHead=fHead;
         this.fName=fName;
         this.now=now;
@@ -48,7 +39,7 @@ public class groupPanel extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     try {
-                        now.withGroup.put(fid,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),fid,fName,fHead,fHead,0));
+                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead,0));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }

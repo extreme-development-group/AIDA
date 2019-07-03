@@ -119,4 +119,10 @@ public class friendPanel extends JPanel {
         this.fOnline = fOnline;
         status.setText(fOnline);
     }
+
+    public String getFAvatar() {
+        // TODO
+        return "头像暂无";
+//        return fHead;
+    }
 }

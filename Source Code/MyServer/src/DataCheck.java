@@ -117,7 +117,7 @@ public class DataCheck {
                 String gAvatar = resultSet.getString("group_avatar");
                 groups.add(new FriendsOrGroups(gId, gName, gAvatar, "", ""));
             }
-            resultSet.close();
+//            resultSet.close();
         } catch (SQLException e) {
             System.out.println("获取群信息失败 " + e.getMessage());
         }
@@ -162,20 +162,33 @@ public class DataCheck {
 
     // 查询群中所有成员的ID
     public static Vector<String> getGroupMember(String groupId) {
-        String sql = "select user_id from aida_groupuser where group_id = " + groupId;
         // 与数据库创建连接
         DataBaseConnection dataCon = new DataBaseConnection();
 
         // 最终结果Vector数组
         Vector<String> member = new Vector<String>();
 
+        // 自身为群主
+        String sql = "select * from aida_group where group_id = " + groupId;
         // 利用该sql语句查询，返回ResultSet结果集
         ResultSet resultSet = dataCon.getFromDataBase(sql);
+        resultSet = dataCon.getFromDataBase(sql);
         try {
             while (resultSet.next()) {
-                member.add(resultSet.getString("user_id"));
+                member.add("0```" + resultSet.getString("group_master") + "```demo");
+            }
+        } catch (SQLException e) {
+            System.out.println("获取群信息失败 " + e.getMessage());
+        }
+        sql = "select aida_groupuser.user_id, aida_user.user_nickname from aida_groupuser, aida_user where aida_groupuser.user_id=aida_user.user_id and group_id = " + groupId;
+        resultSet = dataCon.getFromDataBase(sql);
+        try {
+            while (resultSet.next()) {
+                member.add("2```" + resultSet.getString("user_id") +
+                        "```" + resultSet.getString("user_nickname"));
             }
             // 关闭连接
+            resultSet.close();
             dataCon.close();
         } catch (SQLException e) {
             System.out.println("查询成员ID列表失败：" + e.getMessage());
