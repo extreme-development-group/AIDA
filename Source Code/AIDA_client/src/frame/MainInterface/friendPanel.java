@@ -1,9 +1,12 @@
 package frame.MainInterface;
 
+import client.InteractWithServer;
+import config.PureInfo;
 import config.Tools;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.HeadPortrait;
 import frame.Listener.deleteListener;
+import frame.UserInfoFrame.Info;
 
 import javax.swing.*;
 import java.awt.*;
@@ -52,7 +55,12 @@ public class friendPanel extends JPanel {
                     String userId=now.userInfo.getUserId();
                     String userName=now.userInfo.getUserName();
                     Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
-                    now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,mHeadImage));
+                    if (!now.withFriend.containsKey(fid)){
+                        now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,mHeadImage));
+                    }else {
+                        now.withFriend.get(fid).requestFocus();
+                    }
+
                 }
                 super.mouseClicked(e);
             }
@@ -65,16 +73,45 @@ public class friendPanel extends JPanel {
                     MyMenuItem chatItem = new MyMenuItem("发送消息");
                     chatItem.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
-
+                            String userId=now.userInfo.getUserId();
+                            String userName=now.userInfo.getUserName();
+                            Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
+                            if (!now.withFriend.containsKey(fid)){
+                                now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,mHeadImage));
+                            }else {
+                                now.withFriend.get(fid).requestFocus();
+                            }
                         }
                     });
                     MyMenuItem deleteItem = new MyMenuItem("删除好友");
-                    deleteItem.addActionListener(new deleteListener((JPanel)e.getComponent()));
+                    deleteItem.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            if (InteractWithServer.deleteFriends(now.userInfo.getUserId(),fid,true)){
+                                System.out.println("删除" + friendPanel.this.getFid() );
+                                // 流式布局自动位移
+                                friendPanel.this.setVisible(false);
+                                now.friendListPanel.setPreferredSize(new Dimension((int)now.friendListPanel.getPreferredSize().getWidth(),
+                                        (int)now.friendListPanel.getPreferredSize().getWidth()-50));
+                            }else {
+                                JOptionPane.showMessageDialog(now, "删除好友失败！", "提示", JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                    });
                     MyMenuItem infoItem = new MyMenuItem("个人资料");
+                    infoItem.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            PureInfo pureInfo = InteractWithServer.getFriendInfo(fid);
+                            System.out.println(pureInfo);
+                            new Info(pureInfo,now);
+                        }
+                    });
                     friendPopupMenu.add(chatItem);
                     friendPopupMenu.add(infoItem);
                     friendPopupMenu.add(deleteItem);
                     friendPopupMenu.show(e.getComponent(), e.getX(), e.getY());
+
                 }
                 super.mouseClicked(e);
             }

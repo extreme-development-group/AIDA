@@ -5,16 +5,15 @@ package frame.Search;
 import client.InteractWithServer;
 import config.Tools;
 import config.UserInfo;
+import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ScrollBarUI;
+import frame.MainInterface.DragWindowListener;
+import frame.MainInterface.UI_Close;
 import frame.MainInterface.UI_MainInterface;
+import frame.MainInterface.UI_Minimize;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,10 +40,8 @@ public class InquiryFriendFrame extends JFrame {
 	private JPanel resultPanel;
 	public JButton btnNewButton;
 	private JScrollPane scrollPane;
-	public static Vector<UserInfo.FriendsOrGroups> friendsOrGroups;
-	static {
-		friendsOrGroups = new Vector<UserInfo.FriendsOrGroups>();
-	}
+	private JButton closeButton;
+	private JButton minimizeButton;
 
 	public static void main(String[] args) {
 
@@ -88,13 +85,34 @@ public class InquiryFriendFrame extends JFrame {
 
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		this.setSize(700, 400);
+		this.setSize(700, 370);
 		this.setLayout(null);
+		this.setLocationRelativeTo(null);
+		this.setUndecorated(true);
+		// 关闭按钮
+		closeButton = new UI_Close();
+		closeButton.setBounds(670, 0, 30, 30);
+		closeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InquiryFriendFrame.this.dispose();
+			}
+		});
+		add(closeButton);
+		// 最小化按钮
+		minimizeButton = new UI_Minimize();
+		minimizeButton.setBounds(640, 0, 30, 30);
+		minimizeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setExtendedState(JFrame.ICONIFIED);
+			}
+		});
+		add(minimizeButton);
 
 		this.contentPane = new JPanel();
 		this.contentPane.setBounds(0, 0, 700, 100);
 		this.contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		this.contentPane.setLayout(null);
+		this.contentPane.setBackground(new Color(40,138,221));
 
 		this.userIdField = new JTextField("请输入账号/群号");
 		this.userIdField.setBounds(70, 35, 360, 30);
@@ -103,14 +121,27 @@ public class InquiryFriendFrame extends JFrame {
 		this.userIdField.setBorder(null);
 		this.userIdField.setForeground(new Color(211, 211, 211));
 		this.userIdField.setColumns(10);
-		this.userIdField.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				userIdField.setForeground(new Color(34, 49, 72));
-				userIdField.setText("");
+		this.userIdField.addFocusListener(new FocusListener() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				if(userIdField.getText().equals("请输入账号/群号")) {
+					userIdField.setText("");
+					userIdField.setForeground(Color.black);
+				}
 			}
 
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(userIdField.getText().trim().equals("")) {
+					userIdField.setText("请输入账号/群号");
+					userIdField.setForeground(Color.GRAY);
+				}
+			}
 		});
 		contentPane.add(userIdField);
+		DragWindowListener adapter = new DragWindowListener();
+		contentPane.addMouseMotionListener(adapter);
+		contentPane.addMouseListener(adapter);
 
 
 		//overViewLabel
@@ -127,6 +158,7 @@ public class InquiryFriendFrame extends JFrame {
 		resultPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		resultPanel.setPreferredSize(new Dimension(700,0));
 		resultPanel.setLocation(0,100);
+		resultPanel.setBackground(new Color(128,255,255));
 
 		scrollPane =new JScrollPane(resultPanel);
 		scrollPane.setBounds(0, 100, 700, 270);
@@ -136,18 +168,26 @@ public class InquiryFriendFrame extends JFrame {
 		scrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
 		scrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
 		scrollPane.getVerticalScrollBar().setUnitIncrement(15);
+		scrollPane.setBackground(new Color(128,255,255));
 		this.add(scrollPane);
 
 		btnNewButton = new JButton("查 询");
 		btnNewButton.setBounds(505, 35, 110, 30);
+		btnNewButton.setBackground(new Color(22,155,213));
+		btnNewButton.setForeground(Color.WHITE);
+		btnNewButton.setFont(new Font("微软雅黑",Font.BOLD,16));
+		btnNewButton.setBorderPainted(false); // set don't draw border
+		btnNewButton.setFocusPainted(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				resultPanel.removeAll();
+				resultPanel.validate();
+				resultPanel.repaint();
 				if (userIdField.getText().equals("")){
 					JOptionPane.showMessageDialog(InquiryFriendFrame.this, "搜索为空！", "错误", JOptionPane.WARNING_MESSAGE);
 				}else {
-					friendsOrGroups = InteractWithServer.getFriendsOrGroup(userIdField.getText());
+					Vector<UserInfo.FriendsOrGroups> friendsOrGroups = InteractWithServer.getFriendsOrGroup(userIdField.getText());
 					System.out.println(friendsOrGroups.size());
 					overViewLabel.setText("已查找到"+friendsOrGroups.size()+"结果");
 					for (int i =0;i<friendsOrGroups.size();i++){

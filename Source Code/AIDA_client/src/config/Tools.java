@@ -39,6 +39,12 @@ public class Tools {
         }
         return demo;
     }
+    static public ImageIcon setIcon(String filepath,int x,int y){
+        ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
+        Image image = imageIcon.getImage();                         // 但这个图片太大不适合做Icon//    为把它缩小点，先要取出这个Icon的image ,然后缩放到合适的大小
+        Image smallImage = image.getScaledInstance(x,y,Image.SCALE_FAST);//    再由修改后的Image来生成合适的Icon
+        return new ImageIcon(smallImage);//   最后设置它为按钮的图片
+    }
 
 
     public static void main(String[] args) {

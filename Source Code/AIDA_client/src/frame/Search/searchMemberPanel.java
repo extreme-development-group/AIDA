@@ -46,7 +46,7 @@ public class searchMemberPanel extends JPanel{
         this.fOnline=fOnline;
         this.now=now;
         this.fSigniture=fSignature;
-
+        this.setBackground(new Color(243,249,253));
         setPreferredSize(new Dimension(223, 50));
         setBackground(originColor);
         setLayout(null);

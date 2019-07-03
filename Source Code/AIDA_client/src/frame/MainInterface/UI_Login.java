@@ -1,10 +1,15 @@
 package frame.MainInterface;
 
+import client.ChatThread;
+import client.InteractWithServer;
 import frame.Listener.LoginListener;
+import user.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class UI_Login extends JFrame {
     // upPanel
@@ -27,6 +32,7 @@ public class UI_Login extends JFrame {
     // loadingPanel
     private JPanel loadingPanel;
     private JLabel loadingText;
+    static public User user;
 
     public UI_Login() {
 
@@ -317,7 +323,56 @@ public class UI_Login extends JFrame {
         registerButton.setBackground(new Color(9, 163, 220));
         registerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                loading();
+                String uID=InteractWithServer.register(nickname.getText(),String.valueOf(inputPsk.getPassword()));
+                System.out.println(uID);
+                if (!uID.equals("")){
+                    System.out.println("try login");
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // 获取文本框内容
+                            String userIdString = uID;
+                            String userPasswordString = String.valueOf(inputPsk.getPassword()).trim();
+                            UI_Login.this.loading();
+                            // 验证用户或密码是否正确
+                            Object isLoginSuccess = InteractWithServer.isLogin(userIdString, userPasswordString);
+                            System.out.println("当前登录状态：" + isLoginSuccess);
+                            if (isLoginSuccess != null) {
+                                String loginResult = isLoginSuccess.toString();
+                                if (loginResult.equals("true")) {
+                                    Thread t = new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            user = InteractWithServer.getUserInfo(userIdString);
+                                        }
+                                    });
+                                    t.start();
+                                    // 创建线程接入聊天端口
+                                    new Thread(new ChatThread(userIdString)).start();
+                                    try {
+                                        t.join();
+                                        new UI_MainInterface(user);
+                                        UI_Login.this.dispose();
+                                    } catch (IOException | InterruptedException ex) {
+                                        ex.printStackTrace();
+                                    }
+                                } else if (loginResult.equals("Repeat_login")) {
+                                    JOptionPane.showMessageDialog(UI_Login.this, "重复登录");
+                                    UI_Login.this.backtoLoginPanel();
+                                } else {
+                                    JOptionPane.showMessageDialog(UI_Login.this, "您的登陆信息有误", "登陆失败", JOptionPane.WARNING_MESSAGE);
+                                    UI_Login.this.backtoLoginPanel();
+
+                                }
+                            } else {
+                                JOptionPane.showMessageDialog(UI_Login.this, "与服务器建立连接失败");
+                                UI_Login.this.backtoLoginPanel();
+                            }
+                        }
+                    }).start();
+                }else {
+                    JOptionPane.showMessageDialog(UI_Login.this, "注册失败", "错误", JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
         registerPanel.add(registerButton);

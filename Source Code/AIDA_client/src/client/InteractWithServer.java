@@ -1,6 +1,7 @@
 package client;
 
 import config.ChatVerify;
+import config.PureInfo;
 import config.ServerInfo;
 import config.UserInfo;
 import user.User;
@@ -56,6 +57,13 @@ public final class InteractWithServer {
         userInfo = (User) postToServer(fieldString);
         return userInfo;
     }
+    //注册
+    public static String register(String userName, String password) {
+        String userID = null;
+        String fieldString = "register" + userName + "```" + password;
+        userID = (String) postToServer(fieldString);
+        return userID;
+    }
     //得到搜索好友列表
     public static Vector<UserInfo.FriendsOrGroups> getFriendsOrGroup(String fid){
         Vector<UserInfo.FriendsOrGroups> friendsOrGroups=null;
@@ -63,6 +71,21 @@ public final class InteractWithServer {
         friendsOrGroups = (Vector<UserInfo.FriendsOrGroups>) postToServer(fieldString);
         return friendsOrGroups;
     }
+
+    //申请好友信息
+    public static PureInfo getFriendInfo(String fid){
+        PureInfo pureInfo=null;
+        String fieldString ="getFriendInfo" + fid;
+        pureInfo =(PureInfo)postToServer(fieldString);
+        return pureInfo;
+    }
+    //提交修改信息
+    public static Boolean modifyUserInfo(PureInfo pureInfo){
+        Boolean isSuccess = false;
+        isSuccess = (Boolean)postToServer(pureInfo);
+        return isSuccess;
+    }
+
     //添加好友
     public static Boolean addFriends(String mid,String fid,boolean isFriend){
         boolean isSuccess = false;
@@ -74,7 +97,18 @@ public final class InteractWithServer {
         }
         isSuccess = (boolean)postToServer(fieldString);
         return isSuccess;
-
+    }
+    //删除好友
+    public static Boolean deleteFriends(String mid,String fid,boolean isFriend){
+        boolean isSuccess = false;
+        String fieldString = "";
+        if (isFriend){
+            fieldString = "deleteFriends" + mid + "```" + fid + "```"+ "0";
+        }else {
+            fieldString = "deleteFriends" + mid + "```" + fid + "```"+ "1";
+        }
+        isSuccess = (boolean)postToServer(fieldString);
+        return isSuccess;
     }
 
     // 通过交互双方id获取历史聊天记录

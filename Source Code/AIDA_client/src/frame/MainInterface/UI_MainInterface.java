@@ -1,20 +1,26 @@
 package frame.MainInterface;
 
 import client.InteractWithServer;
+import config.PureInfo;
 import config.Tools;
+import config.UserInfo;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ChatWithGroup;
 import frame.ChatFrame.HeadPortrait;
 import frame.Search.InquiryFriendFrame;
+import frame.UserInfoFrame.Info;
 import user.User;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+
+import static config.Tools.*;
 
 public class UI_MainInterface extends JFrame {
     // upPanel
@@ -26,11 +32,11 @@ public class UI_MainInterface extends JFrame {
     private JButton friendsButton, groupsButton, searchButton;
     private JLabel divLine1, divLine2, divLine3;
     // friendListPanel
-    private JPanel friendListPanel;
+    public JPanel friendListPanel;
     private listScrollPanel friendListJSP;
     // friendPanel
     // groupListPanel
-    private JPanel groupListPanel;
+    public JPanel groupListPanel;
     private listScrollPanel groupListJSP;
     // groupPanel
     //user information
@@ -47,9 +53,9 @@ public class UI_MainInterface extends JFrame {
         withGroup = new HashMap<String, ChatWithGroup>();
     }
 
-    public UI_MainInterface(String userIdString) throws IOException {
+    public UI_MainInterface(User userInfo) throws IOException {
         //信息载入
-        userInfo= InteractWithServer.getUserInfo(userIdString);
+        this.userInfo= userInfo;
         // 调试
         System.out.println("----------- 个人信息 --------------");
         System.out.println("ID：" + userInfo.getUserId());
@@ -150,7 +156,15 @@ public class UI_MainInterface extends JFrame {
         //
         //设置头像
         //
-        headPortrait = new HeadPortrait(70,70, Tools.base64StringToImage(userInfo.getUserAvatar()));
+        headPortrait = new HeadPortrait(70,70, base64StringToImage(userInfo.getUserAvatar()));
+        headPortrait.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PureInfo pureInfo = InteractWithServer.getFriendInfo(UI_MainInterface.this.userInfo.getUserId());
+                System.out.println(pureInfo);
+                new Info(pureInfo,UI_MainInterface.this);
+            }
+        });
         headPortrait.setLocation(20, 40);
         upPanel.add(headPortrait);
         // 昵称
@@ -299,7 +313,7 @@ public class UI_MainInterface extends JFrame {
             String fname = this.userInfo.getFriends().get(i).getName();
             String fsignature = this.userInfo.getFriends().get(i).getSignature();
             String fstatus = this.userInfo.getFriends().get(i).getStatus();
-            Image fHead = Tools.base64StringToImage(this.userInfo.getFriends().get(i).getAvatar());
+            Image fHead = base64StringToImage(this.userInfo.getFriends().get(i).getAvatar());
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
             friendPanel friend= new friendPanel(fid, fHead, fname, fsignature, fstatus,this);
             friendListPanel.add(friend);
@@ -313,7 +327,7 @@ public class UI_MainInterface extends JFrame {
         for(int i=0; i<this.userInfo.getGroups().size(); i++) {
             String gid = this.userInfo.getGroups().get(i).getId();
             String gname = this.userInfo.getGroups().get(i).getName();
-            Image gImage = Tools.base64StringToImage(this.userInfo.getGroups().get(i).getAvatar());
+            Image gImage = base64StringToImage(this.userInfo.getGroups().get(i).getAvatar());
             groupListPanel.setPreferredSize(new Dimension(250, 50*i));
             groupPanel group=new groupPanel(gid, gImage, gname, this);
             groupListPanel.add(group);
@@ -323,7 +337,7 @@ public class UI_MainInterface extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
-        UI_MainInterface demo = new UI_MainInterface("111");
+        UI_MainInterface demo = new UI_MainInterface(null);
     }
 
     private ImageIcon setIcon(String filepath,int x,int y){
@@ -350,6 +364,24 @@ public class UI_MainInterface extends JFrame {
         groupListPanel.repaint();
         UI_MainInterface.group.put(fid, friend);
 //        this.invalidate();
+    }
+    public void modify(PureInfo pureInfo){
+        ((HeadPortrait)headPortrait).updatePortrait(70,70, base64StringToImage(pureInfo.getUserAvatar()));
+        headPortrait.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PureInfo pureInfo = InteractWithServer.getFriendInfo(UI_MainInterface.this.userInfo.getUserId());
+                System.out.println(pureInfo);
+                new Info(pureInfo,UI_MainInterface.this);
+            }
+        });
+        nickname.setText(pureInfo.getUserNickName());
+        signature.setText(pureInfo.getuserSignature());
+        headPortrait.updateUI();
+        upPanel.validate();
+        upPanel.repaint();
+        this.validate();
+        this.repaint();
     }
 }
 

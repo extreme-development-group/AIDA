@@ -1,5 +1,6 @@
 package frame.MainInterface;
 
+import client.InteractWithServer;
 import frame.ChatFrame.ChatWithGroup;
 import frame.ChatFrame.HeadPortrait;
 
@@ -39,10 +40,10 @@ public class groupPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
-                    try {
+                    if (!now.withGroup.containsKey(groupID)){
                         now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead,0));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
+                    }else {
+                        now.withGroup.get(groupID).requestFocus();
                     }
                 }
             }
@@ -75,10 +76,28 @@ public class groupPanel extends JPanel {
                     MyMenuItem enterItem = new MyMenuItem("进入群聊");
                     enterItem.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
-                            System.out.println( groupID );
+                            if (!now.withGroup.containsKey(groupID)){
+                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead,0));
+                            }else {
+                                now.withGroup.get(groupID).requestFocus();
+                            }
                         }
                     });
                     MyMenuItem exitItem = new MyMenuItem("退出群聊");
+                    exitItem.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            if (InteractWithServer.deleteFriends(now.userInfo.getUserId(),groupID,false)){
+                                System.out.println("删除" + groupID );
+                                // 流式布局自动位移
+                                groupPanel.this.setVisible(false);
+                                now.groupListPanel.setPreferredSize(new Dimension((int)now.groupListPanel.getPreferredSize().getWidth(),
+                                        (int)now.groupListPanel.getPreferredSize().getWidth()-50));
+                            }else {
+                                JOptionPane.showMessageDialog(now, "退出群聊失败！", "提示", JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                    });
                     groupPopupMenu.add(enterItem);
                     groupPopupMenu.add(exitItem);
                     groupPopupMenu.show(e.getComponent(), e.getX(), e.getY());

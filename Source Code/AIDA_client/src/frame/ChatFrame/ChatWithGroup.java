@@ -45,7 +45,7 @@ public class ChatWithGroup extends ChatFrame {
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,int userStatue) throws IOException {
+    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,int userStatue){
         this.mid=mid;
         this.mName=mName;
         this.fid=fid;

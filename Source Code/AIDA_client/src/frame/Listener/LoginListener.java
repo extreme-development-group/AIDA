@@ -6,6 +6,7 @@ import frame.ChatFrame.ChatFrame;
 import frame.ChatFrame.ChatWithFriends;
 import frame.MainInterface.UI_Login;
 import frame.MainInterface.UI_MainInterface;
+import user.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +22,7 @@ public class LoginListener implements ActionListener{
     private JPasswordField passwd;
     private JCheckBox isRemeberPasswd,isAutoLogin;
     private UI_Login login;
+    static public User user;
     public LoginListener(JFrame now, JTextField userId, JPasswordField passwd, JCheckBox isRemeberPasswd, JCheckBox isAutoLogin){
         this.now=now;
         this.userId=userId;
@@ -84,19 +86,22 @@ public class LoginListener implements ActionListener{
                             // e.printStackTrace();
                             // }
                         }
-                        try {
-                            Thread.sleep(500);
-                        } catch (InterruptedException ex) {
-                            ex.printStackTrace();
-                        }
-                        now.dispose();
 
 
+                        Thread t = new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                user = InteractWithServer.getUserInfo(userIdString);
+                            }
+                        });
+                        t.start();
                         // 创建线程接入聊天端口
                         new Thread(new ChatThread(userIdString)).start();
                         try {
-                            new UI_MainInterface(userIdString);
-                        } catch (IOException ex) {
+                            t.join();
+                            new UI_MainInterface(user);
+                            now.dispose();
+                        } catch (IOException | InterruptedException ex) {
                             ex.printStackTrace();
                         }
                     } else if (loginResult.equals("Repeat_login")) {
