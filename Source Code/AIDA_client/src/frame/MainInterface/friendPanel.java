@@ -1,6 +1,8 @@
 package frame.MainInterface;
 
+import config.Tools;
 import frame.ChatFrame.ChatWithFriends;
+import frame.ChatFrame.HeadPortrait;
 import frame.Listener.deleteListener;
 
 import javax.swing.*;
@@ -47,7 +49,10 @@ public class friendPanel extends JPanel {
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
-                    now.withFriend.put(fid,new ChatWithFriends(now.userInfo.getUserId(),now.userInfo.getUserName(),fid,fName,fHead,fHead));
+                    String userId=now.userInfo.getUserId();
+                    String userName=now.userInfo.getUserName();
+                    Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
+                    now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,mHeadImage));
                 }
                 super.mouseClicked(e);
             }
@@ -89,7 +94,7 @@ public class friendPanel extends JPanel {
 
     private void init(){
         // 头像
-        headPortrait = new RoundHeadPortrait(40, 40, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
+        headPortrait = new HeadPortrait(40,40,fHead);
         headPortrait.setLocation(5,5);
         add(headPortrait);
         // 昵称

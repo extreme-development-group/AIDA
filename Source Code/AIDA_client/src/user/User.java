@@ -1,5 +1,6 @@
 package user;
 
+import java.awt.*;
 import java.util.Vector;
 import config.UserInfo;
 

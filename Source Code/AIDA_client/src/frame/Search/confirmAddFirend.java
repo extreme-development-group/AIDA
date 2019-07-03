@@ -17,7 +17,7 @@ public class confirmAddFirend extends JFrame{
 	private Avatar avatar;
 	private JLabel nameL,genderL,addressL;
 	//private JTextField Verification;
-	private int count = 0;//鏂囨湰鍩熺涓�娆¤鏁�
+	private int count = 0;
 	
 	public static void main(String[] args) {
 		

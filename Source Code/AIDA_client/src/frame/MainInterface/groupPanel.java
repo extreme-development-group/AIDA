@@ -1,6 +1,7 @@
 package frame.MainInterface;
 
 import frame.ChatFrame.ChatWithGroup;
+import frame.ChatFrame.HeadPortrait;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +11,7 @@ import java.io.IOException;
 // groupPanel
 public class groupPanel extends JPanel {
 
-    private RoundHeadPortrait headPortrait;
+    private JButton headPortrait;
     private JLabel groupName;
     private Color originColor, hoverColor;
     //    private UserInfo userinfo;
@@ -99,7 +100,7 @@ public class groupPanel extends JPanel {
     private void init() {
         // 头像
         try {
-            headPortrait = new RoundHeadPortrait(40, 40, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
+            headPortrait = new HeadPortrait(40,40,fHead);
         } catch (Exception e) {
             System.out.println();
         }

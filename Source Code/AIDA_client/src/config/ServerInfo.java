@@ -4,7 +4,7 @@ public final class ServerInfo {
     /**
      * @Fields SERVER_IP : 服务器地址
      */
-    public final static String SERVER_IP = "127.0.0.1";
+    public final static String SERVER_IP = "10.241.196.76";
 
     /**
      * @Fields CHAT_PORT : 聊天端口监听

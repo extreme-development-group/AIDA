@@ -1,8 +1,10 @@
 package frame.MainInterface;
 
 import client.InteractWithServer;
+import config.Tools;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ChatWithGroup;
+import frame.ChatFrame.HeadPortrait;
 import frame.Search.InquiryFriendFrame;
 import user.User;
 
@@ -55,7 +57,7 @@ public class UI_MainInterface extends JFrame {
         System.out.println("Email：" + userInfo.getUserEmail());
         System.out.println("性别：" + userInfo.getUserSex());
         System.out.println("生日：" + userInfo.getUserBirthday());
-        System.out.println("头像：" + userInfo.getUserAvatar());
+        //System.out.println("头像：" + userInfo.getUserAvatar());
         System.out.println("个性签名：" + userInfo.getUserSignatrue());
         System.out.println("注册时间：" + userInfo.getUserRegistertime());
         System.out.print("好友列表 :");
@@ -148,11 +150,7 @@ public class UI_MainInterface extends JFrame {
         //
         //设置头像
         //
-        try {
-            headPortrait = new RoundHeadPortrait(70, 70, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
-        } catch (Exception e) {
-            System.out.println("Get headPortrait ERROR!");
-        }
+        headPortrait = new HeadPortrait(70,70, Tools.base64StringToImage(userInfo.getUserAvatar()));
         headPortrait.setLocation(20, 40);
         upPanel.add(headPortrait);
         // 昵称
@@ -292,19 +290,18 @@ public class UI_MainInterface extends JFrame {
         upPanel.add(choosePanel);
     }
 
-    private void initListPanel() throws IOException {
+    private void initListPanel(){
         friendListPanel = new listPanel();
         friendListJSP = new listScrollPanel(friendListPanel);
         add(friendListJSP);
-        Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
-
         for(int i=0; i<this.userInfo.getFriends().size(); i++) {
             String fid = this.userInfo.getFriends().get(i).getId();
             String fname = this.userInfo.getFriends().get(i).getName();
             String fsignature = this.userInfo.getFriends().get(i).getSignature();
             String fstatus = this.userInfo.getFriends().get(i).getStatus();
+            Image fHead = Tools.base64StringToImage(this.userInfo.getFriends().get(i).getAvatar());
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
-            friendPanel friend= new friendPanel(fid, image, fname, fsignature, fstatus,this);
+            friendPanel friend= new friendPanel(fid, fHead, fname, fsignature, fstatus,this);
             friendListPanel.add(friend);
             UI_MainInterface.friend.put(fid, friend);
         }
@@ -316,8 +313,9 @@ public class UI_MainInterface extends JFrame {
         for(int i=0; i<this.userInfo.getGroups().size(); i++) {
             String gid = this.userInfo.getGroups().get(i).getId();
             String gname = this.userInfo.getGroups().get(i).getName();
+            Image gImage = Tools.base64StringToImage(this.userInfo.getGroups().get(i).getAvatar());
             groupListPanel.setPreferredSize(new Dimension(250, 50*i));
-            groupPanel group=new groupPanel(gid, image, gname, this);
+            groupPanel group=new groupPanel(gid, gImage, gname, this);
             groupListPanel.add(group);
             UI_MainInterface.group.put(gid, group);
         }
@@ -336,13 +334,23 @@ public class UI_MainInterface extends JFrame {
     }
 
     public void addfriend(String fid,Image fHead,String fName,String fSignature,String fOnline) {
-        friendListPanel.setPreferredSize(new Dimension(250, friendListPanel.getHeight()+50));
+        friendListPanel.setPreferredSize(new Dimension(250, (int)friendListPanel.getPreferredSize().getHeight()+50));
         friendPanel friend= new friendPanel(fid, fHead, fName, fSignature, fOnline,this);
         friendListPanel.add(friend);
+        friendListPanel.validate();
+        friendListPanel.repaint();
         UI_MainInterface.friend.put(fid, friend);
-
+//        this.invalidate();
     }
-
+    public void addGroup(String fid,Image fHead,String fName) {
+        groupListPanel.setPreferredSize(new Dimension(250, (int)groupListPanel.getPreferredSize().getHeight()+50));
+        groupPanel friend= new groupPanel(fid, fHead, fName,this);
+        groupListPanel.add(friend);
+        groupListPanel.validate();
+        groupListPanel.repaint();
+        UI_MainInterface.group.put(fid, friend);
+//        this.invalidate();
+    }
 }
 
 // friendPanel

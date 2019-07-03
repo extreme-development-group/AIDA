@@ -2,6 +2,7 @@ package client;
 
 import config.ChatVerify;
 import config.ServerInfo;
+import config.UserInfo;
 import user.User;
 
 import java.io.IOException;
@@ -12,17 +13,7 @@ import java.util.Vector;
 
 public final class InteractWithServer {
 
-    /**
-     * @Title: postToServer
-     * @Description:与服务器验证端口建立连接，并使用对象流传输数据
-     * @param: obj
-     *             发送给服务器的对象
-     * @return: result 接收服务器返回的对象信息
-     * @exception: IOException
-     *                 如果与服务器建立连接失败或创建对象输入输出流失败产生IOException.
-     * @exception: ClassNotFoundException
-     *                 如果对象输入流读取异常产生ClassNotFoundException.
-     */
+    // 与服务器验证端口建立连接，并使用对象流传输数据
     private static Object postToServer(Object obj) {
         Object result = null;
         try {
@@ -49,15 +40,7 @@ public final class InteractWithServer {
         return result;
     }
 
-    /**
-     * @Title: isLogin
-     * @Description:验证登录用户名或密码是否正确，发送构造的身份信息到服务器
-     * @param: userId
-     *             用户ID
-     * @param: userPassword
-     *             经过MD5加密后的密码
-     * @return: Object 返回接收的回馈对象(Boolean)
-     */
+    // 验证登录用户名或密码是否正确，发送构造的身份信息到服务器
     public static Object isLogin(String userId, String userPassword) {
         // 构造身份信息
         ChatVerify userInfo = new ChatVerify(userId, userPassword);
@@ -66,60 +49,53 @@ public final class InteractWithServer {
         return postToServer(userInfo);
     }
 
-    /**
-     * @Title: getUserInfo
-     * @Description:通过ID获取用户的信息，包括个人资料以及好友列表群列表
-     * @param: userId
-     *             用户ID
-     * @return: userInfo 包含用户信息的对象
-     */
+    // 通过ID获取用户的信息，包括个人资料以及好友列表群列表
     public static User getUserInfo(String userId) {
         User userInfo = null;
         String fieldString = "getUserInfo" + userId;
         userInfo = (User) postToServer(fieldString);
         return userInfo;
     }
+    //得到搜索好友列表
+    public static Vector<UserInfo.FriendsOrGroups> getFriendsOrGroup(String fid){
+        Vector<UserInfo.FriendsOrGroups> friendsOrGroups=null;
+        String fieldString = "getFriendsOrGroups" + fid;
+        friendsOrGroups = (Vector<UserInfo.FriendsOrGroups>) postToServer(fieldString);
+        return friendsOrGroups;
+    }
+    //添加好友
+    public static Boolean addFriends(String mid,String fid,boolean isFriend){
+        boolean isSuccess = false;
+        String fieldString = "";
+        if (isFriend){
+            fieldString = "addFriends" + mid + "```" + fid + "```"+ "0";
+        }else {
+            fieldString = "addFriends" + mid + "```" + fid + "```"+ "1";
+        }
+        isSuccess = (boolean)postToServer(fieldString);
+        return isSuccess;
 
-    /**
-     * @Title: getChatRecord
-     * @Description:通过交互双方id获取历史聊天记录
-     * @param: fromid
-     *             交互方1
-     * @param: toId
-     *             交互方2
-     * @param: isGroup
-     *             是否为群聊天记录
-     * @return: Vector<String> 返回聊天记录信息的Vector数组
-     */
-    @SuppressWarnings("unchecked")
+    }
+
+    // 通过交互双方id获取历史聊天记录
     public static Vector<String> getChatRecord(String fromid, String toId, boolean isGroup) {
         String sendString = "getChatRecord```" + fromid + "```" + toId + "```" + isGroup;
         return (Vector<String>) postToServer(sendString);
     }
 
-    /**
-     * @Title: getGroupMembers
-     * @Description:通过群ID向服务器发送请求，获取群所有成员ID
-     * @param: groupId
-     *             群ID
-     * @return: Vector<String> 返回群成员ID的Vector数组
-     */
-    @SuppressWarnings("unchecked")
+    // 通过群ID向服务器发送请求，获取群所有成员ID
     public static Vector<String> getGroupMembers(String groupId) {
         String send = "getGroupMembers" + groupId;
         return (Vector<String>) postToServer(send);
     }
 
-    /**
-     * @Title: setMyTrades
-     * @Description:向服务器发送请求更改个性签名
-     * @param: myId
-     *             需要修改的用户ID(只能是自己)
-     * @param: content
-     *             新的个性签名内容
-     * @return: void
-     */
+    // 向服务器发送请求更改个性签名
     public static void setMyTrades(String myId, String content) {
         postToServer("setMyTrades```" + myId + "```" + content);
     }
+
+    // 向服务器搜索好友
+
+    // 向服务器请求添加好友
+//    public \
 }
