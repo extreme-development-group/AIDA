@@ -1,6 +1,5 @@
 package frame.Search;
 
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;

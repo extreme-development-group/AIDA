@@ -28,7 +28,7 @@ public class friendPanel extends JPanel {
     private Image fHead;
     private UI_MainInterface now;
 
-    friendPanel(String id,Image fHead,String fName,String fSignature,String fOnline,UI_MainInterface now) throws IOException {
+    friendPanel(String id,Image fHead,String fName,String fSignature,String fOnline,UI_MainInterface now){
         fid = id;
         originColor = new Color(245, 245, 245);
         hoverColor = new Color(255, 255, 255);
@@ -87,7 +87,7 @@ public class friendPanel extends JPanel {
         });
     }
 
-    private void init() throws IOException {
+    private void init(){
         // 头像
         headPortrait = new RoundHeadPortrait(40, 40, new Color(128, 255, 255), "res/MainInterface/headPortrait.jpg");
         headPortrait.setLocation(5,5);
