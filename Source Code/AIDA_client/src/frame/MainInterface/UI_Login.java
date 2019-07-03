@@ -28,7 +28,7 @@ public class UI_Login extends JFrame {
     private JPanel loadingPanel;
     private JLabel loadingText;
 
-    UI_Login() {
+    public UI_Login() {
 
         setTitle("登录窗口");
         setIconImage(Toolkit.getDefaultToolkit().createImage("./res/Login/qq_logo.png")); // 设置小图标
@@ -173,6 +173,13 @@ public class UI_Login extends JFrame {
         rememberPasswd.setPressedIcon(new ImageIcon("res/Login/checkbox_press.png"));
         rememberPasswd.setSelectedIcon(new ImageIcon("res/Login/checkbox_tick_normal.png"));
         rememberPasswd.setRolloverSelectedIcon(new ImageIcon("res/Login/checkbox_tick_highlight.png"));
+        rememberPasswd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!rememberPasswd.isSelected())
+                    autoLogin.setSelected(false);
+            }
+        });
         downPanel.add(rememberPasswd);
         // 自动登录
         autoLogin = new JCheckBox("自动登录");
@@ -185,6 +192,13 @@ public class UI_Login extends JFrame {
         autoLogin.setPressedIcon(new ImageIcon("res/Login/checkbox_press.png"));
         autoLogin.setSelectedIcon(new ImageIcon("res/Login/checkbox_tick_normal.png"));
         autoLogin.setRolloverSelectedIcon(new ImageIcon("res/Login/checkbox_tick_highlight.png"));
+        autoLogin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(autoLogin.isSelected())
+                    rememberPasswd.setSelected(true);
+            }
+        });
         downPanel.add(autoLogin);
         // 注册
         register = new JLabel("注册账号");
@@ -388,7 +402,6 @@ public class UI_Login extends JFrame {
         downPanel.add(headPortrait);
         downPanel.setVisible(true);
     }
-
 
     // 登陆中
     public void loading() {

@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class deleteListener implements ActionListener {
     private JPanel parentPanel;
 
-    deleteListener(JPanel parent) {
+    public deleteListener(JPanel parent) {
         parentPanel = parent;
     }
 
