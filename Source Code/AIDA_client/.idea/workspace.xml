@@ -44,18 +44,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="180" selection-start-line="180" selection-end-line="180" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/DataStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="760">
               <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,10 +56,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithFriends.java">
+        <entry file="file://$PROJECT_DIR$/src/client/InteractWithServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+            <state relative-caret-position="40">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,10 +68,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#142#143#0" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="299" column="20" lean-forward="true" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="21" />
+            <state relative-caret-position="-713">
+              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#UI_MainInterface#0;class#UI_MainInterface#0" />
@@ -90,6 +95,15 @@
                 <element signature="e#3437#3438#0" expanded="true" />
                 <element signature="method#initupPanel#0;class#UI_MainInterface#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Minimize.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -106,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="254">
+              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -115,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/ChatThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="817">
               <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -125,10 +139,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatFrame.java">
+        <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="-12">
+              <caret line="179" column="47" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
+              <folding>
+                <element signature="method#UI_Login#0;class#UI_Login#0" />
+                <element signature="method#init#0;class#UI_Login#0" />
+                <element signature="method#initupPanel#0;class#UI_Login#0" />
+                <element signature="method#initregisterPanel#0;class#UI_Login#0" />
+                <element signature="method#initloadingPanel#0;class#UI_Login#0" />
+                <element signature="method#toRegisterPanel#0;class#UI_Login#0" />
+                <element signature="method#toLoginPanel#0;class#UI_Login#0" />
+                <element signature="method#backtoLoginPanel#0;class#UI_Login#0" />
+                <element signature="method#loading#0;class#UI_Login#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,20 +161,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/ChatExecute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="74" column="82" lean-forward="true" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
+            <state relative-caret-position="285">
+              <caret line="95" column="65" lean-forward="true" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/ServerInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -177,6 +193,8 @@
       <find>friend</find>
       <find>message</find>
       <find>withFriend</find>
+      <find>system</find>
+      <find>fOnline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,20 +235,20 @@
         <option value="$PROJECT_DIR$/src/frame/MainInterface/ScrollBarUI.java" />
         <option value="$PROJECT_DIR$/src/frame/MainInterface/deleteListener.java" />
         <option value="$PROJECT_DIR$/src/frame/Listener/deleteListener.java" />
-        <option value="$PROJECT_DIR$/src/client/Start.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatFrame/ChatWithFriends.java" />
         <option value="$PROJECT_DIR$/src/frame/ChatFrame/ChatWithGroup.java" />
         <option value="$PROJECT_DIR$/src/config/ServerInfo.java" />
         <option value="$PROJECT_DIR$/src/client/DataStream.java" />
-        <option value="$PROJECT_DIR$/src/client/ChatExecute.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java" />
         <option value="$PROJECT_DIR$/src/frame/MainInterface/groupPanel.java" />
         <option value="$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java" />
+        <option value="$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java" />
+        <option value="$PROJECT_DIR$/src/client/ChatExecute.java" />
+        <option value="$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java" />
+        <option value="$PROJECT_DIR$/src/client/Start.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1203" />
     <option name="y" value="7" />
     <option name="width" value="1212" />
@@ -277,13 +295,6 @@
               <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ChatFrame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="MainInterface" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -323,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Start">
+  <component name="RunManager" selected="Application.UI_Login">
     <configuration name="ChatWithGroup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="frame.ChatFrame.ChatWithGroup" />
       <module name="AIDA_client" />
@@ -385,8 +396,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Start" />
         <item itemvalue="Application.UI_Login" />
+        <item itemvalue="Application.Start" />
         <item itemvalue="Application.UI_MainInterface" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.ChatWithGroup" />
@@ -410,12 +421,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39431000" />
+    <option name="totallyTimeSpent" value="42301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21018593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21018593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,7 +436,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8871528" visible="true" weight="0.2636816" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8871528" visible="true" weight="0.2636816" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -707,39 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding>
-            <element signature="method#initregisterPanel#0;class#UI_Login#0" />
-            <element signature="method#initloadingPanel#0;class#UI_Login#0" />
-            <element signature="method#toRegisterPanel#0;class#UI_Login#0" />
-            <element signature="e#16283#16284#0" expanded="true" />
-            <element signature="e#16327#16328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Minimize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/Listener/SendFriend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -749,16 +728,6 @@
             <element signature="e#1290#1291#0" expanded="true" />
             <element signature="e#1337#1338#0" expanded="true" />
             <element signature="e#1367#1368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/InteractWithServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -787,26 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/ChatThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/DataStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -821,20 +770,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/ChatExecute.java">
+    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Minimize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="74" column="82" lean-forward="true" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="179" column="47" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
+          <folding>
+            <element signature="method#UI_Login#0;class#UI_Login#0" />
+            <element signature="method#init#0;class#UI_Login#0" />
+            <element signature="method#initupPanel#0;class#UI_Login#0" />
+            <element signature="method#initregisterPanel#0;class#UI_Login#0" />
+            <element signature="method#initloadingPanel#0;class#UI_Login#0" />
+            <element signature="method#toRegisterPanel#0;class#UI_Login#0" />
+            <element signature="method#toLoginPanel#0;class#UI_Login#0" />
+            <element signature="method#backtoLoginPanel#0;class#UI_Login#0" />
+            <element signature="method#loading#0;class#UI_Login#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/ChatThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/client/DataStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="760">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/InteractWithServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#UI_MainInterface#0;class#UI_MainInterface#0" />
+            <element signature="e#3287#3288#0" expanded="true" />
+            <element signature="e#3316#3317#0" expanded="true" />
+            <element signature="e#3389#3390#0" expanded="true" />
+            <element signature="e#3437#3438#0" expanded="true" />
+            <element signature="method#initupPanel#0;class#UI_MainInterface#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -845,18 +848,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/client/ChatExecute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="299" column="20" lean-forward="true" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="95" column="65" lean-forward="true" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#UI_MainInterface#0;class#UI_MainInterface#0" />
-            <element signature="e#3287#3288#0" expanded="true" />
-            <element signature="e#3316#3317#0" expanded="true" />
-            <element signature="e#3389#3390#0" expanded="true" />
-            <element signature="e#3437#3438#0" expanded="true" />
-            <element signature="method#initupPanel#0;class#UI_MainInterface#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
           </folding>
         </state>
       </provider>

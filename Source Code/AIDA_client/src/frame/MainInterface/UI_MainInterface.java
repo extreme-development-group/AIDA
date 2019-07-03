@@ -285,8 +285,9 @@ public class UI_MainInterface extends JFrame {
             String fid = this.userInfo.getFriends().get(i).getId();
             String fname = this.userInfo.getFriends().get(i).getName();
             String fsignature = this.userInfo.getFriends().get(i).getSignature();
+            String fstatus = this.userInfo.getFriends().get(i).getStatus();
             friendListPanel.setPreferredSize(new Dimension(250, 50*i));
-            friendPanel friend= new friendPanel(fid, image, fname, fsignature, "在线",this);
+            friendPanel friend= new friendPanel(fid, image, fname, fsignature, fstatus,this);
             friendListPanel.add(friend);
             UI_MainInterface.friend.put(fid, friend);
         }

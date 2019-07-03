@@ -6,6 +6,6 @@ import javax.swing.*;
 
 public class Start {
     public static void main(String[] args) {
-        JFrame demo = new UI_Login();
+        JFrame demo1 = new UI_Login();
     }
 }

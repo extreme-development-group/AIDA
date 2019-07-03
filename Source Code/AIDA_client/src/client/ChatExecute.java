@@ -62,8 +62,6 @@ public final class ChatExecute {
             HashMap<String, ChatWithFriends> fModel;
             HashMap<String, ChatWithGroup> gModel;
 
-            // all ok.
-
             // 接收到的消息是从好友发送来的
             if (type.equals("toFriend")) {
 
@@ -71,6 +69,7 @@ public final class ChatExecute {
                 System.out.println(scMessage);
 
                 // 展示在对应好友聊天面板中
+                // 若打开了聊天窗口
                 if (fModel.containsKey(fromId)) {
                     fModel.get(fromId).addMessage(image,UI_MainInterface.getFriend().get(fromId).getfName(), res[0], message,
                             0);
@@ -79,6 +78,7 @@ public final class ChatExecute {
             // 接收到的消息是从某个群发送来的
             else if (type.equals("toGroup")) {
                 gModel = UI_MainInterface.getGroupChat();
+                // 若打开了聊天窗口
                 if (gModel.containsKey(toId)) {
                     // 聊天面板显示用户昵称
                     String fromString = UI_MainInterface.getFriend().containsKey(fromId)
@@ -91,6 +91,8 @@ public final class ChatExecute {
             /** res[0]:验证标识、res[1]:状态信息、res[2]:好友ID */
             if (res[0].equals("OnlineSituation")) {
                 if (UI_MainInterface.getFriend().containsKey(res[2])) {
+                    System.out.println(res[0]);
+                    System.out.println(UI_MainInterface.getFriend().get(res[2]).getfName());
                     UI_MainInterface.getFriend().get(res[2]).setfOnline(res[1]);
                 }
             }

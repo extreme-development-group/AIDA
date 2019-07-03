@@ -117,5 +117,6 @@ public class friendPanel extends JPanel {
 
     public void setfOnline(String fOnline) {
         this.fOnline = fOnline;
+        status.setText(fOnline);
     }
 }
