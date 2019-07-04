@@ -109,6 +109,13 @@ public class Verification implements Runnable {
                     // 获取指定用户的网络地址信息, 返回InetAddress对象
                     field = field.replace("getUserIP", "");
                     return ServerListener.getUserIP(field);
+                } else if (field.startsWith("getChatRecord")) {
+                    // 获取聊天历史记录
+                    field = field.replace("getChatRecord", "");
+                    String info[] = field.split("```");
+                    // uid```fid```好友0群1
+                    boolean isGroup = info[2].equals("1") ? true : false;
+                    return DataCheck.getChatRecord(info[0], info[1], isGroup);
                 }
                 break;
         }

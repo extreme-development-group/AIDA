@@ -16,6 +16,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.net.ConnectException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
@@ -553,6 +554,60 @@ public class DataCheck {
             return true;
 
         return false;
+    }
+
+    // 存消息记录
+    public static boolean saveMessage(String time, String content, String fromid, String toid, boolean isGroup) {
+        System.out.println("In saveMessage");
+
+        String sql = "insert into aida_";
+
+        if (isGroup) {
+            sql += "group";
+        }
+
+        sql += "chathistory (message_time, message_content, message_fromid, message_toid)" +
+                " value (\"" + time + "\", \"" + content + "\", " + fromid + ", " + toid +")";
+        DataBaseConnection dataCon = new DataBaseConnection();
+
+        if (dataCon.updateDataBase(sql))
+            return true;
+        return false;
+    }
+
+    // 历史记录
+    public static Vector<String> getChatRecord(String uid, String fid, boolean isGroup) {
+        System.out.println("In getChatRecord");
+        Vector<String> chatRecord = new Vector<String>();
+        String sql = null;
+
+        // 好友历史记录, toid就是toid
+        if(!isGroup) {
+            sql = "select * from aida_chathistory where (message_fromid="+uid+" and message_toid="+fid+") or (" +
+                    "message_fromid="+fid+" and message_toid="+uid+")";
+        } else {
+            // 群消息，toid是群号即此处fid
+            sql = "select * from aida_groupchathistory where message_toid=" + fid;
+        }
+            DataBaseConnection dataCon = new DataBaseConnection();
+            ResultSet resultSet = dataCon.getFromDataBase(sql);
+            try {
+                while (resultSet.next()) {
+                    String time = resultSet.getString("message_time");
+                    String content = resultSet.getString("message_content");
+                    String fromid = resultSet.getString("message_fromid");
+                    String toid = resultSet.getString("message_toid");
+                    // 发送给好友的消息
+                    // message, 时间```fromid```toid```content
+                    String message = time + "```" + fromid + "```" + toid + "```" + content;
+                    chatRecord.add(message);
+                }
+            } catch (SQLException e) {
+                System.out.println("获取历史消息失败 " + e.getMessage());
+            }
+
+        System.out.println("历史消息数量: " + chatRecord.size());
+        return chatRecord;
     }
 }
 

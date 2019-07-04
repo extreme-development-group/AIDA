@@ -14,16 +14,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="134">
+              <caret line="608" column="57" selection-start-line="608" selection-start-column="57" selection-end-line="608" selection-end-column="57" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#isLoginSuccess#0;class#DataCheck#0" />
                 <element signature="method#getUserInfo#0;class#DataCheck#0" />
-                <element signature="method#getUserFriends#0;class#DataCheck#0" />
+                <element signature="e#3616#3633#0" expanded="true" />
                 <element signature="method#getUserGroups#0;class#DataCheck#0" />
+                <element signature="method#getFriendMember#0;class#DataCheck#0" />
                 <element signature="method#getGroupMember#0;class#DataCheck#0" />
                 <element signature="method#getSearchResult#0;class#DataCheck#0" />
                 <element signature="method#addFriend#0;class#DataCheck#0" />
@@ -35,6 +37,8 @@
                 <element signature="method#editInfo#0;class#DataCheck#0" />
                 <element signature="method#createGroup#0;class#DataCheck#0" />
                 <element signature="method#deleteGrouopMember#0;class#DataCheck#0" />
+                <element signature="method#saveMessage#0;class#DataCheck#0" />
+                <element signature="e#22466#22474#0" expanded="true" />
                 <element signature="class#Imagebase64#0" />
                 <element signature="method#main#0;class#Imagebase64#0" />
               </folding>
@@ -77,12 +81,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="167">
+              <caret line="87" column="79" selection-start-line="87" selection-start-column="79" selection-end-line="87" selection-end-column="79" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#DataStream#0;class#DataStream#0" />
                 <element signature="method#sendToAllFriends#0;class#DataStream#0" />
-                <element signature="method#execute#0;class#DataStream#0" />
               </folding>
             </state>
           </provider>
@@ -103,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/ServerListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
+            <state relative-caret-position="649">
               <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/WaitForConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="380">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,15 +131,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/Verification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2033">
-              <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
+            <state relative-caret-position="167">
+              <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#run#0;class#Verification#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -208,11 +221,11 @@
         <option value="$PROJECT_DIR$/src/InteractWithClient.java" />
         <option value="$PROJECT_DIR$/src/Verification.java" />
         <option value="$PROJECT_DIR$/src/DataCheck.java" />
-        <option value="$PROJECT_DIR$/src/server/Start.java" />
         <option value="$PROJECT_DIR$/src/user/PureInfo.java" />
         <option value="$PROJECT_DIR$/src/config/PureInfo.java" />
-        <option value="$PROJECT_DIR$/src/server/Verification.java" />
         <option value="$PROJECT_DIR$/src/server/ServerListener.java" />
+        <option value="$PROJECT_DIR$/src/server/Start.java" />
+        <option value="$PROJECT_DIR$/src/server/Verification.java" />
         <option value="$PROJECT_DIR$/src/server/DataStream.java" />
         <option value="$PROJECT_DIR$/src/database/DataCheck.java" />
       </list>
@@ -242,6 +255,12 @@
               <item name="MyServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyServer" type="b2602c69:ProjectViewProjectNode" />
@@ -338,17 +357,18 @@
       <updated>1562045168441</updated>
       <workItem from="1562045171114" duration="69253000" />
       <workItem from="1562166560880" duration="14814000" />
-      <workItem from="1562219010104" duration="1666000" />
+      <workItem from="1562219010104" duration="11830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85733000" />
+    <option name="totallyTimeSpent" value="95897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28051737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14632174" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -357,7 +377,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294702" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.352649" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.294702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -402,13 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -457,40 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ServerListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/WaitForConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Verification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2033">
-          <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#run#0;class#Verification#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/DataBaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -502,27 +481,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/WaitForConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ServerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/DataStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="167">
+          <caret line="87" column="79" selection-start-line="87" selection-start-column="79" selection-end-line="87" selection-end-column="79" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#DataStream#0;class#DataStream#0" />
             <element signature="method#sendToAllFriends#0;class#DataStream#0" />
-            <element signature="method#execute#0;class#DataStream#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="134">
+          <caret line="608" column="57" selection-start-line="608" selection-start-column="57" selection-end-line="608" selection-end-column="57" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#isLoginSuccess#0;class#DataCheck#0" />
             <element signature="method#getUserInfo#0;class#DataCheck#0" />
-            <element signature="method#getUserFriends#0;class#DataCheck#0" />
+            <element signature="e#3616#3633#0" expanded="true" />
             <element signature="method#getUserGroups#0;class#DataCheck#0" />
+            <element signature="method#getFriendMember#0;class#DataCheck#0" />
             <element signature="method#getGroupMember#0;class#DataCheck#0" />
             <element signature="method#getSearchResult#0;class#DataCheck#0" />
             <element signature="method#addFriend#0;class#DataCheck#0" />
@@ -534,8 +545,21 @@
             <element signature="method#editInfo#0;class#DataCheck#0" />
             <element signature="method#createGroup#0;class#DataCheck#0" />
             <element signature="method#deleteGrouopMember#0;class#DataCheck#0" />
+            <element signature="method#saveMessage#0;class#DataCheck#0" />
+            <element signature="e#22466#22474#0" expanded="true" />
             <element signature="class#Imagebase64#0" />
             <element signature="method#main#0;class#Imagebase64#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Verification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#run#0;class#Verification#0" />
           </folding>
         </state>
       </provider>

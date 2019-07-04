@@ -82,6 +82,10 @@ public final class DataStream implements Runnable{
                 } else {
                     // 好友不在线的情况
                 }
+                // 存入数据库
+                // message, 时间```标识```fromid```toid```content
+                String info[] = message.split("```");
+                DataCheck.saveMessage(info[0], info[4], info[2], info[3], false);
             } else if (type.equals("toGroup")) {
                 // 群聊消息
                 Vector<UserInfo.FriendsOrGroups> groupM = DataCheck.getGroupMember(toId);
@@ -93,7 +97,9 @@ public final class DataStream implements Runnable{
                         break;
                     }
                 }
+                // 不是群成员发不了消息（有可能被踢出群了）
                 if (!isMember) return;
+
                 // 发给除了自己的其他人
                 for (int i = 0; i < groupM.size(); i++) {
                     if (!groupM.get(i).getId().equals(userId)
@@ -103,6 +109,10 @@ public final class DataStream implements Runnable{
                         // 群成员不在线情况
                     }
                 }
+                // 保存消息
+                // message, 时间```标识```fromid```toid即群id```content
+                String info[] = message.split("```");
+                DataCheck.saveMessage(info[0], info[4], info[2], info[3], true);
             }
         } else {
             System.out.println("收到的信息不规范：" + message);
