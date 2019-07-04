@@ -1,10 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/client/Start.java" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="79073fca-de88-4332-94cc-2ca43276fba7" name="Default Changelist" comment="" />
+    <list default="true" id="b9d13c59-df47-4490-9032-1a01f0bd5353" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b255f433-744b-48ea-81ac-f524c0b403d1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDA_client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/META-INF/AIDA_client.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/ChatExecute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/ChatThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/DataStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/InteractWithServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/client/testClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/ChatVerify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/PureInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/ServerInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/Tools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/UserInfo$FriendsOrGroups.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/config/testConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/EmojiMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/GetAvatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/HeadPortrait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/MemberText$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/MemberText$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/MemberText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/ScrollBarUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/ChatFrame/SingleText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Listener/LoginListener$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Listener/LoginListener$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Listener/LoginListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Listener/SendFriend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Listener/deleteListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/DragWindowListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/MyMenuItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/MyMenuItemUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/MyPopupMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/RoundHeadPortrait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/ScrollBarUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Close.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$11$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$11$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$8$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_MainInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/UI_Minimize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/friendPanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/friendPanel$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/friendPanel$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/friendPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/friendPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/groupPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/groupPanel$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/groupPanel$2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/groupPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/groupPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/listPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/MainInterface/listScrollPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/AddFriends$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/AddFriends$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/AddFriends$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/AddFriends$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/AddFriends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/Avatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/InquiryFriendFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/confirmAddFirend$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/confirmAddFirend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/searchMemberPanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/searchMemberPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/Search/searchMemberPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info$1ExitNowFrameListenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/Info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$1ExitNowFrameListenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/frame/UserInfoFrame/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/test$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIDA_client/user/testUser.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,408 +164,89 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
-    <select />
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/SingleText.java">
+        <entry file="file://$PROJECT_DIR$/src/config/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="115" column="38" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="115" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/groupPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="43" column="133" selection-start-line="43" selection-start-column="128" selection-end-line="43" selection-end-column="133" />
+            <state relative-caret-position="19">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithFriends.java">
+        <entry file="file://$PROJECT_DIR$/src/client/InteractWithServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12528#12529#0" expanded="true" />
-                <element signature="e#12561#12562#0" expanded="true" />
-                <element signature="e#12610#12611#0" expanded="true" />
-                <element signature="e#12654#12655#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/Listener/LoginListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/Listener/deleteListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/MemberText.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-              <folding>
-                <element signature="method#MemberText#0;class#MemberText#0" />
-                <element signature="method#setIcon#0;class#MemberText#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/GetAvatar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frame/Listener/SendFriend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
-                <element signature="e#1337#1338#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-969" />
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>showResult</find>
-      <find>Avatar</find>
-      <find>avatar</find>
-      <find>setBounds</find>
-      <find>jsp</find>
-      <find>js</find>
-      <find>sear</find>
-      <find>count</find>
-      <find>searchbu</find>
-      <find>查找</find>
-      <find>focus</find>
-      <find>userin</find>
-      <find>grid</find>
-      <find>contentPane</find>
-      <find>resultPanel</find>
-      <find>groupListPanel</find>
-      <find>throws</find>
-      <find>bg.jpg</find>
-      <find>icon</find>
-      <find>left2</find>
-      <find>userSignatrure</find>
-      <find>t7</find>
-      <find>register</find>
-      <find>friendPopupMenu</find>
-      <find>createGroupMenu</find>
-      <find>addMember</find>
-      <find>userStatue</find>
-      <find>showPopupMenu</find>
-      <find>pane</find>
-      <find>textLabel</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>userSignature</replace>
-      <replace>userAvatar</replace>
-      <replace>userAddress</replace>
-      <replace>createGroupMenu</replace>
-      <replace>textPane</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/frame/DragWindowListener.java" />
-        <option value="$PROJECT_DIR$/src/frame/UI_MainInterface.java" />
-        <option value="$PROJECT_DIR$/src/frame/test/InquiryFriendFrame.java" />
-        <option value="$PROJECT_DIR$/src/frame/test/Avator.java" />
-        <option value="$PROJECT_DIR$/src/frame/test/Avatar.java" />
-        <option value="$PROJECT_DIR$/src/frame/test/AddFriends.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/ListenerClass.java" />
-        <option value="$PROJECT_DIR$/src/frame/Listener/ListenerClass.java" />
-        <option value="$PROJECT_DIR$/src/config/ChatVerify.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/GetAvatar.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/listPanel.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/listScrollPanel.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/MyPopupMenu.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/MyMenuItem.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/MyMenuItemUI.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/ScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/deleteListener.java" />
-        <option value="$PROJECT_DIR$/src/client/DataStream.java" />
-        <option value="$PROJECT_DIR$/src/client/Start.java" />
-        <option value="$PROJECT_DIR$/src/frame/Search/Avatar.java" />
-        <option value="$PROJECT_DIR$/src/frame/Search/AddFriends.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/RoundHeadPortrait.java" />
-        <option value="$PROJECT_DIR$/src/config/ServerInfo.java" />
-        <option value="$PROJECT_DIR$/src/config/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/frame/Search/confirmAddFirend.java" />
-        <option value="$PROJECT_DIR$/src/frame/Listener/deleteListener.java" />
-        <option value="$PROJECT_DIR$/src/frame/UserInfoFrame/changeAvatar.java" />
-        <option value="$PROJECT_DIR$/src/user/User.java" />
-        <option value="$PROJECT_DIR$/src/frame/Listener/LoginListener.java" />
-        <option value="$PROJECT_DIR$/src/frame/Listener/RegisterListener.java" />
-        <option value="$PROJECT_DIR$/src/config/PureInfo.java" />
-        <option value="$PROJECT_DIR$/src/config/Tools.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java" />
-        <option value="$PROJECT_DIR$/src/frame/UserInfoFrame/ModifyInfo.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/HeadPortrait.java" />
-        <option value="$PROJECT_DIR$/src/frame/UserInfoFrame/Info.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/ChatFrame.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java" />
-        <option value="$PROJECT_DIR$/src/client/ChatExecute.java" />
-        <option value="$PROJECT_DIR$/src/frame/Search/searchMemberPanel.java" />
-        <option value="$PROJECT_DIR$/src/frame/Search/InquiryFriendFrame.java" />
-        <option value="$PROJECT_DIR$/src/client/InteractWithServer.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/groupPanel.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/MemberText.java" />
-        <option value="$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/EmojiMenu.java" />
-        <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/frame/Listener/SendFriend.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/SingleText.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/ChatWithGroup.java" />
-        <option value="$PROJECT_DIR$/src/frame/ChatFrame/ChatWithFriends.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="339" />
-    <option name="y" value="37" />
-    <option name="width" value="1515" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="478" />
+    <option name="y" value="-21" />
+    <option name="width" value="1212" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
           <expand>
             <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="AIDA_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AIDA_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Emoji" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AIDA_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Icon" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Login" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="MainInterface" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PersonInfo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ChatFrame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Listener" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="MainInterface" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Search" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="frame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="UserInfoFrame" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="AIDA_client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="AIDA_client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AIDA_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Package/sun.misc.BASE64Decoder.jar!/" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="D:/CODE/Package/sun.misc.BASE64Decoder.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programming\Github\Teamwork\AIDA\Source Code\AIDA_client\res\Avatar" />
-      <recent name="D:\Programming\Github\Teamwork\AIDA\Source Code\AIDA_client\src\frame" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -427,33 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UI_Login">
-    <configuration name="Info" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="frame.UserInfoFrame.Info" />
-      <module name="AIDA_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frame.UserInfoFrame.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InquiryFriendFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="frame.Search.InquiryFriendFrame" />
-      <module name="AIDA_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frame.Search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.Start" />
       <module name="AIDA_client" />
@@ -467,33 +274,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UI_Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="frame.MainInterface.UI_Login" />
-      <module name="AIDA_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frame.Listener.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="AIDA_client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UI_Login" />
         <item itemvalue="Application.Start" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.Info" />
-        <item itemvalue="Application.InquiryFriendFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -502,507 +285,67 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79073fca-de88-4332-94cc-2ca43276fba7" name="Default Changelist" comment="" />
-      <created>1562043833400</created>
+      <changelist id="b9d13c59-df47-4490-9032-1a01f0bd5353" name="Default Changelist" comment="" />
+      <created>1562218905706</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1562043833400</updated>
-      <workItem from="1562043843895" duration="944000" />
-      <workItem from="1562045136978" duration="599000" />
-      <workItem from="1562053985025" duration="20670000" />
-      <workItem from="1562128136062" duration="38896000" />
-      <workItem from="1562199365508" duration="17461000" />
+      <updated>1562218905706</updated>
+      <workItem from="1562218908135" duration="566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108857000" />
+    <option name="totallyTimeSpent" value="566000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="339" y="37" width="1515" height="1100" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33745703" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.87766325" weight="0.24016564" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4996633" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4995618" weight="0.32963374" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.12233677" side_tool="true" visible="true" weight="0.24016564" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.7591415" weight="0.3264642" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.3298611" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/frame/ChatFrame/MemberText.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/listPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/UserInfoFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/frame/Listener/RegisterListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/ScrollBarUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/HeadPortrait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/UserInfoFrame/changeAvatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/swing/JComboBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12903">
-          <caret line="619" column="18" selection-start-line="619" selection-start-column="18" selection-end-line="619" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/UserInfoFrame/Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4062">
-          <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3689#3690#0" expanded="true" />
-            <element signature="e#3734#3735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/UserInfoFrame/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/testConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/testClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Search/searchMemberPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Search/confirmAddFirend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Search/Avatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Avatar#0;class#Avatar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Search/AddFriends.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/UserInfoFrame/ModifyInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="255" column="51" selection-start-line="255" selection-start-column="51" selection-end-line="255" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Search/InquiryFriendFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="193" column="66" selection-start-line="193" selection-start-column="66" selection-end-line="193" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/RoundHeadPortrait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/MyPopupMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/MyMenuItemUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Close.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5255">
-          <caret line="236" column="34" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
-          <folding>
-            <element signature="e#2617#2618#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
-            <element signature="e#2959#2960#0" expanded="true" />
-            <element signature="e#3025#3026#0" expanded="true" />
-            <element signature="e#15027#15028#0" expanded="true" />
-            <element signature="e#15166#15167#0" expanded="true" />
-            <element signature="e#17361#17362#0" expanded="true" />
-            <element signature="e#17407#17408#0" expanded="true" />
-            <element signature="method#initloadingPanel#0;class#UI_Login#0" />
-            <element signature="method#toRegisterPanel#0;class#UI_Login#0" />
-            <element signature="method#toLoginPanel#0;class#UI_Login#0" />
-            <element signature="method#backtoLoginPanel#0;class#UI_Login#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_MainInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2343">
-          <caret line="287" column="52" selection-start-line="287" selection-start-column="52" selection-end-line="287" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#UI_MainInterface#0" />
-            <element signature="e#3517#3518#0" expanded="true" />
-            <element signature="e#3546#3547#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/UI_Minimize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/DragWindowListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/PureInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="19">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/InteractWithServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/EmojiMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="125" column="59" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ScrollBarUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/testUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/DataStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="47" column="66" lean-forward="true" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/ChatThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/ServerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/ChatVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/ChatExecute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="68" column="45" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Listener/SendFriend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Listener/LoginListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Listener/deleteListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/MemberText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-          <folding>
-            <element signature="method#MemberText#0;class#MemberText#0" />
-            <element signature="method#setIcon#0;class#MemberText#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/GetAvatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/SingleText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/friendPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="115" column="38" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="115" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainInterface/groupPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="43" column="133" selection-start-line="43" selection-start-column="128" selection-end-line="43" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/ChatFrame/ChatWithFriends.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12528#12529#0" expanded="true" />
-            <element signature="e#12561#12562#0" expanded="true" />
-            <element signature="e#12610#12611#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-969" />
       </provider>
     </entry>
   </component>
@@ -1065,7 +408,31 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>jdk-10.0.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>sun.misc.BASE64Decoder</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

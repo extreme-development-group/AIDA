@@ -2,12 +2,158 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a764c1-9e6c-4536-adf4-7bfca486a825" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AIDA详细设计说明书.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../AIDA详细设计说明书.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Charts/AIDA.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Charts/AIDA.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Charts/detailedAIDA.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Charts/detailedAIDA.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Charts/detailedAIDA.asta.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../冲刺时间安排.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../冲刺时间安排.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../极限开发小组开发计划.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../极限开发小组开发计划.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/dataSources/b255f433-744b-48ea-81ac-f524c0b403d1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDA_client/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDA_client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/AIDA_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDA_client/AIDA_client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/META-INF/AIDA_client.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/ChatExecute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/ChatThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/DataStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/InteractWithServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/client/testClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/ChatVerify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/PureInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/ServerInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/Tools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/UserInfo$FriendsOrGroups.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/config/testConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithFriends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ChatWithGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/EmojiMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/GetAvatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/HeadPortrait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/MemberText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/ScrollBarUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/ChatFrame/SingleText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Listener/LoginListener$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Listener/LoginListener$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Listener/LoginListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Listener/SendFriend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Listener/deleteListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/DragWindowListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/MyMenuItemUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/MyPopupMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/RoundHeadPortrait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/ScrollBarUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Close.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$11$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$11$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$8$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_MainInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/UI_Minimize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/friendPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/groupPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/listPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/MainInterface/listScrollPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/AddFriends$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/AddFriends$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/AddFriends$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/AddFriends$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/AddFriends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/Avatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/InquiryFriendFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/confirmAddFirend$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/confirmAddFirend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/searchMemberPanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/searchMemberPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/Search/searchMemberPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info$1ExitNowFrameListenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/Info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$1ExitNowFrameListenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/ModifyInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/changeAvatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/frame/UserInfoFrame/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/test$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDA_client/out/production/AIDA_client/user/testUser.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,13 +161,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AIDA_client/src/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
-    <option name="height" value="1047" />
+    <option name="x" value="240" />
+    <option name="y" value="135" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -29,8 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -38,13 +199,42 @@
               <item name="Source Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Source Code" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Source Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Source Code" type="462c0819:PsiDirectoryNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Source Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Source Code" type="462c0819:PsiDirectoryNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Source Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Source Code" type="462c0819:PsiDirectoryNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Source Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Source Code" type="462c0819:PsiDirectoryNode" />
+              <item name="AIDA_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frame" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -74,27 +264,23 @@
       <option name="presentableId" value="Default" />
       <updated>1561853076278</updated>
       <workItem from="1561853077417" duration="23000" />
+      <workItem from="1562218574186" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23000" />
+    <option name="totallyTimeSpent" value="44000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -102,18 +288,35 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AIDA_client/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
