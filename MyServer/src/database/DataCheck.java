@@ -579,16 +579,18 @@ public class DataCheck {
     public static Vector<String> getChatRecord(String uid, String fid, boolean isGroup) {
         System.out.println("In getChatRecord");
         Vector<String> chatRecord = new Vector<String>();
-        String sql = null;
+        String in_sql = null;
 
         // 好友历史记录, toid就是toid
         if(!isGroup) {
-            sql = "select * from aida_chathistory where (message_fromid="+uid+" and message_toid="+fid+") or (" +
+            in_sql = "select * from aida_chathistory where (message_fromid="+uid+" and message_toid="+fid+") or (" +
                     "message_fromid="+fid+" and message_toid="+uid+")";
         } else {
             // 群消息，toid是群号即此处fid
-            sql = "select * from aida_groupchathistory where message_toid=" + fid;
+            in_sql = "select * from aida_groupchathistory where message_toid=" + fid;
         }
+            // 按message_id倒序排序，最多查询50条
+            String sql = "select * from (" + in_sql + " order by message_id DESC) temp limit 50";
             DataBaseConnection dataCon = new DataBaseConnection();
             ResultSet resultSet = dataCon.getFromDataBase(sql);
             try {
