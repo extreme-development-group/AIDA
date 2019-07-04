@@ -1,15 +1,20 @@
 package frame.ChatFrame;
 
+import client.ChatThread;
+import config.Tools;
 import frame.Listener.SendFriend;
 import frame.MainInterface.UI_MainInterface;
+import frame.UserInfoFrame.ModifyInfo;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
@@ -185,6 +190,37 @@ public class ChatWithFriends extends ChatFrame {
         pictureButton.setBorderPainted(false); // set don't draw border
         pictureButton.setFocusPainted(false);
         pictureButton.setIcon(setIcon("res/Icon/image.png",30,30));
+        pictureButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                int returnVal=chooser.showOpenDialog(ChatWithFriends.this);
+                chooser.setFileFilter(new FileFilter() {
+                    @Override
+                    public boolean accept(File f) {
+                        if(f.getName().endsWith(".jpg")||f.getName().endsWith(".png")||f.isDirectory()){
+                            return true;
+                        }
+                        return false;
+                    }
+
+                    @Override
+                    public String getDescription() {
+                        return "图片(.jpg,.png)";
+                    }
+                });
+                System.out.println("returnVal="+returnVal);
+                String filepath;
+                if (returnVal == JFileChooser.APPROVE_OPTION) {          //如果符合文件类型
+                    filepath = chooser.getSelectedFile().getPath();      //获取绝对路径
+                    System.out.println(filepath);
+                    System.out.println("You chose to open this file: " + chooser.getSelectedFile().getName());  //输出相对路径
+                    String message= "#/Image"+ Tools.getImageBinary(filepath);
+                    ChatWithFriends.this.addMessage(mHeadPic,mName, new Date().toString(),message, 1);
+                    ChatThread.getDataStream().send(message, fid, false);
+                }
+            }
+        });
 
 
         fileButton=new JButton();

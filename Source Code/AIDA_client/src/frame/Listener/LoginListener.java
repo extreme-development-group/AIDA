@@ -55,7 +55,7 @@ public class LoginListener implements ActionListener{
                     if (loginResult.equals("true")) {
                         if (isRemeber) {
                             try {
-                                FileOutputStream out = new FileOutputStream("./Data/UserInfo.uif");
+                                FileOutputStream out = new FileOutputStream("res/UserInfo.uif");
                                 for(int i=0;i<userIdString.length();i++){
                                     char t = userIdString.charAt(i);
                                     out.write(t);

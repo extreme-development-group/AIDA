@@ -1,5 +1,6 @@
 package frame.ChatFrame;
 
+import client.ChatThread;
 import client.InteractWithServer;
 import config.Tools;
 import config.UserInfo;
@@ -8,10 +9,12 @@ import frame.MainInterface.UI_MainInterface;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Vector;
 
 public class ChatWithGroup extends ChatFrame {
@@ -176,6 +179,37 @@ public class ChatWithGroup extends ChatFrame {
         pictureButton.setBorderPainted(false); // set don't draw border
         pictureButton.setFocusPainted(false);
         pictureButton.setIcon(setIcon("res/Icon/image.png",30,30));
+        pictureButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                int returnVal=chooser.showOpenDialog(ChatWithGroup.this);
+                chooser.setFileFilter(new FileFilter() {
+                    @Override
+                    public boolean accept(File f) {
+                        if(f.getName().endsWith(".jpg")||f.getName().endsWith(".png")||f.isDirectory()){
+                            return true;
+                        }else {
+                            return false;
+                        }
+                    }
+                    @Override
+                    public String getDescription() {
+                        return "图片(.jpg,.png)";
+                    }
+                });
+                System.out.println("returnVal="+returnVal);
+                String filepath;
+                if (returnVal == JFileChooser.APPROVE_OPTION) {          //如果符合文件类型
+                    filepath = chooser.getSelectedFile().getPath();      //获取绝对路径
+                    System.out.println(filepath);
+                    System.out.println("You chose to open this file: " + chooser.getSelectedFile().getName());  //输出相对路径
+                    String message= "#/Image"+ Tools.getImageBinary(filepath);
+                    ChatWithGroup.this.addMessage(mHeadPic,mName, new Date().toString(),message, 1);
+                    ChatThread.getDataStream().send(message, fid, true);
+                }
+            }
+        });
 
         input=new JTextArea("");
         input.setPreferredSize(new Dimension(700,300));

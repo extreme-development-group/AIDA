@@ -1,6 +1,7 @@
 package frame.MainInterface;
 
 import client.InteractWithServer;
+import config.Tools;
 import frame.ChatFrame.ChatWithGroup;
 import frame.ChatFrame.HeadPortrait;
 
@@ -41,7 +42,7 @@ public class groupPanel extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     if (!now.withGroup.containsKey(groupID)){
-                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead));
+                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName, Tools.base64StringToImage(now.userInfo.getUserAvatar())));
                     }else {
                         now.withGroup.get(groupID).requestFocus();
                     }
@@ -77,7 +78,7 @@ public class groupPanel extends JPanel {
                     enterItem.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             if (!now.withGroup.containsKey(groupID)){
-                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead));
+                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,Tools.base64StringToImage(now.userInfo.getUserAvatar())));
                             }else {
                                 now.withGroup.get(groupID).requestFocus();
                             }

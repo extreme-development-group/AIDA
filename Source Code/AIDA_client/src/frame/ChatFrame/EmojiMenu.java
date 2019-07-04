@@ -19,7 +19,7 @@ public class EmojiMenu extends JFrame{
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#01#");
+                chat.input.setText(chat.input.getText()+"#/Emoji01#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -32,7 +32,7 @@ public class EmojiMenu extends JFrame{
         b2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#02#");
+                chat.input.setText(chat.input.getText()+"#/Emoji02#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -45,7 +45,7 @@ public class EmojiMenu extends JFrame{
         b3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#03#");
+                chat.input.setText(chat.input.getText()+"#/Emoji03#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -58,7 +58,7 @@ public class EmojiMenu extends JFrame{
         b4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#04#");
+                chat.input.setText(chat.input.getText()+"#/Emoji04#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -71,7 +71,7 @@ public class EmojiMenu extends JFrame{
         b5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#05#");
+                chat.input.setText(chat.input.getText()+"#/Emoji05#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -84,7 +84,7 @@ public class EmojiMenu extends JFrame{
         b6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#06#");
+                chat.input.setText(chat.input.getText()+"#/Emoji06#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -97,7 +97,7 @@ public class EmojiMenu extends JFrame{
         b7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#07#");
+                chat.input.setText(chat.input.getText()+"#/Emoji07#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -110,7 +110,7 @@ public class EmojiMenu extends JFrame{
         b8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#08#");
+                chat.input.setText(chat.input.getText()+"#/Emoji08#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -123,7 +123,7 @@ public class EmojiMenu extends JFrame{
         b9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#09#");
+                chat.input.setText(chat.input.getText()+"#/Emoji09#");
                 EmojiMenu.this.dispose();
             }
         });

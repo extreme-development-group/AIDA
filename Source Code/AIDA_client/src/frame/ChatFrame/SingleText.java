@@ -31,27 +31,51 @@ public class SingleText extends JPanel {
 
         textPane=new JTextPane();
         textPane.setEditable(false);
-        textPane.setFont(new Font("微软雅黑",Font.PLAIN,20));
+        textPane.setFont(new Font("微软雅黑",Font.BOLD,16));
+        textPane.setLayout(null);
+
+
         if (side==1){
             //设置靠右显示
             SimpleAttributeSet set = new SimpleAttributeSet();
             StyleConstants.setAlignment(set,StyleConstants.ALIGN_RIGHT);
             StyledDocument demo = textPane.getStyledDocument();
             demo.setParagraphAttributes(0,104,set,false);
-        }else {
-            SimpleAttributeSet set = new SimpleAttributeSet();
-            StyleConstants.setAlignment(set,StyleConstants.ALIGN_LEFT);
-            StyledDocument demo = textPane.getStyledDocument();
-            demo.setParagraphAttributes(0,104,set,false);
         }
         textPane.setBackground(new Color(243,249,253));
-
+        String chatText=text;
+        System.out.println(text);
+        if (text.startsWith("#/Image")){
+            String image = text.replace("#/Image","");
+            textPane.insertIcon(new ImageIcon(Tools.base64StringToImage(image).getScaledInstance(70,70,Image.SCALE_FAST)));
+            textPane.setPreferredSize(new Dimension(460,70));
+        }else {
+            String rec[] =chatText.split("#");
+            for (String str:rec){
+                if (str.startsWith("/Emoji")){
+                    String emoji = str.replace("/Emoji","");
+//                    System.out.println("icon");
+                    textPane.setCaretPosition(textPane.getStyledDocument().getLength());
+                    textPane.insertIcon(Tools.setIcon("res/Emoji/EMOJI-"+emoji+".png",30,30));
+                }else {
+                    try {
+                        textPane.setCaretPosition(textPane.getStyledDocument().getLength());
+//                        System.out.println(textPane.getCaretPosition() + " " +textPane.getText().length()+" "+str);
+                        textPane.getStyledDocument().insertString(textPane.getStyledDocument().getLength(), str, null);
+                    } catch (BadLocationException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        textPane.setSize(new Dimension(460,textPane.getPreferredSize().height));
+        System.out.println(textPane.getPreferredSize().height);
+//        textPane.setPreferredSize(new Dimension(460,Height));
         textPanel=new JPanel();
         textPanel.setLayout(new BorderLayout(0,0));
         textPanel.add(idLabel,BorderLayout.NORTH);
         textPanel.add(textPane,BorderLayout.CENTER);
         textPanel.setBackground(new Color(243,249,253));
-
         this.setLayout(new BorderLayout(10,5));
         if (side==0){
             this.add(avatar,BorderLayout.WEST);
@@ -60,25 +84,7 @@ public class SingleText extends JPanel {
             this.add(avatar,BorderLayout.EAST);
             this.add(textPanel,BorderLayout.CENTER);
         }
-
-        String chatText=text;
-        System.out.println(text);
-        String rec[] =chatText.split("#");
-        for (String str:rec){
-            if (str.length()==2){
-                System.out.println("icon");
-                textPane.insertIcon(Tools.setIcon("res/Emoji/EMOJI-"+str+".png",30,30));
-            }else {
-                try {
-                    System.out.println(str);
-                    textPane.getStyledDocument().insertString(textPane.getText().length(), str, null);
-                } catch (BadLocationException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
         this.setBackground(new Color(243,249,253));
-        this.setPreferredSize(new Dimension(500,60));
+        this.setPreferredSize(new Dimension(500,textPane.getPreferredSize().height+20));
     }
 }
