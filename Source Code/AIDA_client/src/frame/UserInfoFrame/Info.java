@@ -17,8 +17,8 @@ import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 
 public class Info extends JFrame{
-	
-	JPanel jp1 = new JPanel(),jp2 = new JPanel();
+	JPanel userPanel;
+	JPanel infoPanel;
 	//JButton b1 = new JButton("编辑资料");
 	Point pressedPoint;
 	public UI_MainInterface mainInterface;
@@ -35,9 +35,14 @@ public class Info extends JFrame{
 		  }
 	}
 	public Info(PureInfo pureInfo, UI_MainInterface mainInterface){
+		this.userPanel = new JPanel();
+		this.infoPanel = new JPanel();
 		this.mainInterface=mainInterface;
+		int setWidth=50;
+		int setGrap=100;
+		Font font = new Font("微软雅黑", Font.BOLD, 15);
 		//Container c = getContentPane();
-		InitGlobalFont(new Font("微软雅黑", Font.PLAIN, 13));
+//		InitGlobalFont();
 		this.setUndecorated(true);
 		this.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) { //鼠标按下事件
@@ -56,19 +61,17 @@ public class Info extends JFrame{
 		setTitle("个人资料");
 		//c.setLayout(new BorderLayout());
 		setLayout(null);
-		setSize(720, 522);
+		setSize(360, 522);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JPanel jp = new JPanel();
-		jp.setBounds(0, 0, 720, 30);
-		jp.setBackground(Color.lightGray);
-		add(jp);
-		jp.setLayout(null);
+		userPanel.setBounds(0, 0, 360, 180);
+		userPanel.setBackground(new Color(40,138,221));
+		this.add(userPanel);
+		userPanel.setLayout(null);
 		//添加左右两个面板
-		jp1.setBounds(0, 30, 360, 492);
-		jp2.setBounds(360, 30, 360, 492);
+		infoPanel.setBounds(0, 180, 360, 492);
 
 		//添加关闭和最小化按钮
 		class ExitNowFrameListenter implements ActionListener {
@@ -87,7 +90,7 @@ public class Info extends JFrame{
 		JButton minimize;
 		close = new JButton("");
 		close.setMargin(new Insets(0, 0, 0, 0));
-		close.setBounds(690, 0, 30, 30);// 386x30
+		close.setBounds(330, 0, 30, 30);// 386x30
 		close.setContentAreaFilled(false); // set don't draw message area
 		close.setBorderPainted(false); // set don't draw border
 		close.setFocusPainted(false);
@@ -96,12 +99,12 @@ public class Info extends JFrame{
 		close.setRolloverIcon(new ImageIcon("res/PersonInfo/closebutton_hover.png"));
 		close.setPressedIcon(new ImageIcon("res/PersonInfo/closebutton_down.png"));
 		close.addActionListener(new ExitNowFrameListenter(this));
-		jp.add(close);
+		userPanel.add(close);
 
 		// 最小化按钮
 		minimize = new JButton();
 		minimize.setMargin(new Insets(0, 0, 0, 0));
-		minimize.setBounds(660, 0, 30, 30);//28x28
+		minimize.setBounds(300, 0, 30, 30);//28x28
 		minimize.setContentAreaFilled(false);
 		minimize.setBorderPainted(false);
 		minimize.setFocusPainted(false);
@@ -116,53 +119,49 @@ public class Info extends JFrame{
 				setExtendedState(JFrame.ICONIFIED);
 			}
 		});
-		jp.add(minimize);
+		userPanel.add(minimize);
 		//jp1.setBackground(Color.BLUE);
-
-		add(jp1);
-		add(jp2);
-
-		//左面板添加元素
-		jp1.setLayout(null);
-		JLabel left1 = new JLabel("背景");
-		left1.setBounds(0, 0, 360, 360);
-		Icon icon = new ImageIcon("res/PersonInfo/bg.jpg");
-		left1.setIcon(icon);
-		jp1.add(left1);
-		left1.setOpaque(true);
-		jp1.add(left1);
+		
 		Image image =Tools.base64StringToImage(pureInfo.getUserAvatar());
-		HeadPortrait headPortrait=new HeadPortrait(70,70,image);
+		HeadPortrait headPortrait=new HeadPortrait(100,100,image);
 		//ImageIcon ico=new ImageIcon("src/bg.jpg");
 		//ico.setImage(ico.getImage().getScaledInstance(50,20,Image.SCALE_DEFAULT));
 		//userAvatar.setIcon(ico);
-		headPortrait.setBounds(40,390,70,70);
-		jp1.add(headPortrait);
+		headPortrait.setBounds(30,40,100,100);
+		userPanel.add(headPortrait);
 
-		JLabel lefcountry = new JLabel(pureInfo.getUserNickName());
-		lefcountry.setOpaque(true);
-		lefcountry.setBounds(150,390,100,30);
-		//lefcountry.setBackground(Color.LIGHT_GRAY);
-		jp1.add(lefcountry);
+		JLabel userName = new JLabel(pureInfo.getUserNickName());
+		userName.setOpaque(false);
+		userName.setBorder(null);
+		userName.setBounds(180,60,100,30);
+		userPanel.add(userName);
+		userName.setFont(new Font("微软雅黑",Font.BOLD,20));
+		userName.setForeground(Color.white);
+		//userName.setBackground(Color.LIGHT_GRAY);
 
 		JTextArea signature = new JTextArea(pureInfo.getuserSignature());
-		signature.setEditable(true);
+		signature.setEditable(false);
 		signature.setLineWrap(true);
 		signature.setOpaque(false);
-		signature.setBounds(150, 430, 200, 50);//492
-		jp1.add(signature);
+		signature.setFont(new Font("微软雅黑",Font.PLAIN,13));
+		signature.setBounds(180, 100, 200, 50);
+		userPanel.add(signature);//492
+
+
 		//右面板添加元素
-		jp2.setLayout(null);
-		JLabel l1 = new JLabel("QQ");
-		l1.setBounds(20,20,30, 30);//坐标位置，宽和高
-		l1.setIcon(new ImageIcon("res/PersonInfo/qq.png"));
-		JTextField t1 = new JTextField(10);
-		t1.setText(pureInfo.getUserId());
-		t1.setBorder(null);
-		t1.setEditable(false);
-		t1.setBounds(60, 20, 150, 30);
-		jp2.add(l1);
-		jp2.add(t1);
+		infoPanel.setLayout(null);
+		infoPanel.setBackground(new Color(223,238,250));
+		JLabel l1 = new JLabel("UID");
+		l1.setFont(new Font("微软雅黑",Font.BOLD,15));
+		l1.setBounds(setWidth,20,30, 30);//坐标位置，宽和高
+		JTextField userID = new JTextField(10);
+		userID.setText(pureInfo.getUserId());
+		userID.setBorder(null);
+		userID.setOpaque(false);
+		userID.setEditable(false);
+		userID.setBounds(setGrap, 20, 150, 30);
+		infoPanel.add(l1);
+		infoPanel.add(userID);
 		//JButton b1 = new JButton("编辑资料");
 		if(pureInfo.getUserId().equals(mainInterface.userInfo.getUserId())){
 			//编辑资料
@@ -184,11 +183,11 @@ public class Info extends JFrame{
 					Info.this.dispose();
 				}
 			});
-			jp2.add(modify);
+			infoPanel.add(modify);
 			modify.setBounds(280, 20, 30, 30);
 		}
 //		b1.setBounds(230,20,100,30);
-//		jp2.add(b1);
+//		infoPanel.add(b1);
 //		b1.addActionListener(new ActionListener() {
 //			@Override
 //			public void actionPerformed(ActionEvent e) {
@@ -200,20 +199,22 @@ public class Info extends JFrame{
 //			}
 //		});
 		//
-		JLabel l2 = new JLabel();
-		l2.setBounds(20,60,30,30);
-		l2.setIcon(new ImageIcon("res/PersonInfo/info.png"));
+		JLabel l2 = new JLabel("性别");
+		l2.setBounds(setWidth,60,30,30);
+		l2.setFont(font);
 		//l2.setOpaque(true);
-		jp2.add(l2);
+		infoPanel.add(l2);
 		//
 		JTextField userSex = new JTextField(5);
 		userSex.setText(pureInfo.getUserSex());
 		userSex.setEditable(false);
-		userSex.setBounds(60,60,30,30);
+		userSex.setOpaque(false);
+		userSex.setBounds(setGrap,60,30,30);
 		JTextField userBirth = new JTextField(5);
 		userBirth.setText("1月1日");
+		userBirth.setOpaque(false);
 		userBirth.setEditable(false);
-		userBirth.setBounds(140,60,60,30);
+		userBirth.setBounds(200,60,60,30);
 		JTextField t2_4 = new JTextField(5);
 //		t2_4.setText("水瓶");
 //		t2_4.setEditable(false);
@@ -223,56 +224,69 @@ public class Info extends JFrame{
 //		t2_5.setEditable(false);
 //		t2_5.setBounds(270,60,50,30);
 		userSex.setBorder(null);userBirth.setBorder(null);//t2_4.setBorder(null);t2_5.setBorder(null);
-		jp2.add(l2);
-		jp2.add(userSex);jp2.add(userBirth);//jp2.add(t2_4);jp2.add(t2_5);
+		infoPanel.add(l2);
+		infoPanel.add(userSex);infoPanel.add(userBirth);//infoPanel.add(t2_4);infoPanel.add(t2_5);
 
 		JLabel l3 = new JLabel("家乡");
-		l3.setBounds(20,100,30,30);
+		l3.setBounds(setWidth,100,30,30);
+		l3.setFont(font);
 		JTextField country = new JTextField(10);
 		country.setText("中国");
-		country.setBounds(60, 100, 200, 30);
+		country.setBounds(setGrap, 100, 200, 30);
 		country.setEditable(false);
+		country.setOpaque(false);
 		country.setBorder(null);
-		jp2.add(l3);
-		jp2.add(country);
+		infoPanel.add(l3);
+		infoPanel.add(country);
 
 		JLabel l4 = new JLabel("公司");
-		l4.setBounds(20,140,30,30);
+		l4.setBounds(setWidth,140,30,30);
+		l4.setFont(font);
 		JTextField userCompany = new JTextField(10);
 		userCompany.setText(pureInfo.getUserCompany());
-		userCompany.setBounds(60, 140, 200, 30);
+		userCompany.setBounds(setGrap, 140, 200, 30);
 		userCompany.setEditable(false);
+		userCompany.setOpaque(false);
 		userCompany.setBorder(null);
-		jp2.add(l4);
-		jp2.add(userCompany);
+		infoPanel.add(l4);
+		infoPanel.add(userCompany);
 
 		JLabel l5 = new JLabel("注册时间");
-		l5.setBounds(20,180,60,30);
+		l5.setBounds(setWidth,180,60,30);
+		l5.setFont(font);
 		JTextField registerTime = new JTextField(10);
 		registerTime.setText(pureInfo.getUserRegistertime());
 		registerTime.setEditable(false);
 		registerTime.setBorder(null);
-		registerTime.setBounds(90, 180, 200, 30);
-		jp2.add(l5);
-		jp2.add(registerTime);
+		registerTime.setOpaque(false);
+		registerTime.setBounds(setGrap+20, 180, 200, 30);
+		infoPanel.add(l5);
+		infoPanel.add(registerTime);
 
 		JLabel l6 = new JLabel("地址");
-		l6.setBounds(20,220,30,30);
+		l6.setBounds(setWidth,220,30,30);
+		l6.setFont(font);
 		JTextField userAddress = new JTextField(10);
 		userAddress.setText(pureInfo.getUserAddress());
 		userAddress.setEditable(false);
-		userAddress.setBounds(60, 220, 200, 30);userAddress.setBorder(null);
-		jp2.add(l6);
-		jp2.add(userAddress);
+		userAddress.setOpaque(false);
+		userAddress.setBounds(setGrap, 220, 200, 30);
+		userAddress.setBorder(null);
+		infoPanel.add(l6);
+		infoPanel.add(userAddress);
 
 		JLabel l7 = new JLabel("邮箱");
-		l7.setBounds(20,260,30,30);
+		l7.setBounds(setWidth,260,30,30);
+		l7.setFont(font);
 		JTextField userEmail = new JTextField(10);
 		userEmail.setText(pureInfo.getUserEmail());
 		userEmail.setEditable(false);
-		userEmail.setBounds(60, 260, 200, 30);userEmail.setBorder(null);
-		jp2.add(l7);
-		jp2.add(userEmail);
+		userEmail.setBounds(setGrap, 260, 200, 30);
+		userEmail.setBorder(null);
+		userEmail.setOpaque(false);
+		infoPanel.add(l7);
+		infoPanel.add(userEmail);
+		this.add(infoPanel);
 		this.setVisible(true);
 	}
 }

@@ -27,6 +27,8 @@ public class ChatWithFriends extends ChatFrame {
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
     protected JPanel mainControlPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
+    protected JScrollPane inputScrollPane;
+    protected JTextPane inputText;
     private String fAvatarString,fName,fid,mid,mName;
     private int messageNum;
     private int height;
@@ -275,6 +277,20 @@ public class ChatWithFriends extends ChatFrame {
         sendPanel=new JPanel();
         controlPanel=new JPanel();
         sysPanel=new JPanel();
+
+
+        inputText = new JTextPane();
+        inputScrollPane = new JScrollPane(inputText);
+        inputScrollPane.setPreferredSize(new Dimension(500,100));
+        
+
+
+
+
+
+
+
+
 
 
         mainControlPanel.setPreferredSize(new Dimension(500,40));

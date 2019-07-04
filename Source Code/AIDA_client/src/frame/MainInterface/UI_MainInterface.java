@@ -215,7 +215,7 @@ public class UI_MainInterface extends JFrame {
         upPanel.add(signature);
         // 搜索按钮
         searchButton = new JButton();
-        searchButton.setBounds(upPanel.getWidth()-40, upPanel.getHeight()-35-30, 30, 30);
+        searchButton.setBounds(upPanel.getWidth()-40, upPanel.getHeight()-70, 30, 30);
         searchButton.setContentAreaFilled(false);
         searchButton.setBorderPainted(false);
         searchButton.setFocusPainted(false);
@@ -232,6 +232,7 @@ public class UI_MainInterface extends JFrame {
         choosePanel = new JPanel();
         choosePanel.setBounds(0, 130, 250, 35);
         choosePanel.setBackground(new Color(242,242,242));
+        choosePanel.setBackground(new Color(223,238,250));
         choosePanel.setLayout(null);
         // 好友按钮
         friendsButton = new JButton();
@@ -240,6 +241,7 @@ public class UI_MainInterface extends JFrame {
         friendsButton.setFocusPainted(false);
         friendsButton.setBorderPainted(false);
         friendsButton.setOpaque(false);
+        friendsButton.setBackground(new Color(223,238,250));
 //        friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_normal.png"));
 //        friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_hover.png"));
         // 初始即为按下状态
@@ -265,6 +267,7 @@ public class UI_MainInterface extends JFrame {
         choosePanel.add(friendsButton);
         // 群聊按钮
         groupsButton = new JButton();
+        groupsButton.setBackground(new Color(223,238,250));
         groupsButton.setBounds(126, 1, 124, 33);
         groupsButton.setContentAreaFilled(false);
         groupsButton.setFocusPainted(false);
@@ -312,17 +315,17 @@ public class UI_MainInterface extends JFrame {
         // 添加分割线
         divLine1 = new JLabel(); // 中
         divLine1.setBounds(125, 0, 1, 35);
-        divLine1.setOpaque(true);
+        divLine1.setOpaque(false);
         divLine1.setBackground(new Color(121, 121, 121));
         choosePanel.add(divLine1);
         divLine2 = new JLabel(); // 上
         divLine2.setBounds(0, 0, 250, 1);
-        divLine2.setOpaque(true);
+        divLine2.setOpaque(false);
         divLine2.setBackground(new Color(121, 121, 121));
         choosePanel.add(divLine2);
         divLine3 = new JLabel(); // 下
         divLine3.setBounds(0, 34, 250, 1);
-        divLine3.setOpaque(true);
+        divLine3.setOpaque(false);
         divLine3.setBackground(new Color(121, 121, 121));
         choosePanel.add(divLine3);
         // choosePanel end

@@ -11,20 +11,14 @@ import frame.MainInterface.UI_MainInterface;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class searchMemberPanel extends JPanel{
     private JButton headPortrait;
     private JLabel nickname, status;
-    private Color originColor, hoverColor;
-
     public String getFid() {
         return fid;
     }
-
     //    private UserInfo userinfo;
     private String fid,fOnline;
     // just for test
@@ -37,20 +31,42 @@ public class searchMemberPanel extends JPanel{
     private UI_MainInterface now;
 
     public searchMemberPanel(String fid,Image fHead,String fName,String fOnline,String fSignature,UI_MainInterface now){
-        fid = fid;
-        originColor = new Color(245, 245, 245);
-        hoverColor = new Color(255, 255, 255);
         this.fid =fid;
         this.fHead=fHead;
         this.fName=fName;
         this.fOnline=fOnline;
         this.now=now;
         this.fSigniture=fSignature;
-        this.setBackground(new Color(243,249,253));
+        this.setBackground(new Color(223,238,250));
+        this.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                searchMemberPanel.this.setBackground(new Color(207,221,232));
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                searchMemberPanel.this.setBackground(new Color(223,238,250));
+            }
+        });
         setPreferredSize(new Dimension(223, 50));
-        setBackground(originColor);
         setLayout(null);
         init();
+
 
     }
 
@@ -65,14 +81,18 @@ public class searchMemberPanel extends JPanel{
         nickname.setFont(new Font("微软雅黑", Font.BOLD, 14));
         add(nickname);
         // 个性签名
-        status = new JLabel(fid+"("+fOnline+")");
+        if (fOnline.equals("")){
+            status = new JLabel(fid+"(群聊)");
+        }else {
+            status = new JLabel(fid+"("+fOnline+")");
+        }
         status.setBounds(65, 28, 100, 14);
         status.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         status.setForeground(Color.gray);
         add(status);
         //搜索按钮
         addFriends = new JButton();
-        addFriends.setBounds(160, 5, 35, 35);
+        addFriends.setBounds(180, 15, 20, 20);
         addFriends.setContentAreaFilled(false);
         addFriends.setBorderPainted(false);
         addFriends.setFocusPainted(false);

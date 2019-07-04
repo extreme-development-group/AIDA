@@ -44,7 +44,7 @@ public class SingleText extends JPanel {
         }
         textPane.setBackground(new Color(243,249,253));
         String chatText=text;
-        System.out.println(text);
+//      System.out.println(text);
         if (text.startsWith("#/Image")){
             String image = text.replace("#/Image","");
             textPane.insertIcon(new ImageIcon(Tools.base64StringToImage(image).getScaledInstance(70,70,Image.SCALE_FAST)));
@@ -69,7 +69,7 @@ public class SingleText extends JPanel {
             }
         }
         textPane.setSize(new Dimension(460,textPane.getPreferredSize().height));
-        System.out.println(textPane.getPreferredSize().height);
+//        System.out.println(textPane.getPreferredSize().height);
 //        textPane.setPreferredSize(new Dimension(460,Height));
         textPanel=new JPanel();
         textPanel.setLayout(new BorderLayout(0,0));

@@ -148,6 +148,7 @@ public class InquiryFriendFrame extends JFrame {
 		JLabel overViewLabel = new JLabel("");
 		overViewLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
 		overViewLabel.setBounds(12, 80, 130, 18);
+		overViewLabel.setForeground(Color.white);
 		contentPane.add(overViewLabel);
 
 		this.add(contentPane);
@@ -158,7 +159,7 @@ public class InquiryFriendFrame extends JFrame {
 		resultPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		resultPanel.setPreferredSize(new Dimension(700,0));
 		resultPanel.setLocation(0,100);
-		resultPanel.setBackground(new Color(128,255,255));
+		resultPanel.setBackground(new Color(223,238,250));
 
 		scrollPane =new JScrollPane(resultPanel);
 		scrollPane.setBounds(0, 100, 700, 270);
