@@ -8,6 +8,7 @@ import user.User;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -58,6 +59,7 @@ public class UI_Login extends JFrame {
         addMouseMotionListener(adpter);
 
         setSize(upPanel.getWidth(), upPanel.getHeight()+downPanel.getHeight());
+
         setLocationRelativeTo(null); // 窗口居中
         setVisible(true);
     }
@@ -205,6 +207,40 @@ public class UI_Login extends JFrame {
                     rememberPasswd.setSelected(true);
             }
         });
+        try {
+            FileInputStream in = new FileInputStream("./Data/UserInfo.uif");
+            int t;
+            String username = "";
+            String userPasswd = "";
+            while ((t = in.read()) != -1) {
+                if (t == '\n')
+                    break;
+                t ^= 'I';
+                username = username + (char) t;
+            }
+            if (!username.equals("")) {
+                while ((t = in.read()) != -1) {
+                    if (t == '\n')
+                        break;
+                    t ^= 'P';
+                    userPasswd = userPasswd + (char) t;
+                }
+                userID.setForeground(Color.BLACK);
+                userID.setText(username);
+                passwd.setEchoChar('•');
+                passwd.setForeground(Color.BLACK);
+                passwd.setText(userPasswd);
+                t = (char) in.read();
+                rememberPasswd.setSelected(true);
+                if (t == '1') {
+                    autoLogin.setSelected(true);
+                    // todo something auto login
+                }
+            }
+            in.close();
+        } catch (Exception e) {
+//			System.out.println("No user Info");
+        }
         downPanel.add(autoLogin);
         // 注册
         register = new JLabel("注册账号");

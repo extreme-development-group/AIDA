@@ -19,7 +19,7 @@ public class EmojiMenu extends JFrame{
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#1#");
+                chat.input.setText(chat.input.getText()+"#01#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -28,11 +28,11 @@ public class EmojiMenu extends JFrame{
         b2.setContentAreaFilled(false); // set don't draw message area
         b2.setBorderPainted(false); // set don't draw border
         b2.setFocusPainted(false);
-        b2.setIcon(setIcon("res/Emoji/EMOJI-03.png",30,30));
+        b2.setIcon(setIcon("res/Emoji/EMOJI-02.png",30,30));
         b2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#2#");
+                chat.input.setText(chat.input.getText()+"#02#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -41,11 +41,11 @@ public class EmojiMenu extends JFrame{
         b3.setContentAreaFilled(false); // set don't draw message area
         b3.setBorderPainted(false); // set don't draw border
         b3.setFocusPainted(false);
-        b3.setIcon(setIcon("res/Emoji/EMOJI-05.png",30,30));
+        b3.setIcon(setIcon("res/Emoji/EMOJI-03.png",30,30));
         b3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#3#");
+                chat.input.setText(chat.input.getText()+"#03#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -54,11 +54,11 @@ public class EmojiMenu extends JFrame{
         b4.setContentAreaFilled(false); // set don't draw message area
         b4.setBorderPainted(false); // set don't draw border
         b4.setFocusPainted(false);
-        b4.setIcon(setIcon("res/Emoji/EMOJI-10.png",30,30));
+        b4.setIcon(setIcon("res/Emoji/EMOJI-04.png",30,30));
         b4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#4#");
+                chat.input.setText(chat.input.getText()+"#04#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -67,11 +67,11 @@ public class EmojiMenu extends JFrame{
         b5.setContentAreaFilled(false); // set don't draw message area
         b5.setBorderPainted(false); // set don't draw border
         b5.setFocusPainted(false);
-        b5.setIcon(setIcon("res/Emoji/EMOJI-17.png",30,30));
+        b5.setIcon(setIcon("res/Emoji/EMOJI-05.png",30,30));
         b5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#5#");
+                chat.input.setText(chat.input.getText()+"#05#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -80,11 +80,11 @@ public class EmojiMenu extends JFrame{
         b6.setContentAreaFilled(false); // set don't draw message area
         b6.setBorderPainted(false); // set don't draw border
         b6.setFocusPainted(false);
-        b6.setIcon(setIcon("res/Emoji/EMOJI-24.png",30,30));
+        b6.setIcon(setIcon("res/Emoji/EMOJI-06.png",30,30));
         b6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#6#");
+                chat.input.setText(chat.input.getText()+"#06#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -93,11 +93,11 @@ public class EmojiMenu extends JFrame{
         b7.setContentAreaFilled(false); // set don't draw message area
         b7.setBorderPainted(false); // set don't draw border
         b7.setFocusPainted(false);
-        b7.setIcon(setIcon("res/Emoji/EMOJI-25.png",30,30));
+        b7.setIcon(setIcon("res/Emoji/EMOJI-07.png",30,30));
         b7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#7#");
+                chat.input.setText(chat.input.getText()+"#07#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -106,11 +106,11 @@ public class EmojiMenu extends JFrame{
         b8.setContentAreaFilled(false); // set don't draw message area
         b8.setBorderPainted(false); // set don't draw border
         b8.setFocusPainted(false);
-        b8.setIcon(setIcon("res/Emoji/EMOJI-44.png",30,30));
+        b8.setIcon(setIcon("res/Emoji/EMOJI-08.png",30,30));
         b8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#8#");
+                chat.input.setText(chat.input.getText()+"#08#");
                 EmojiMenu.this.dispose();
             }
         });
@@ -119,11 +119,11 @@ public class EmojiMenu extends JFrame{
         b9.setContentAreaFilled(false); // set don't draw message area
         b9.setBorderPainted(false); // set don't draw border
         b9.setFocusPainted(false);
-        b9.setIcon(setIcon("res/Emoji/EMOJI-48.png",30,30));
+        b9.setIcon(setIcon("res/Emoji/EMOJI-09.png",30,30));
         b9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chat.input.setText(chat.input.getText()+"#9#");
+                chat.input.setText(chat.input.getText()+"#09#");
                 EmojiMenu.this.dispose();
             }
         });

@@ -147,7 +147,7 @@ public class ChatWithFriends extends ChatFrame {
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UI_MainInterface.withFriend.remove(this);
+                UI_MainInterface.withFriend.remove(fid);
                 ChatWithFriends.this.dispose();
             }
         });

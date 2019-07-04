@@ -35,7 +35,10 @@ public class SendFriend implements ActionListener {
             ChatThread.getDataStream().send(this.message.getText(), fid, isGroup);
             this.message.setText("");
         }
-        else {JOptionPane.showMessageDialog(now, "发送消息不能为空，请重新输入");}
+        else {
+            JOptionPane.showMessageDialog(now, "发送消息不能为空，请重新输入");
+            this.message.setText("");
+        }
     }
 
     public void setMessage(JTextArea message) {

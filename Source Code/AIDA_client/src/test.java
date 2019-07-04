@@ -10,8 +10,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.StyleConstants;
+import javax.swing.text.*;
 
 public class test extends JFrame{
     private JTextPane mypane;
@@ -43,6 +42,7 @@ public class test extends JFrame{
         scrollMypane = new JScrollPane(mypane);
         scrollMypane.setBounds(new Rectangle(0,270,400,200));
 
+
         JButton sendButton = new JButton("發送");
         sendButton.setBounds(new Rectangle(170,500,60,40));
         sendButton.addActionListener(new ActionListener(){
@@ -63,6 +63,7 @@ public class test extends JFrame{
                         System.err.println(picVector.get(k++).toString());
                     }else{
                         try {
+                            System.out.println(mypane.getStyledDocument().getText(i,1));
                             pane.getStyledDocument().insertString(pane.getText().length(), mypane.getStyledDocument().getText(i,1), null);
                         } catch (BadLocationException e1) {
                             e1.printStackTrace();
@@ -72,6 +73,10 @@ public class test extends JFrame{
                 picVector.clear();
             }
         });
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setAlignment(set,StyleConstants.ALIGN_RIGHT);
+        StyledDocument demo = pane.getStyledDocument();
+        demo.setParagraphAttributes(0,104,set,false);
         container.add(scrollPane);
         container.add(insertButton);
         container.add(scrollMypane);

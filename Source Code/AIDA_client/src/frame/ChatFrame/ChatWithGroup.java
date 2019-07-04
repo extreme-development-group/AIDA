@@ -46,6 +46,7 @@ public class ChatWithGroup extends ChatFrame {
         this.fid=fid;
         this.fName=fName;
         this.mHeadPic=mHeadPic;
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
