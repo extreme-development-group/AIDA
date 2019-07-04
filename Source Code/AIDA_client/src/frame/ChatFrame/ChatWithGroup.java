@@ -267,24 +267,6 @@ public class ChatWithGroup extends ChatFrame {
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         chatPanel.setPreferredSize(new Dimension(500,height));
 
-//        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, true);
-//        for (int i = 0; i < record.size(); i++) {
-//            /*
-//             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
-//             */
-//            String res[] = record.get(i).split("```", 4);
-//            // 聊天面板显示用户昵称
-//            if (res.length == 4) {
-//                if (res[1].equals(mid)){
-//                    addMessage(mHeadPic,mName,res[0],res[3],1);
-//                }else {
-//                    addMessage((GetAvatar.getAvatarImage(res[1],"res/Avatar/User/",fAvatarString).getImage()),mName,res[0],res[3],0);
-//                }
-//            }
-//        }
-//        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
-
-
 
         functionPanel.setLayout(new FlowLayout(FlowLayout.LEADING,10,0));
         functionPanel.setBackground(Color.BLUE);
@@ -334,6 +316,27 @@ public class ChatWithGroup extends ChatFrame {
                     System.out.println("Group Member load:"+members.get(i).getId());
                     addMember(Tools.base64StringToImage(members.get(i).getAvatar()), members.get(i).getId(), members.get(i).getName(), Integer.parseInt(members.get(i).getStatus()));
                 }
+                Vector<String> record = InteractWithServer.getChatRecord(mid, fid, true);
+                System.out.println("获得消息数量："+record.size());
+                for (int i = 0; i < record.size(); i++) {
+//                 res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+                    String res[] = record.get(i).split("```", 4);
+                    Image image;
+                    System.out.println("历史消息:"+res[3]);
+                    for (int j = 0; j <members.size();j++){
+                        if(members.get(j).getId().equals(res[1])){
+                            if (members.get(j).getId().equals(mid)){
+                                addMessage(mHeadPic,mName,res[0],res[3],1);
+                            }else {
+                                image=Tools.base64StringToImage(members.get(j).getAvatar());
+                                addMessage(image,members.get(j).getName(),res[0],res[3],0);
+                            }
+                            break;
+                        }
+                    }
+                    // 聊天面板显示用户昵称
+                }
+                scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
             }
         }).start();
     }

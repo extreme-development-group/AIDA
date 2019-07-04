@@ -30,8 +30,8 @@ public class groupPanel extends JPanel {
         this.fName=fName;
         this.now=now;
 
-        originColor = new Color(245, 245, 245);
-        hoverColor = new Color(255, 255, 255);
+        originColor = new Color(223, 238, 250);
+        hoverColor = new Color(207, 221, 232);
 
         setPreferredSize(new Dimension(250, 50));
         setBackground(originColor);
@@ -41,6 +41,7 @@ public class groupPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
+                    groupPanel.this.setBackground(hoverColor);
                     if (!now.withGroup.containsKey(groupID)){
                         now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName, Tools.base64StringToImage(now.userInfo.getUserAvatar())));
                     }else {

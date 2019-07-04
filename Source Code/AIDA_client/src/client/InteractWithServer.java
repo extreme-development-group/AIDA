@@ -134,8 +134,13 @@ public final class InteractWithServer {
     }
 
     // 通过交互双方id获取历史聊天记录
-    public static Vector<String> getChatRecord(String fromid, String toId, boolean isGroup) {
-        String sendString = "getChatRecord```" + fromid + "```" + toId + "```" + isGroup;
+    public static Vector<String> getChatRecord(String fromid, String toId,Boolean isGroup) {
+        String sendString;
+        if (isGroup){
+            sendString = "getChatRecord" + fromid + "```" + toId + "```" + "1";
+        }else {
+            sendString = "getChatRecord" + fromid + "```" + toId + "```" + "0";
+        }
         return (Vector<String>) postToServer(sendString);
     }
     // 通过群ID向服务器发送请求，获取群所有成员ID
@@ -151,8 +156,5 @@ public final class InteractWithServer {
         postToServer("setMyTrades```" + myId + "```" + content);
     }
 
-    // 向服务器搜索好友
 
-    // 向服务器请求添加好友
-//    public \
 }

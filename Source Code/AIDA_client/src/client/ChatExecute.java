@@ -68,6 +68,8 @@ public final class ChatExecute {
                 if (fModel.containsKey(fromId)) {
                     fModel.get(fromId).addMessage(Tools.base64StringToImage(InteractWithServer.getFriendInfo(fromId).getUserAvatar()),UI_MainInterface.getFriend().get(fromId).getfName(), res[0], message,
                             0);
+                }else {
+                    UI_MainInterface.friend.get(fromId).setBackground(new Color(146,199,241));
                 }
             }
             // 接收到的消息是从某个群发送来的
@@ -79,6 +81,8 @@ public final class ChatExecute {
                     String fromString = UI_MainInterface.getFriend().containsKey(fromId)
                             ? UI_MainInterface.getFriend().get(fromId).getfName() : ("陌生人:" + fromId);
                     gModel.get(toId).addMessage(Tools.base64StringToImage(InteractWithServer.getFriendInfo(fromId).getUserAvatar()),fromString, res[0], message, 0);
+                }else {
+                    UI_MainInterface.group.get(fromId).setBackground(new Color(146,199,241));
                 }
             }
         } // 接收的内容是为了改变用户状态（在线/离线）

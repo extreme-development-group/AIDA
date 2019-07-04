@@ -1,6 +1,7 @@
 package frame.ChatFrame;
 
 import client.ChatThread;
+import client.InteractWithServer;
 import config.Tools;
 import frame.Listener.SendFriend;
 import frame.MainInterface.UI_MainInterface;
@@ -15,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Vector;
 
 public class ChatWithFriends extends ChatFrame {
     public static void main(String[] args) throws IOException {
@@ -304,22 +306,22 @@ public class ChatWithFriends extends ChatFrame {
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         chatPanel.setPreferredSize(new Dimension(500,height));
 
-//        Vector<String> record = InteractWithServer.getChatRecord(mid, fid, false);
-//        for (int i = 0; i < record.size(); i++) {
-//            /*
-//             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
-//             */
-//            String res[] = record.get(i).split("```", 4);
-//            // 聊天面板显示用户昵称
-//            if (res.length == 4) {
-//                if (res[1].equals(fid)){
-//                    addMessage(fHeadPic,fName,res[0],res[3],0);
-//                }else if (res[1].equals(mid)){
-//                    addMessage(mHeadPic,mName,res[0],res[3],1);
-//                }
-//            }
-//        }
-//        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+        Vector<String> record = InteractWithServer.getChatRecord(mid, fid,false);
+        for (int i = 0; i < record.size(); i++) {
+            /*
+             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+             */
+            String res[] = record.get(i).split("```", 4);
+            // 聊天面板显示用户昵称
+            if (res.length == 4) {
+                if (res[1].equals(fid)){
+                    addMessage(fHeadPic,fName,res[0],res[3],0);
+                }else if (res[1].equals(mid)){
+                    addMessage(mHeadPic,mName,res[0],res[3],1);
+                }
+            }
+        }
+        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
 
 
 

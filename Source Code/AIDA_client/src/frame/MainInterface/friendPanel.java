@@ -35,8 +35,8 @@ public class friendPanel extends JPanel {
 
     friendPanel(String id,Image fHead,String fName,String fSignature,String fOnline,UI_MainInterface now){
         fid = id;
-        originColor = new Color(245, 245, 245);
-        hoverColor = new Color(255, 255, 255);
+        originColor = new Color(223, 238, 250);
+        hoverColor = new Color(207, 221, 232);
         this.fid =id;
         this.fHead=fHead;
         this.fName=fName;
@@ -52,6 +52,7 @@ public class friendPanel extends JPanel {
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
+                    friendPanel.this.setBackground(hoverColor);
                     String userId=now.userInfo.getUserId();
                     String userName=now.userInfo.getUserName();
                     Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
