@@ -1,5 +1,6 @@
 package client;
 
+import config.Tools;
 import frame.ChatFrame.ChatFrame;
 import frame.ChatFrame.ChatWithFriends;
 import frame.ChatFrame.ChatWithGroup;
@@ -45,12 +46,6 @@ public final class ChatExecute {
     public static void execute(String scMessage) {
         // 对接收到的消息内容进行解码
         String res[] = scMessage.split("```", 5);
-        try {
-            image = ImageIO.read(new File("res/Avatar/head-test.JPG"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         // 从服务端发送的内容解码之后长度为5，代表该消息为聊天内容
         if (res.length == 5) {
             type = res[1];
@@ -71,7 +66,7 @@ public final class ChatExecute {
                 // 展示在对应好友聊天面板中
                 // 若打开了聊天窗口
                 if (fModel.containsKey(fromId)) {
-                    fModel.get(fromId).addMessage(image,UI_MainInterface.getFriend().get(fromId).getfName(), res[0], message,
+                    fModel.get(fromId).addMessage(Tools.base64StringToImage(InteractWithServer.getFriendInfo(fromId).getUserAvatar()),UI_MainInterface.getFriend().get(fromId).getfName(), res[0], message,
                             0);
                 }
             }
@@ -83,7 +78,7 @@ public final class ChatExecute {
                     // 聊天面板显示用户昵称
                     String fromString = UI_MainInterface.getFriend().containsKey(fromId)
                             ? UI_MainInterface.getFriend().get(fromId).getfName() : ("陌生人:" + fromId);
-                    gModel.get(toId).addMessage(image,fromString, res[0], message, 0);
+                    gModel.get(toId).addMessage(Tools.base64StringToImage(InteractWithServer.getFriendInfo(fromId).getUserAvatar()),fromString, res[0], message, 0);
                 }
             }
         } // 接收的内容是为了改变用户状态（在线/离线）

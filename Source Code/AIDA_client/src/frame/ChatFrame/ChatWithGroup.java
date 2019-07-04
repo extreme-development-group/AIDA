@@ -1,6 +1,8 @@
 package frame.ChatFrame;
 
 import client.InteractWithServer;
+import config.Tools;
+import config.UserInfo;
 import frame.Listener.SendFriend;
 import frame.MainInterface.UI_MainInterface;
 
@@ -13,31 +15,23 @@ import java.io.IOException;
 import java.util.Vector;
 
 public class ChatWithGroup extends ChatFrame {
-    public static void main(String[] args) throws IOException {
-        Image image= ImageIO.read(new File("res/Avatar/head-test.JPG"));
-        ChatWithGroup chatWithGroup=new ChatWithGroup("1","Mike","3","Jack",image,0);
-    }
     protected JButton GroupNameButton,minimize,closeButton,emojiButton,
             pictureButton,sendButton;
     protected JPanel mainControlPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel,groupMemberPanel;
     protected JScrollPane memberPanel;
 
-    private int memberHeight;
     private String fName,fid,mid,mName;
+    public String getGroupID(){
+        return fid;
+    }
     private int messageNum;
     private int height;
     private Image mHeadPic;
     private int userStatue;
-    public void addMember(String uid, String uName, int statue){
-        try {
-            Image image = ImageIO.read(new File("res/Avatar/head-test.JPG"));
-            memberHeight=memberHeight+40;
-            groupMemberPanel.setPreferredSize(new Dimension(200,height));
-            groupMemberPanel.add(new MemberText(image,uName,uid,statue,this, userStatue));
-            memberPanel.getViewport().setViewPosition(new Point(0,groupMemberPanel.getHeight()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void addMember(Image uHead,String uid, String uName, int statue){
+        groupMemberPanel.setPreferredSize(new Dimension(200,(int)groupMemberPanel.getPreferredSize().getHeight()+40));
+        groupMemberPanel.add(new MemberText(uHead,uName,uid,statue,this, userStatue,mid));
+        memberPanel.getViewport().setViewPosition(new Point(0,groupMemberPanel.getHeight()));
 
     }
 
@@ -45,13 +39,13 @@ public class ChatWithGroup extends ChatFrame {
         EmojiMenu emojiMenu=new EmojiMenu(this);
     }
 
-    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic,int userStatue){
+
+    public ChatWithGroup(String mid,String mName,String fid,String fName,Image mHeadPic){
         this.mid=mid;
         this.mName=mName;
         this.fid=fid;
         this.fName=fName;
         this.mHeadPic=mHeadPic;
-        this.userStatue =userStatue;
         init();
         this.setLayout(new BorderLayout());
         this.add(mainControlPanel,BorderLayout.NORTH);
@@ -152,6 +146,7 @@ public class ChatWithGroup extends ChatFrame {
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                UI_MainInterface.withGroup.remove(fid);
                 ChatWithGroup.this.dispose();
             }
         });
@@ -282,34 +277,30 @@ public class ChatWithGroup extends ChatFrame {
         memberPanel.setBackground(new Color(201,251,254));
         groupMemberPanel.setBackground(new Color(201,251,254));
         memberPanel.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
-        memberHeight=0;
         memberPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         memberPanel.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
         memberPanel.getVerticalScrollBar().setUI(new ScrollBarUI());
         memberPanel.getVerticalScrollBar().setUnitIncrement(15);
-        groupMemberPanel.setPreferredSize(new Dimension(200,memberHeight));
-
-        Vector<String> members = InteractWithServer.getGroupMembers(fid);
-        for (String i : members) {
-            System.out.println(i);
-            String id[] = i.split("```");
-            String memberid = id[1];
-            String memberName = id[2];
-            int state = Integer.parseInt(id[0]);
-            if (memberid.equals(mid)) {
-                addMember(mid, mName, state);
-                continue;
+        groupMemberPanel.setPreferredSize(new Dimension(200,0));
+        //新线程拉取信息
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Vector<UserInfo.FriendsOrGroups> members = InteractWithServer.getGroupMembers(fid);
+                for (int i =0;i<members.size();i++){
+                    System.out.println(members.get(i).getId());
+                    if (members.get(i).getId().equals(mid)){
+                        userStatue=Integer.parseInt(members.get(i).getStatus());
+                        System.out.println(userStatue);
+                        break;
+                    }
+                }
+                for (int i =0;i<members.size();i++){
+                    System.out.println("Group Member load:"+members.get(i).getId());
+                    addMember(Tools.base64StringToImage(members.get(i).getAvatar()), members.get(i).getId(), members.get(i).getName(), Integer.parseInt(members.get(i).getStatus()));
+                }
             }
-            ImageIcon icon = new ImageIcon("./res/tempheadportrait.jpg");
-            if (UI_MainInterface.getFriend().containsKey(memberid)) {
-                icon = GetAvatar.getAvatarImage(memberid, "./Data/Avatar/User/",
-                        UI_MainInterface.getFriend().get(memberid).getFAvatar());
-            }
-            icon = new ImageIcon(icon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
-            addMember(memberid,memberName,state);
-        }
-
-
+        }).start();
     }
     private ImageIcon setIcon(String filepath,int x,int y){
         ImageIcon imageIcon = new ImageIcon(filepath);    // Icon由图片文件形成
@@ -318,5 +309,19 @@ public class ChatWithGroup extends ChatFrame {
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
 
-
+    public void updateFrame(){
+        groupMemberPanel.removeAll();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Vector<UserInfo.FriendsOrGroups> members = InteractWithServer.getGroupMembers(fid);
+                for (int i =0;i<members.size();i++){
+                    System.out.println("Group Member load:"+members.get(i).getId());
+                    addMember(Tools.base64StringToImage(members.get(i).getAvatar()),members.get(i).getId(),members.get(i).getName(),Integer.parseInt(members.get(i).getStatus()));
+                }
+            }
+        }).start();
+        groupMemberPanel.validate();
+        groupMemberPanel.repaint();
+    }
 }

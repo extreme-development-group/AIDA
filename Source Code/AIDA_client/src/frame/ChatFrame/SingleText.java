@@ -10,6 +10,7 @@ public class SingleText extends JPanel {
     private JPanel textPanel;
     private JLabel idLabel;
     private JLabel textLabel;
+    //private JTextPane textLabel;
     public SingleText(Image userHeadPic,String username,String time,String text,int side) {
         avatar=new HeadPortrait(40,40,userHeadPic);
 

@@ -1,6 +1,7 @@
 package frame.ChatFrame;
 
 import frame.Listener.SendFriend;
+import frame.MainInterface.UI_MainInterface;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -146,6 +147,7 @@ public class ChatWithFriends extends ChatFrame {
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                UI_MainInterface.withFriend.remove(this);
                 ChatWithFriends.this.dispose();
             }
         });

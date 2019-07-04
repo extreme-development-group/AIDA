@@ -1,5 +1,8 @@
 package frame.ChatFrame;
 
+import client.InteractWithServer;
+import frame.MainInterface.UI_MainInterface;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,11 +21,13 @@ public class MemberText extends JPanel {
     private JLabel statusLabel;
     private int status;
     private int userStatus;
-    private String userID;
+    private String userID,curID;
     private ChatWithGroup group;
 
-    public MemberText(Image memAvatar,String username,String userID,int status,ChatWithGroup group,int userStatus) throws IOException {
+    public MemberText(Image memAvatar,String username,String userID,int status,ChatWithGroup group,int userStatus,String curID){
         this.userID=userID;
+        this.curID=curID;
+        this.userStatus = userStatus;
         this.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -81,27 +86,21 @@ public class MemberText extends JPanel {
         return new ImageIcon(smallImage);//   最后设置它为按钮的图片
     }
     private void showPopupMenu(Component invoker,int x,int y){
-        JPopupMenu popupMenu=new JPopupMenu();
-        JMenuItem setAdmin = new JMenuItem("设置为管理员");
-        JMenuItem getOut=new JMenuItem("踢出群");
-        if (userStatus==0){
-            popupMenu.add(setAdmin);
+        System.out.println(userStatus);
+        if (userStatus==0&&!curID.equals(userID)){
+            JPopupMenu popupMenu=new JPopupMenu();
+            JMenuItem getOut=new JMenuItem("踢出群");
             popupMenu.add(getOut);
-        }else if (userStatus==1){
-            popupMenu.add(getOut);
+            getOut.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (InteractWithServer.deleteGroupMember(group.getGroupID(),userID)){
+                        group.updateFrame();
+                    }
+                    group.input.setText(userID+"exit");
+                }
+            });
+            popupMenu.show(invoker,x,y);
         }
-        setAdmin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                group.input.setText(userID+"setAdmin");
-            }
-        });
-        getOut.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                group.input.setText(userID+"exit");
-            }
-        });
-        popupMenu.show(invoker,x,y);
     }
 }

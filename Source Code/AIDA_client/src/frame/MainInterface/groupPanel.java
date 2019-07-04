@@ -41,7 +41,7 @@ public class groupPanel extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     if (!now.withGroup.containsKey(groupID)){
-                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead,0));
+                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead));
                     }else {
                         now.withGroup.get(groupID).requestFocus();
                     }
@@ -77,7 +77,7 @@ public class groupPanel extends JPanel {
                     enterItem.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             if (!now.withGroup.containsKey(groupID)){
-                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead,0));
+                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,fHead));
                             }else {
                                 now.withGroup.get(groupID).requestFocus();
                             }
@@ -126,8 +126,8 @@ public class groupPanel extends JPanel {
         headPortrait.setLocation(5,5);
         add(headPortrait);
         // 群名
-        groupName = new JLabel("群名"+groupID);
-        groupName.setBounds(55, 8, 100, 16);
+        groupName = new JLabel(fName+"("+groupID+")");
+        groupName.setBounds(55, 8, 180, 32);
         groupName.setFont(new Font("微软雅黑", Font.BOLD, 14));
         add(groupName);
     }

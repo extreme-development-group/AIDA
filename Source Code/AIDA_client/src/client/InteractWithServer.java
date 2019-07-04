@@ -65,12 +65,13 @@ public final class InteractWithServer {
         return userID;
     }
     //得到搜索好友列表
-    public static Vector<UserInfo.FriendsOrGroups> getFriendsOrGroup(String fid){
+    public static Vector<UserInfo.FriendsOrGroups> getFriendsOrGroup(String fid,String uID){
         Vector<UserInfo.FriendsOrGroups> friendsOrGroups=null;
-        String fieldString = "getFriendsOrGroups" + fid;
+        String fieldString = "getFriendsOrGroups" + fid +  "```" + uID;
         friendsOrGroups = (Vector<UserInfo.FriendsOrGroups>) postToServer(fieldString);
         return friendsOrGroups;
     }
+
 
     //申请好友信息
     public static PureInfo getFriendInfo(String fid){
@@ -83,6 +84,27 @@ public final class InteractWithServer {
     public static Boolean modifyUserInfo(PureInfo pureInfo){
         Boolean isSuccess = false;
         isSuccess = (Boolean)postToServer(pureInfo);
+        return isSuccess;
+    }
+    //创建群聊
+    public static UserInfo.FriendsOrGroups createGroup(String uid,String gName){
+        UserInfo.FriendsOrGroups friendsOrGroups = null;
+        String fieldString = "createGroup"+uid+"```"+gName;
+        friendsOrGroups=(UserInfo.FriendsOrGroups)postToServer(fieldString);
+        return friendsOrGroups;
+    }
+    //删除群成员
+    public static Boolean deleteGroupMember(String gid,String uid){
+        Boolean isSuccess = false;
+        String fieldString = "deleteGroupMember"+gid+"```"+uid;
+        isSuccess = (Boolean)postToServer(fieldString);
+        return isSuccess;
+    }
+    //设置为管理员
+    public static Boolean setAdmin(String gid,String uid){
+        Boolean isSuccess=false;
+        String fieldString = "setAdmin"+gid+"```"+uid;
+        isSuccess = (Boolean)postToServer(fieldString);
         return isSuccess;
     }
 
@@ -116,11 +138,12 @@ public final class InteractWithServer {
         String sendString = "getChatRecord```" + fromid + "```" + toId + "```" + isGroup;
         return (Vector<String>) postToServer(sendString);
     }
-
     // 通过群ID向服务器发送请求，获取群所有成员ID
-    public static Vector<String> getGroupMembers(String groupId) {
-        String send = "getGroupMembers" + groupId;
-        return (Vector<String>) postToServer(send);
+    public static  Vector<UserInfo.FriendsOrGroups> getGroupMembers(String groupId) {
+        Vector<UserInfo.FriendsOrGroups> friendsOrGroups=null;
+        String fieldString = "getGroupMembers" + groupId;
+        friendsOrGroups = (Vector<UserInfo.FriendsOrGroups>) postToServer(fieldString);
+        return friendsOrGroups;
     }
 
     // 向服务器发送请求更改个性签名

@@ -164,28 +164,29 @@ public class Info extends JFrame{
 		jp2.add(l1);
 		jp2.add(t1);
 		//JButton b1 = new JButton("编辑资料");
-
-		//编辑资料
-		JButton modify = new JButton();
-		modify.setMargin(new Insets(0, 0, 0, 0));
-		modify.setBounds(660, 0, 30, 30);//28x28
-		modify.setContentAreaFilled(false);
-		modify.setBorderPainted(false);
-		modify.setFocusPainted(false);
-		modify.setToolTipText("编辑资料");
-		modify.setIcon(new ImageIcon("res/PersonInfo/modify.png"));
-		modify.setRolloverIcon(new ImageIcon("res/PersonInfo/cover_modify.png"));
-		//modify.setPressedIcon(new ImageIcon("src/minbutton_down.png"));
-		modify.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//setExtendedState(JFrame.ICONIFIED);
-				ModifyInfo m = new ModifyInfo(pureInfo,Info.this.mainInterface);
-				Info.this.dispose();
-			}
-		});
-		jp2.add(modify);
-		modify.setBounds(280, 20, 30, 30);
+		if(pureInfo.getUserId().equals(mainInterface.userInfo.getUserId())){
+			//编辑资料
+			JButton modify = new JButton();
+			modify.setMargin(new Insets(0, 0, 0, 0));
+			modify.setBounds(660, 0, 30, 30);//28x28
+			modify.setContentAreaFilled(false);
+			modify.setBorderPainted(false);
+			modify.setFocusPainted(false);
+			modify.setToolTipText("编辑资料");
+			modify.setIcon(new ImageIcon("res/PersonInfo/modify.png"));
+			modify.setRolloverIcon(new ImageIcon("res/PersonInfo/cover_modify.png"));
+			//modify.setPressedIcon(new ImageIcon("src/minbutton_down.png"));
+			modify.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					//setExtendedState(JFrame.ICONIFIED);
+					ModifyInfo m = new ModifyInfo(pureInfo,Info.this.mainInterface);
+					Info.this.dispose();
+				}
+			});
+			jp2.add(modify);
+			modify.setBounds(280, 20, 30, 30);
+		}
 //		b1.setBounds(230,20,100,30);
 //		jp2.add(b1);
 //		b1.addActionListener(new ActionListener() {

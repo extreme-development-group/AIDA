@@ -248,14 +248,17 @@ public class UI_MainInterface extends JFrame {
         friendsButton.setPressedIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
         friendsButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // 保持按下
-                friendListJSP.setVisible(true);
-                friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
-                friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
-                // 另一弹起
-                groupListJSP.setVisible(false);
-                groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_normal.png"));
-                groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_hover.png"));
+                if (e.getButton()==e.BUTTON1){
+                    // 保持按下
+                    friendListJSP.setVisible(true);
+                    friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
+                    friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_selected.png"));
+                    // 另一弹起
+                    groupListJSP.setVisible(false);
+                    groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_normal.png"));
+                    groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_hover.png"));
+                    super.mouseClicked(e);
+                }
                 super.mouseClicked(e);
             }
         });
@@ -272,15 +275,37 @@ public class UI_MainInterface extends JFrame {
         groupsButton.setPressedIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
         groupsButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // 保持按下
-                groupListJSP.setVisible(true);
-                groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
-                groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
-                // 另一弹起
-                friendListJSP.setVisible(false);
-                friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_normal.png"));
-                friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_hover.png"));
-                super.mouseClicked(e);
+                if (e.getButton()==e.BUTTON1){
+                    // 保持按下
+                    groupListJSP.setVisible(true);
+                    groupsButton.setIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
+                    groupsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_group_selected.png"));
+                    // 另一弹起
+                    friendListJSP.setVisible(false);
+                    friendsButton.setIcon(new ImageIcon("res/MainInterface/icon_contacts_normal.png"));
+                    friendsButton.setRolloverIcon(new ImageIcon("res/MainInterface/icon_contacts_hover.png"));
+                    super.mouseClicked(e);
+                }else if (e.getButton()==e.BUTTON3){
+                    MyPopupMenu createGroupMenu = new MyPopupMenu();
+                    MyMenuItem chatItem = new MyMenuItem("创建群聊");
+                    chatItem.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            String inputValue=JOptionPane.showInputDialog("请输入群名");
+                            UserInfo.FriendsOrGroups friendsOrGroups = InteractWithServer.createGroup(UI_MainInterface.this.userInfo.getUserId(),inputValue);
+                            if (friendsOrGroups!=null){
+                                System.out.println("Get Group:"+friendsOrGroups);
+                                UI_MainInterface.this.addGroup(friendsOrGroups.getId(),
+                                        Tools.base64StringToImage(friendsOrGroups.getAvatar()),
+                                        friendsOrGroups.getName());
+                            }else {
+                                JOptionPane.showMessageDialog(UI_MainInterface.this, "创建群失败！", "错误", JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                    });
+                    createGroupMenu.add(chatItem);
+                    createGroupMenu.show(e.getComponent(), e.getX(), e.getY());
+                }
+
             }
         });
         choosePanel.add(groupsButton);
@@ -380,8 +405,6 @@ public class UI_MainInterface extends JFrame {
         headPortrait.updateUI();
         upPanel.validate();
         upPanel.repaint();
-        this.validate();
-        this.repaint();
     }
 }
 

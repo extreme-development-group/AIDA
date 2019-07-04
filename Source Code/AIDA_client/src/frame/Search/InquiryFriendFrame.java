@@ -187,7 +187,7 @@ public class InquiryFriendFrame extends JFrame {
 				if (userIdField.getText().equals("")){
 					JOptionPane.showMessageDialog(InquiryFriendFrame.this, "搜索为空！", "错误", JOptionPane.WARNING_MESSAGE);
 				}else {
-					Vector<UserInfo.FriendsOrGroups> friendsOrGroups = InteractWithServer.getFriendsOrGroup(userIdField.getText());
+					Vector<UserInfo.FriendsOrGroups> friendsOrGroups = InteractWithServer.getFriendsOrGroup(userIdField.getText(),now.userInfo.getUserId());
 					System.out.println(friendsOrGroups.size());
 					overViewLabel.setText("已查找到"+friendsOrGroups.size()+"结果");
 					for (int i =0;i<friendsOrGroups.size();i++){
