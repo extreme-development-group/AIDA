@@ -26,7 +26,7 @@ public class ChatWithFriends extends ChatFrame {
     }
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
-    protected JPanel mainControlPanel,functionPanel,inputPanel,sendPanel,controlPanel,sysPanel;
+    protected JPanel mainControlPanel,functionPanel,sendPanel,controlPanel,sysPanel;
     protected JScrollPane inputScrollPane;
     protected JTextPane inputText;
     private String fAvatarString,fName,fid,mid,mName;
@@ -273,15 +273,19 @@ public class ChatWithFriends extends ChatFrame {
         mainControlPanel =new JPanel();
         chatPanel=new JPanel();
         functionPanel=new JPanel();
-        inputPanel=new JPanel();
+//        inputPanel=new JPanel();
         sendPanel=new JPanel();
         controlPanel=new JPanel();
         sysPanel=new JPanel();
 
 
-        inputText = new JTextPane();
-        inputScrollPane = new JScrollPane(inputText);
-        inputScrollPane.setPreferredSize(new Dimension(500,100));
+        inputScrollPane = new JScrollPane(input);
+        inputScrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(128,255,255)));
+        inputScrollPane.setPreferredSize(new Dimension(500,90));
+        inputScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        inputScrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
+        inputScrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
+        inputScrollPane.getVerticalScrollBar().setUnitIncrement(15);
         
 
 
@@ -297,7 +301,7 @@ public class ChatWithFriends extends ChatFrame {
 
         chatPanel.setPreferredSize(new Dimension(500,300));
         functionPanel.setPreferredSize(new Dimension(500,40));
-        inputPanel.setPreferredSize(new Dimension(500,100));
+//        inputPanel.setPreferredSize(new Dimension(500,100));
         sendPanel.setPreferredSize(new Dimension(500,40));
 
         sysPanel.setBackground(new Color(40,138,221));
@@ -353,8 +357,8 @@ public class ChatWithFriends extends ChatFrame {
         functionPanel.add(sendButton);
         functionPanel.setBackground(new Color(128,255,255));
 
-        inputPanel.add(input);
-        inputPanel.setBackground(new Color(128,255,255));
+
+//        inputPanel.setBackground(new Color(128,255,255));
 
         sendPanel.setLayout(null);
         sendPanel.add(sendButton);
@@ -362,7 +366,7 @@ public class ChatWithFriends extends ChatFrame {
 
         controlPanel.setLayout(new BorderLayout());
         controlPanel.add(functionPanel,BorderLayout.NORTH);
-        controlPanel.add(inputPanel,BorderLayout.CENTER);
+        controlPanel.add(inputScrollPane,BorderLayout.CENTER);
         controlPanel.add(sendPanel,BorderLayout.SOUTH);
 
     }

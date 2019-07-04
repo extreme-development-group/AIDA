@@ -57,6 +57,7 @@ public class SingleText extends JPanel {
 //                    System.out.println("icon");
                     textPane.setCaretPosition(textPane.getStyledDocument().getLength());
                     textPane.insertIcon(Tools.setIcon("res/Emoji/EMOJI-"+emoji+".png",30,30));
+
                 }else {
                     try {
                         textPane.setCaretPosition(textPane.getStyledDocument().getLength());
