@@ -79,6 +79,7 @@ public class ServerFile extends Thread {
                     size1 += len;
                     jprogressbars.setValue((int) (size1 / 10000));
                 }
+                fout.close();
                 frame.dispose();
                 input.close();
                 socket.close();
@@ -90,6 +91,12 @@ public class ServerFile extends Thread {
         } catch (IOException e) {
             System.out.println();
             javax.swing.JOptionPane.showMessageDialog(null, "传输错误");
+        }finally {
+            try {
+                openServer(8080);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
     private static ServerSocket server = null;
