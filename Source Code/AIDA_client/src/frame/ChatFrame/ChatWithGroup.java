@@ -183,7 +183,6 @@ public class ChatWithGroup extends ChatFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser chooser = new JFileChooser();
-                int returnVal=chooser.showOpenDialog(ChatWithGroup.this);
                 chooser.setFileFilter(new FileFilter() {
                     @Override
                     public boolean accept(File f) {
@@ -198,6 +197,7 @@ public class ChatWithGroup extends ChatFrame {
                         return "图片(.jpg,.png)";
                     }
                 });
+                int returnVal=chooser.showOpenDialog(ChatWithGroup.this);
                 System.out.println("returnVal="+returnVal);
                 String filepath;
                 if (returnVal == JFileChooser.APPROVE_OPTION) {          //如果符合文件类型
@@ -207,6 +207,8 @@ public class ChatWithGroup extends ChatFrame {
                     String message= "#/Image"+ Tools.getImageBinary(filepath);
                     ChatWithGroup.this.addMessage(mHeadPic,mName, new Date().toString(),message, 1);
                     ChatThread.getDataStream().send(message, fid, true);
+                }else {
+                    JOptionPane.showMessageDialog(ChatWithGroup.this, "请打开图片(.jpg,.png)！", "错误", JOptionPane.WARNING_MESSAGE);
                 }
             }
         });

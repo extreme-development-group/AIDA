@@ -1,9 +1,15 @@
 package client;
 
+import config.Tools;
+import frame.ChatFrame.ChatWithFriends;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.Socket;
+import java.util.Date;
 
 public class FileTransfer {
     private static final String SERVER_IP = "127.0.0.1"; // 服务端IP
@@ -30,13 +36,12 @@ public class FileTransfer {
      * 向服务端传输文件
      * @throws Exception
      */
-    public void sendFile() throws Exception {
+    public void sendFile(String filepath) throws Exception {
         try {
-            File file = new File("E:\\JDK1.6中文参考手册(JDK_API_1_6_zh_CN).CHM");
+            File file = new File(filepath);
             if(file.exists()) {
                 fis = new FileInputStream(file);
                 dos = new DataOutputStream(client.getOutputStream());
-
                 // 文件名和长度
                 dos.writeUTF(file.getName());
                 dos.flush();
@@ -75,7 +80,28 @@ public class FileTransfer {
     public static void main(String[] args) {
         try {
             FileTransfer client = new FileTransfer(); // 启动客户端连接
-            client.sendFile(); // 传输文件
+            JFileChooser chooser = new JFileChooser();
+            chooser.setFileFilter(new FileFilter() {
+                @Override
+                public boolean accept(File f) {
+                    if(f.getName().endsWith(".jpg")||f.getName().endsWith(".png")||f.isDirectory()){
+                        return true;
+                    }
+                    return false;
+                }
+
+                @Override
+                public String getDescription() {
+                    return "图片(.jpg,.png)";
+                }
+            });
+            int returnVal=chooser.showOpenDialog(null);
+            System.out.println("returnVal="+returnVal);
+            String filepath;
+            filepath = chooser.getSelectedFile().getPath();
+            System.out.println(filepath);
+            client.sendFile(filepath);
+            // 传输文件
         } catch (Exception e) {
             e.printStackTrace();
         }
