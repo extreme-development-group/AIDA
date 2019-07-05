@@ -256,7 +256,7 @@ public class ChatWithGroup extends ChatFrame {
         mainControlPanel.add(sysPanel,BorderLayout.EAST);
 
         chatPanel.setBackground(new Color(243,249,253));
-        chatPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        chatPanel.setLayout(new FlowLayout(FlowLayout.LEADING, 0, 0));
         scrollPane =new JScrollPane(chatPanel);
         scrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
         height=0;

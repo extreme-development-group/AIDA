@@ -3,10 +3,7 @@ package frame.ChatFrame;
 import config.Tools;
 
 import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
+import javax.swing.text.*;
 import java.awt.*;
 
 public class SingleText extends JPanel {
@@ -29,8 +26,9 @@ public class SingleText extends JPanel {
         }
 
 
-        textPane=new JTextPane();
+        textPane=new MyTextPane();
         textPane.setEditable(false);
+        ((DefaultCaret)textPane.getCaret()).setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
         textPane.setFont(new Font("微软雅黑",Font.BOLD,16));
         textPane.setLayout(null);
 
@@ -57,7 +55,6 @@ public class SingleText extends JPanel {
 //                    System.out.println("icon");
                     textPane.setCaretPosition(textPane.getStyledDocument().getLength());
                     textPane.insertIcon(Tools.setIcon("res/Emoji/EMOJI-"+emoji+".png",30,30));
-
                 }else {
                     try {
                         textPane.setCaretPosition(textPane.getStyledDocument().getLength());
@@ -69,7 +66,7 @@ public class SingleText extends JPanel {
                 }
             }
         }
-        textPane.setSize(new Dimension(460,textPane.getPreferredSize().height));
+        textPane.setSize(new Dimension(500,textPane.getPreferredSize().height));
 //        System.out.println(textPane.getPreferredSize().height);
 //        textPane.setPreferredSize(new Dimension(460,Height));
         textPanel=new JPanel();

@@ -10,6 +10,9 @@ import frame.UserInfoFrame.ModifyInfo;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -254,7 +257,9 @@ public class ChatWithFriends extends ChatFrame {
         cameraButton.setIcon(setIcon("res/Icon/camera.png",30,30));
 
         input=new JTextArea("");
-        input.setPreferredSize(new Dimension(500,300));
+//        input.setPreferredSize(new Dimension(500,100));
+        input.setLineWrap(true);
+        input.setWrapStyleWord(true);
         input.setBackground(new Color(128,255,255));
         input.setBorder(null);
 
@@ -290,16 +295,8 @@ public class ChatWithFriends extends ChatFrame {
 
 
 
-
-
-
-
-
-
-
         mainControlPanel.setPreferredSize(new Dimension(500,40));
 
-        chatPanel.setPreferredSize(new Dimension(500,300));
         functionPanel.setPreferredSize(new Dimension(500,40));
 //        inputPanel.setPreferredSize(new Dimension(500,100));
         sendPanel.setPreferredSize(new Dimension(500,40));
@@ -315,23 +312,26 @@ public class ChatWithFriends extends ChatFrame {
         mainControlPanel.add(sysPanel,BorderLayout.EAST);
 
         chatPanel.setBackground(new Color(243,249,253));
-        chatPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        chatPanel.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
+
         scrollPane=new JScrollPane(chatPanel);
+
         scrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(243,249,253)));
-        height=0;
-        scrollPane.setPreferredSize(new Dimension(500, 300));
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
         scrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
-        chatPanel.setPreferredSize(new Dimension(500,height));
+        chatPanel.setPreferredSize(new Dimension(500,0));
+
 
         Vector<String> record = InteractWithServer.getChatRecord(mid, fid,false);
         for (int i = 0; i < record.size(); i++) {
             /*
              * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
              */
+
             String res[] = record.get(i).split("```", 4);
+            System.out.println("From:"+res[1]+ "message"+res[3]);
             // 聊天面板显示用户昵称
             if (res.length == 4) {
                 if (res[1].equals(fid)){
@@ -341,7 +341,7 @@ public class ChatWithFriends extends ChatFrame {
                 }
             }
         }
-        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getPreferredSize().height));
 
 
 

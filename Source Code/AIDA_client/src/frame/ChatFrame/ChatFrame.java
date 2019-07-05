@@ -11,9 +11,8 @@ public class ChatFrame extends JFrame {
     protected JScrollPane scrollPane;
     public void addMessage(Image userHeadPic, String userName, String sendTime, String message, int side){
         SingleText singleText=new SingleText(userHeadPic,userName,sendTime,message,side);
-        chatPanel.setPreferredSize(new Dimension(500,(int)chatPanel.getPreferredSize().getHeight()+(int)singleText.getPreferredSize().height));
+        chatPanel.setPreferredSize(new Dimension(500,chatPanel.getPreferredSize().height+singleText.getPreferredSize().height));
         chatPanel.add(singleText);
-        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getPreferredSize().height));
     }
-
 }
