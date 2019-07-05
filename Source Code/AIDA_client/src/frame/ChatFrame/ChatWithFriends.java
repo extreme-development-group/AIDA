@@ -179,6 +179,7 @@ public class ChatWithFriends extends ChatFrame {
         emojiButton.setBorderPainted(false); // set don't draw border
         emojiButton.setFocusPainted(false);
         emojiButton.setIcon(setIcon("res/Icon/smile.png",30,30));
+        emojiButton.setRolloverIcon(setIcon("res/Icon/smile_hover.png",30,30));
         emojiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -203,6 +204,7 @@ public class ChatWithFriends extends ChatFrame {
         pictureButton.setBorderPainted(false); // set don't draw border
         pictureButton.setFocusPainted(false);
         pictureButton.setIcon(setIcon("res/Icon/image.png",30,30));
+        pictureButton.setRolloverIcon(setIcon("res/Icon/image_hover.png",30,30));
         pictureButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -245,6 +247,7 @@ public class ChatWithFriends extends ChatFrame {
         fileButton.setBorderPainted(false); // set don't draw border
         fileButton.setFocusPainted(false);
         fileButton.setIcon(setIcon("res/Icon/folder.png",30,30));
+        fileButton.setRolloverIcon(setIcon("res/Icon/folder_hover.png",30,30));
         fileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

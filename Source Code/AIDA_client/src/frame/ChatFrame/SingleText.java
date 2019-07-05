@@ -15,7 +15,6 @@ public class SingleText extends JPanel {
     private JTextPane textPane;
     public SingleText(Image userHeadPic,String username,String time,String text,int side) {
         avatar=new HeadPortrait(40,40,userHeadPic);
-        text=" "+text+" ";
         idLabel=new JLabel();
         idLabel.setText(username+"  "+time);
         idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));
@@ -46,6 +45,7 @@ public class SingleText extends JPanel {
             textPane.insertIcon(new ImageIcon(Tools.base64StringToImage(image).getScaledInstance(70,70,Image.SCALE_FAST)));
             textPane.setPreferredSize(new Dimension(460,70));
         }else {
+            chatText=" "+chatText+ " ";
             String rec[] =chatText.split("#");
             for (String str:rec){
                 if (str.startsWith("/Emoji")){
