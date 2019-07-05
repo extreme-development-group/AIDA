@@ -12,7 +12,7 @@ public class DataBaseConnection {
     // 驱动名及数据库url
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://"+ ServerInfo.MYSQL_IP +":" +
-        ServerInfo.MYSQL_PORT + "/" + ServerInfo.DB_NAME +"?useSSL=false&serverTimezone=UTC";
+        ServerInfo.MYSQL_PORT + "/" + ServerInfo.DB_NAME +"?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     // 数据库用户名密码
     static final String USER = ServerInfo.DB_USER_NAME;
     static final String PASS = ServerInfo.DB_USER_PASSWORD;
