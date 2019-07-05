@@ -105,7 +105,7 @@ public class ServerFile extends Thread {
                     server = new ServerSocket(port);
                     new ServerFile(server.accept()).start();
                 } catch (IOException e) {
-                    JOptionPane.showMessageDialog(null, "传输错误");
+//                    JOptionPane.showMessageDialog(null, "传输错误");
                 }
             }
         }.start();
@@ -121,7 +121,7 @@ public class ServerFile extends Thread {
     }
     public static void main(String[] args){
         try {
-            ServerFile.openServer(8080);
+            ServerFile.openServer(48248);
         } catch (Exception e) {
             e.printStackTrace();
         }

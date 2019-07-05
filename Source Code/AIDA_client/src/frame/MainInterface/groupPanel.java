@@ -43,7 +43,7 @@ public class groupPanel extends JPanel {
                 if (e.getClickCount() == 2) {
                     groupPanel.this.setBackground(hoverColor);
                     if (!now.withGroup.containsKey(groupID)){
-                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName, Tools.base64StringToImage(now.userInfo.getUserAvatar())));
+                        now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,now.userHead));
                     }else {
                         now.withGroup.get(groupID).requestFocus();
                     }
@@ -79,7 +79,7 @@ public class groupPanel extends JPanel {
                     enterItem.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             if (!now.withGroup.containsKey(groupID)){
-                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,Tools.base64StringToImage(now.userInfo.getUserAvatar())));
+                                now.withGroup.put(groupID,new ChatWithGroup(now.userInfo.getUserId(),now.userInfo.getUserName(),groupID,fName,now.userHead));
                             }else {
                                 now.withGroup.get(groupID).requestFocus();
                             }

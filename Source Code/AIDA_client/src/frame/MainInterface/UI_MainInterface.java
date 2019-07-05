@@ -41,6 +41,8 @@ public class UI_MainInterface extends JFrame {
     // groupPanel
     //user information
     public User userInfo;
+    public Image userHead;
+    public String username;
     public static HashMap<String, friendPanel> friend;
     public static HashMap<String, groupPanel> group;
     public static HashMap<String, ChatWithFriends> withFriend;
@@ -73,6 +75,8 @@ public class UI_MainInterface extends JFrame {
         for (int i = 0; i < userInfo.getGroups().size(); i++)
             System.out.print(userInfo.getGroups().get(i).getName() + " ");
         System.out.println("\n----------- END --------------");
+        userHead = Tools.base64StringToImage(userInfo.getUserAvatar());
+        username=userInfo.getUserName();
 
 
 
@@ -405,6 +409,8 @@ public class UI_MainInterface extends JFrame {
         });
         nickname.setText(pureInfo.getUserNickName());
         signature.setText(pureInfo.getuserSignature());
+        username = pureInfo.getUserNickName();
+        userHead = Tools.base64StringToImage(pureInfo.getUserAvatar());
         headPortrait.updateUI();
         upPanel.validate();
         upPanel.repaint();

@@ -13,6 +13,6 @@ public class ChatFrame extends JFrame {
         SingleText singleText=new SingleText(userHeadPic,userName,sendTime,message,side);
         chatPanel.setPreferredSize(new Dimension(500,chatPanel.getPreferredSize().height+singleText.getPreferredSize().height));
         chatPanel.add(singleText);
-        scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getPreferredSize().height));
+        scrollPane.getViewport().setViewPosition(new Point(0,(int)chatPanel.getPreferredSize().getHeight()));
     }
 }
