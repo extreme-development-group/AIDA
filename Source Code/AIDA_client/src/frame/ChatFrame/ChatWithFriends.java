@@ -1,7 +1,9 @@
 package frame.ChatFrame;
 
 import client.ChatThread;
+import client.ClientFile;
 import client.InteractWithServer;
+import client.ServerFile;
 import config.Tools;
 import frame.Listener.SendFriend;
 import frame.MainInterface.UI_MainInterface;
@@ -58,6 +60,11 @@ public class ChatWithFriends extends ChatFrame {
         this.mHeadPic=mHeadPic;
         this.fHeadPic=fHeadPic;
         this.setIconImage(fHeadPic.getScaledInstance(40,40,Image.SCALE_SMOOTH));
+        try {
+            ServerFile.openServer(8080);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         init();
         this.setTitle(fName);
@@ -238,6 +245,20 @@ public class ChatWithFriends extends ChatFrame {
         fileButton.setBorderPainted(false); // set don't draw border
         fileButton.setFocusPainted(false);
         fileButton.setIcon(setIcon("res/Icon/folder.png",30,30));
+        fileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                int returnVal=chooser.showOpenDialog(ChatWithFriends.this);
+                System.out.println("returnVal="+returnVal);
+                String filepath;
+                filepath = chooser.getSelectedFile().getPath();
+                String ip = (InteractWithServer.getUserIP(fid)).getHostAddress();
+                System.out.println(ip);
+                ClientFile clientFile = new ClientFile(ip,8080,filepath);
+                clientFile.start();
+            }
+        });
 
 
         phoneButton=new JButton();

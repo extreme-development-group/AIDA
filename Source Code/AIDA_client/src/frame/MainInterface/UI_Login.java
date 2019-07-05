@@ -359,6 +359,10 @@ public class UI_Login extends JFrame {
         registerButton.setBackground(new Color(9, 163, 220));
         registerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                if (!String.valueOf(inputPsk.getPassword()).equals(String.valueOf(confirmPsk.getPassword()))){
+                    JOptionPane.showMessageDialog(UI_Login.this, "密码不一致", "注册失败", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
                 String uID=InteractWithServer.register(nickname.getText(),String.valueOf(inputPsk.getPassword()));
                 System.out.println(uID);
                 if (!uID.equals("")){

@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Vector;
 
@@ -152,6 +153,11 @@ public final class InteractWithServer {
         String fieldString = "getGroupMembers" + groupId;
         friendsOrGroups = (Vector<UserInfo.FriendsOrGroups>) postToServer(fieldString);
         return friendsOrGroups;
+    }
+    //获得用户IP
+    public static InetAddress getUserIP(String userID){
+        String fieldString = "getUserIP" + userID;
+        return (InetAddress)postToServer(fieldString);
     }
 
     // 向服务器发送请求更改个性签名
