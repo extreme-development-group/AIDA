@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="592" column="95" selection-start-line="592" selection-start-column="95" selection-end-line="592" selection-end-column="95" />
+            <state relative-caret-position="59">
+              <caret line="592" column="119" selection-start-line="592" selection-start-column="119" selection-end-line="592" selection-end-column="119" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#isLoginSuccess#0;class#DataCheck#0" />
@@ -123,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/src/server/WaitForConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,7 +148,7 @@
         <entry file="file://$PROJECT_DIR$/src/server/Start.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+              <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -232,8 +232,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="184" />
-    <option name="y" value="-39" />
+    <option name="x" value="57" />
+    <option name="y" value="-36" />
     <option name="width" value="1515" />
     <option name="height" value="1101" />
   </component>
@@ -364,16 +364,15 @@
       <updated>1562045168441</updated>
       <workItem from="1562045171114" duration="69253000" />
       <workItem from="1562166560880" duration="14814000" />
-      <workItem from="1562219010104" duration="13389000" />
+      <workItem from="1562219010104" duration="17318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97456000" />
+    <option name="totallyTimeSpent" value="101385000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14632174" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -384,8 +383,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294702" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.294702" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.705298" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -491,14 +490,14 @@
     <entry file="file://$PROJECT_DIR$/src/server/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/WaitForConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -543,8 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/DataCheck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="592" column="95" selection-start-line="592" selection-start-column="95" selection-end-line="592" selection-end-column="95" />
+        <state relative-caret-position="59">
+          <caret line="592" column="119" selection-start-line="592" selection-start-column="119" selection-end-line="592" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#isLoginSuccess#0;class#DataCheck#0" />

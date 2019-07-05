@@ -590,7 +590,7 @@ public class DataCheck {
             in_sql = "select * from aida_groupchathistory where message_toid=" + fid;
         }
             // 按message_id倒序排序，最多查询50条
-            String sql = "select * from (" + in_sql + " order by message_id DESC) temp limit 50";
+            String sql = "select * from (select * from (" + in_sql + " order by message_id DESC) temp limit 50 ) temp2 order by message_id";
             DataBaseConnection dataCon = new DataBaseConnection();
             ResultSet resultSet = dataCon.getFromDataBase(sql);
             try {
