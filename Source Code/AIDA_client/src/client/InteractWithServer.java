@@ -6,6 +6,7 @@ import config.ServerInfo;
 import config.UserInfo;
 import user.User;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -36,7 +37,9 @@ public final class InteractWithServer {
             in.close();
             out.close();
         } catch (ClassNotFoundException | IOException e) {
+            JOptionPane.showMessageDialog(null, "在与服务器验证交互中出现了异常，请重新登录", "错误", JOptionPane.WARNING_MESSAGE);
             System.out.println("在与服务器验证交互中出现了异常：" + e.getMessage());
+            System.exit(0);
         }
         return result;
     }

@@ -1,5 +1,6 @@
 package client;
 
+import javax.swing.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -57,7 +58,9 @@ public final class DataStream implements Runnable {
             } catch (IOException e1) {
                 System.out.println("服务器连接关闭失败：" + e.getMessage());
             }
+            JOptionPane.showMessageDialog(null, "与服务端失去联系,请重新登录", "错误", JOptionPane.WARNING_MESSAGE);
             System.out.println("与服务端失去联系 " + e.getMessage());
+            System.exit(0);
         }
     }
 

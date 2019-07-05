@@ -28,6 +28,7 @@ public final class ChatThread implements Runnable {
             new Thread(dataStream).start();
         } catch (IOException e) {
             System.out.println("创建与服务端的连接出错：" + e.getMessage());
+
         }
     }
 
