@@ -13,36 +13,15 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public final class ChatExecute {
-    /**
-     * @Fields message : 接收到的消息内容
-     */
+    //     message : 接收到的消息内容
     private static String message;
-
-    private static Image image;
-
-
-    /**
-     * @Fields fromId : 发送该消息的用户ID，用作显示对方信息
-     */
+    //     fromId : 发送该消息的用户ID，用作显示对方信息
     private static String fromId;
-
-    /**
-     * @Fields toId : 发送目标方ID，主要在群聊天中有效，用作消息应该展示在哪个群里面
-     */
+    //     toId : 发送目标方ID，主要在群聊天中有效，用作消息应该展示在哪个群里面
     private static String toId;
-
-    /**
-     * @Fields type : 接收消息内容的标识信息
-     */
+    //     接收消息内容的标识信息
     private static String type;
-
-    /**
-     * @Title: execute
-     * @Description:开始处理服务端发送已封装的消息内容
-     * @param: scMessage
-     *             接收到的消息内容
-     * @return: void
-     */
+    //    开始处理服务端发送已封装的消息内容
     public static void execute(String scMessage) {
         // 对接收到的消息内容进行解码
         String res[] = scMessage.split("```", 5);
@@ -87,7 +66,7 @@ public final class ChatExecute {
             }
         } // 接收的内容是为了改变用户状态（在线/离线）
         else if (res.length == 3) {
-            /** res[0]:验证标识、res[1]:状态信息、res[2]:好友ID */
+//             res[0]:验证标识、res[1]:状态信息、res[2]:好友ID
             if (res[0].equals("OnlineSituation")) {
                 if (UI_MainInterface.getFriend().containsKey(res[2])) {
                     System.out.println(res[0]);

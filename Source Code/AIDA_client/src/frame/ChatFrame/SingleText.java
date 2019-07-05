@@ -14,9 +14,8 @@ public class SingleText extends JPanel {
     private JLabel idLabel;
     private JTextPane textPane;
     public SingleText(Image userHeadPic,String username,String time,String text,int side) {
-//        side = 1;
         avatar=new HeadPortrait(40,40,userHeadPic);
-
+        text=" "+text+" ";
         idLabel=new JLabel();
         idLabel.setText(username+"  "+time);
         idLabel.setFont(new Font("微软雅黑",Font.PLAIN,10));
@@ -42,7 +41,6 @@ public class SingleText extends JPanel {
         }
         textPane.setBackground(new Color(243,249,253));
         String chatText=text;
-//      System.out.println(text);
         if (text.startsWith("#/Image")){
             String image = text.replace("#/Image","");
             textPane.insertIcon(new ImageIcon(Tools.base64StringToImage(image).getScaledInstance(70,70,Image.SCALE_FAST)));
@@ -52,13 +50,11 @@ public class SingleText extends JPanel {
             for (String str:rec){
                 if (str.startsWith("/Emoji")){
                     String emoji = str.replace("/Emoji","");
-//                    System.out.println("icon");
                     textPane.setCaretPosition(textPane.getStyledDocument().getLength());
                     textPane.insertIcon(Tools.setIcon("res/Emoji/EMOJI-"+emoji+".png",30,30));
                 }else {
                     try {
                         textPane.setCaretPosition(textPane.getStyledDocument().getLength());
-//                        System.out.println(textPane.getCaretPosition() + " " +textPane.getText().length()+" "+str);
                         textPane.getStyledDocument().insertString(textPane.getStyledDocument().getLength(), str, null);
                     } catch (BadLocationException e) {
                         e.printStackTrace();
@@ -66,9 +62,7 @@ public class SingleText extends JPanel {
                 }
             }
         }
-        textPane.setSize(new Dimension(500,textPane.getPreferredSize().height));
-//        System.out.println(textPane.getPreferredSize().height);
-//        textPane.setPreferredSize(new Dimension(460,Height));
+        textPane.setSize(new Dimension(480,textPane.getPreferredSize().height));
         textPanel=new JPanel();
         textPanel.setLayout(new BorderLayout(0,0));
         textPanel.add(idLabel,BorderLayout.NORTH);
@@ -83,6 +77,6 @@ public class SingleText extends JPanel {
             this.add(textPanel,BorderLayout.CENTER);
         }
         this.setBackground(new Color(243,249,253));
-        this.setPreferredSize(new Dimension(500,textPane.getPreferredSize().height+20));
+        this.setPreferredSize(new Dimension(480,textPane.getPreferredSize().height+20));
     }
 }

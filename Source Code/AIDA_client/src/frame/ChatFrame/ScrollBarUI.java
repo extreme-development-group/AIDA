@@ -10,24 +10,9 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
-/**
- * @ClassName: ScrollBarUI
- * @Description:Beautify the JScrollPane Scrollbar to add a custom style to it.
- * @author: 千千
- * @date: 2016/11/22 17:39
- *
- * @since: JDK 1.8
- * @Copyright: 2016 www.dreamwings.cn Inc. All rights reserved.
- */
-public final class ScrollBarUI extends BasicScrollBarUI {
 
-    /*
-     * （非 Javadoc）
-     *
-     * @see javax.swing.plaf.basic.BasicScrollBarUI#configureScrollBarColors()
-     *
-     * @Description:更改滑道颜色与滚动条宽度
-     */
+public final class ScrollBarUI extends BasicScrollBarUI {
+//    更改滑道颜色与滚动条宽度
     @Override
     protected void configureScrollBarColors() {
         // 滑道
@@ -42,15 +27,7 @@ public final class ScrollBarUI extends BasicScrollBarUI {
         super.paintTrack(g, c, trackBounds);
     }
 
-    /*
-     * （非 Javadoc）
-     *
-     * @see
-     * javax.swing.plaf.basic.BasicScrollBarUI#paintThumb(java.awt.Graphics,
-     * javax.swing.JComponent, java.awt.Rectangle)
-     *
-     * @Description:更改滚动条内部样式(滑块颜色,滑块宽度,把手颜色等)
-     */
+//     更改滚动条内部样式(滑块颜色,滑块宽度,把手颜色等)
     @Override
     protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
         // 重写父类方法，如果不加这一句无法拖动滑动条
@@ -71,14 +48,8 @@ public final class ScrollBarUI extends BasicScrollBarUI {
         g2.fillRoundRect(0, 0, 10, thumbBounds.height - 1, 15, 15);
     }
 
-    /*
-     * （非 Javadoc）
-     *
-     * @see javax.swing.plaf.basic.BasicScrollBarUI#createIncreaseButton(int)
-     *
-     * @Description:隐藏向下点击的按钮
-     *
-     */
+//     隐藏向下点击的按钮
+
     @Override
     protected JButton createIncreaseButton(int orientation) {
         JButton button = new JButton();
@@ -88,14 +59,8 @@ public final class ScrollBarUI extends BasicScrollBarUI {
         return button;
     }
 
-    /*
-     * （非 Javadoc）
-     *
-     * @see javax.swing.plaf.basic.BasicScrollBarUI#createIncreaseButton(int)
-     *
-     * @Description:隐藏向上点击的按钮
-     *
-     */
+//   隐藏向上点击的按钮
+
     @Override
     protected JButton createDecreaseButton(int orientation) {
         JButton button = new JButton();

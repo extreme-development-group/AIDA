@@ -13,15 +13,12 @@ import javax.swing.text.StyledEditorKit;
 import javax.swing.text.View;
 import javax.swing.text.ViewFactory;
 
-/**
- * 该类是真正实现超长单词都能自动换行的 JTextPane 的子类
- * Java 7 以下版本的 JTextPane 本身都能实现自动换行，对
- * 超长单词都能有效，但从 Java 7 开始读超长单词就不能自动
- * 换行，导致 JTextPane 的实际宽度变大，使得滚动条出现。
- * 下面的方法是对这个 bug 的较好修复。
- *
- * Created by dolphin on 15-2-3.
- */
+//该类是真正实现超长单词都能自动换行的 JTextPane 的子类
+//Java 7 以下版本的 JTextPane 本身都能实现自动换行，对
+// 超长单词都能有效，但从 Java 7 开始读超长单词就不能自动
+//换行，导致 JTextPane 的实际宽度变大，使得滚动条出现。
+//下面的方法是对这个 bug 的较好修复。
+
 public class MyTextPane extends JTextPane {
 
     // 内部类
@@ -78,8 +75,6 @@ public class MyTextPane extends JTextPane {
             }
         }
     }
-
-    // 本类
 
     // 构造函数
     public MyTextPane() {

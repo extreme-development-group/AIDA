@@ -6,34 +6,16 @@ import java.io.IOException;
 import java.net.Socket;
 
 public final class ChatThread implements Runnable {
-    /**
-     * @Fields userId : 用户IDChat
-     */
+    // userId : 用户IDChat
     private String userId;
-
-    /**
-     * @Fields dataStream : 聊天数据流传输对象，主要通过它发送消息或者接收消息
-     */
+    //dataStream : 聊天数据流传输对象，主要通过它发送消息或者接收消息
     private static DataStream dataStream;
+    //     初始化用户ID
 
-    /**
-     * @Title: ChatThread
-     * @Description: 初始化用户ID
-     * @param: userId
-     */
     public ChatThread(String userId) {
         this.userId = userId;
     }
-
-    /*
-     * （非 Javadoc）
-     *
-     * @see java.lang.Runnable#run()
-     *
-     * @Description: 创建与服务器聊天端口的通讯，并创建线程开始(接收/发送)数据
-     *
-     * @exception: IOException 如果与服务端建立Socket连接失败，则产生IOException.
-     */
+//    创建与服务器聊天端口的通讯，并创建线程开始(接收/发送)数据
     @Override
     public void run() {
         Socket myHost = null;
@@ -49,11 +31,7 @@ public final class ChatThread implements Runnable {
         }
     }
 
-    /**
-     * @Title: getDataStream
-     * @Description: 返回与服务器聊天端口创建的信息数据流对象
-     * @return: dataStream 流对象
-     */
+//     返回与服务器聊天端口创建的信息数据流对象
     public static DataStream getDataStream() {
         return dataStream;
     }

@@ -89,7 +89,6 @@ public class UI_Login extends JFrame {
             }
             in.close();
         } catch (Exception e) {
-//			System.out.println("No user Info");
         }
         //等待后续开发
         autoLogin.setSelected(false);

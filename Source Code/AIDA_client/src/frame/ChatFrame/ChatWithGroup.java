@@ -212,7 +212,9 @@ public class ChatWithGroup extends ChatFrame {
         });
 
         input=new JTextArea("");
-        input.setPreferredSize(new Dimension(700,300));
+//        input.setPreferredSize(new Dimension(500,100));
+        input.setLineWrap(true);
+        input.setWrapStyleWord(true);
         input.setBackground(new Color(128,255,255));
         input.setBorder(null);
 
@@ -238,11 +240,19 @@ public class ChatWithGroup extends ChatFrame {
         controlPanel=new JPanel();
         sysPanel=new JPanel();
 
+        JScrollPane inputScrollPane;
+        inputScrollPane = new JScrollPane(input);
+        inputScrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(128,255,255)));
+        inputScrollPane.setPreferredSize(new Dimension(700,90));
+        inputScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        inputScrollPane.setVerticalScrollBarPolicy((JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED));
+        inputScrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
+        inputScrollPane.getVerticalScrollBar().setUnitIncrement(15);
+
 
         mainControlPanel.setPreferredSize(new Dimension(700,40));
         chatPanel.setPreferredSize(new Dimension(500,300));
         functionPanel.setPreferredSize(new Dimension(700,40));
-        inputPanel.setPreferredSize(new Dimension(700,100));
         sendPanel.setPreferredSize(new Dimension(700,40));
 
         sysPanel.setBackground(new Color(40,138,221));
@@ -275,16 +285,13 @@ public class ChatWithGroup extends ChatFrame {
         functionPanel.add(sendButton);
         functionPanel.setBackground(new Color(128,255,255));
 
-        inputPanel.add(input);
-        inputPanel.setBackground(new Color(128,255,255));
-
         sendPanel.setLayout(null);
         sendPanel.add(sendButton);
         sendPanel.setBackground(new Color(128,255,255));
 
         controlPanel.setLayout(new BorderLayout());
         controlPanel.add(functionPanel,BorderLayout.NORTH);
-        controlPanel.add(inputPanel,BorderLayout.CENTER);
+        controlPanel.add(inputScrollPane,BorderLayout.CENTER);
         controlPanel.add(sendPanel,BorderLayout.SOUTH);
 
         groupMemberPanel=new JPanel();
@@ -303,6 +310,7 @@ public class ChatWithGroup extends ChatFrame {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                System.out.println("-------------LoadGroupMember---------------");
                 Vector<UserInfo.FriendsOrGroups> members = InteractWithServer.getGroupMembers(fid);
                 for (int i =0;i<members.size();i++){
                     System.out.println(members.get(i).getId());
@@ -316,13 +324,15 @@ public class ChatWithGroup extends ChatFrame {
                     System.out.println("Group Member load:"+members.get(i).getId());
                     addMember(Tools.base64StringToImage(members.get(i).getAvatar()), members.get(i).getId(), members.get(i).getName(), Integer.parseInt(members.get(i).getStatus()));
                 }
+                System.out.println("-------------LoadGroupMember---------------");
+                System.out.println("-------------LoadGroupChatRecord---------------");
                 Vector<String> record = InteractWithServer.getChatRecord(mid, fid, true);
-                System.out.println("获得消息数量："+record.size());
+                System.out.println("Get Message Num："+record.size());
                 for (int i = 0; i < record.size(); i++) {
 //                 res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
                     String res[] = record.get(i).split("```", 4);
+                    System.out.println("FromGroup: "+res[1]+ "  message: "+res[3]);
                     Image image;
-                    System.out.println("历史消息:"+res[3]);
                     for (int j = 0; j <members.size();j++){
                         if(members.get(j).getId().equals(res[1])){
                             if (members.get(j).getId().equals(mid)){
@@ -336,7 +346,8 @@ public class ChatWithGroup extends ChatFrame {
                     }
                     // 聊天面板显示用户昵称
                 }
-                scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getHeight()));
+                System.out.println("-------------LoadGroupChatRecord---------------");
+                scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getPreferredSize().height));
             }
         }).start();
     }
@@ -352,11 +363,14 @@ public class ChatWithGroup extends ChatFrame {
         new Thread(new Runnable() {
             @Override
             public void run() {
+
                 Vector<UserInfo.FriendsOrGroups> members = InteractWithServer.getGroupMembers(fid);
+                System.out.println("-------------ReloadGroupMember---------------");
                 for (int i =0;i<members.size();i++){
                     System.out.println("Group Member load:"+members.get(i).getId());
                     addMember(Tools.base64StringToImage(members.get(i).getAvatar()),members.get(i).getId(),members.get(i).getName(),Integer.parseInt(members.get(i).getStatus()));
                 }
+                System.out.println("-------------LoadGroupMember---------------");
             }
         }).start();
         groupMemberPanel.validate();

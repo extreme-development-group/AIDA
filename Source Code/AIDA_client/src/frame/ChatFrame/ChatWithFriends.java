@@ -30,7 +30,6 @@ public class ChatWithFriends extends ChatFrame {
     protected JButton friendsNameButton,minimize,closeButton,emojiButton,
             voiceButton,pictureButton,fileButton,phoneButton,cameraButton,sendButton;
     protected JPanel mainControlPanel,functionPanel,sendPanel,controlPanel,sysPanel;
-    protected JScrollPane inputScrollPane;
     protected JTextPane inputText;
     private String fAvatarString,fName,fid,mid,mName;
     private int messageNum;
@@ -283,7 +282,7 @@ public class ChatWithFriends extends ChatFrame {
         controlPanel=new JPanel();
         sysPanel=new JPanel();
 
-
+        JScrollPane inputScrollPane;
         inputScrollPane = new JScrollPane(input);
         inputScrollPane.setBorder(BorderFactory.createMatteBorder(1, 5, 1, 1, new Color(128,255,255)));
         inputScrollPane.setPreferredSize(new Dimension(500,90));
@@ -298,7 +297,6 @@ public class ChatWithFriends extends ChatFrame {
         mainControlPanel.setPreferredSize(new Dimension(500,40));
 
         functionPanel.setPreferredSize(new Dimension(500,40));
-//        inputPanel.setPreferredSize(new Dimension(500,100));
         sendPanel.setPreferredSize(new Dimension(500,40));
 
         sysPanel.setBackground(new Color(40,138,221));
@@ -325,13 +323,14 @@ public class ChatWithFriends extends ChatFrame {
 
 
         Vector<String> record = InteractWithServer.getChatRecord(mid, fid,false);
+        System.out.println("-------------LoadFriendChatRecord---------------");
         for (int i = 0; i < record.size(); i++) {
-            /*
-             * res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
-             */
+
+//          res[0] 消息发送时间 res[1] fromId res[2] toId res[3] message
+
 
             String res[] = record.get(i).split("```", 4);
-            System.out.println("From:"+res[1]+ "message"+res[3]);
+            System.out.println("FromFriends: "+res[1]+ "  message: "+res[3]);
             // 聊天面板显示用户昵称
             if (res.length == 4) {
                 if (res[1].equals(fid)){
@@ -341,9 +340,8 @@ public class ChatWithFriends extends ChatFrame {
                 }
             }
         }
+        System.out.println("-------------LoadFriendChatRecord---------------");
         scrollPane.getViewport().setViewPosition(new Point(0,chatPanel.getPreferredSize().height));
-
-
 
 
         functionPanel.setLayout(new FlowLayout(FlowLayout.LEADING,10,0));
@@ -356,9 +354,6 @@ public class ChatWithFriends extends ChatFrame {
         functionPanel.add(cameraButton);
         functionPanel.add(sendButton);
         functionPanel.setBackground(new Color(128,255,255));
-
-
-//        inputPanel.setBackground(new Color(128,255,255));
 
         sendPanel.setLayout(null);
         sendPanel.add(sendButton);

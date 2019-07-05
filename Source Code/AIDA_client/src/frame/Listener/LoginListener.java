@@ -77,17 +77,7 @@ public class LoginListener implements ActionListener{
                             } catch (Exception e) {
                                 System.out.println("ListenterClass/actionPerformed Error " + e);
                             }
-                        } else {
-                            // try {
-                            // FileOutputStream out = new
-                            // FileOutputStream("./Data/UserInfo.uif");
-                            // } catch (FileNotFoundException e) {
-                            // // TODO 自动生成的 catch 块
-                            // e.printStackTrace();
-                            // }
                         }
-
-
                         Thread t = new Thread(new Runnable() {
                             @Override
                             public void run() {
