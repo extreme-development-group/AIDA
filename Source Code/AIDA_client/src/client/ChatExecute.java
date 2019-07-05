@@ -61,7 +61,7 @@ public final class ChatExecute {
                             ? UI_MainInterface.getFriend().get(fromId).getfName() : ("陌生人:" + fromId);
                     gModel.get(toId).addMessage(Tools.base64StringToImage(InteractWithServer.getFriendInfo(fromId).getUserAvatar()),fromString, res[0], message, 0);
                 }else {
-                    UI_MainInterface.group.get(fromId).setBackground(new Color(146,199,241));
+                    UI_MainInterface.group.get(toId).setBackground(new Color(146,199,241));
                 }
             }
         } // 接收的内容是为了改变用户状态（在线/离线）

@@ -57,7 +57,7 @@ public class friendPanel extends JPanel {
                     String userName=now.userInfo.getUserName();
                     Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
                     if (!now.withFriend.containsKey(fid)){
-                        now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,now.userHead));
+                        now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,now.userHead,fHead));
                     }else {
                         now.withFriend.get(fid).requestFocus();
                     }
@@ -78,7 +78,7 @@ public class friendPanel extends JPanel {
                             String userName=now.userInfo.getUserName();
                             Image mHeadImage= Tools.base64StringToImage(now.userInfo.getUserAvatar());
                             if (!now.withFriend.containsKey(fid)){
-                                now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,fHead,now.userHead));
+                                now.withFriend.put(fid,new ChatWithFriends(userId,userName,fid,fName,now.userHead,fHead));
                             }else {
                                 now.withFriend.get(fid).requestFocus();
                             }

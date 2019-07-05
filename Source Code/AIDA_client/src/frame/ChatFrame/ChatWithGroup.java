@@ -365,7 +365,6 @@ public class ChatWithGroup extends ChatFrame {
         new Thread(new Runnable() {
             @Override
             public void run() {
-
                 Vector<UserInfo.FriendsOrGroups> members = InteractWithServer.getGroupMembers(fid);
                 System.out.println("-------------ReloadGroupMember---------------");
                 for (int i =0;i<members.size();i++){
